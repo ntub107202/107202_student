@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:text="回報問題"
+            android:text="@string/return_problem"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>

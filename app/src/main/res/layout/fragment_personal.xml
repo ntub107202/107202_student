@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="個人頁面"
+                android:text="@string/title_student"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
@@ -53,7 +53,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="20dp"
                         android:gravity="left|center_vertical"
-                        android:text="收藏紀錄"
+                        android:text="@string/collection_history"
                         android:background="#00000000"
                         android:textColor="@color/fontDark"/>
 
@@ -78,7 +78,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="聯絡紀錄"
+                        android:text="@string/contact_history"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -92,15 +92,15 @@
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/ic_volume_up_black_24dp" />
 
-                    <Switch
-                        android:id="@+id/switch_notice"
+                    <Button
+                        android:id="@+id/btn_notice"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="left|center_vertical"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="40dp"
-                        android:text="系統通知"
-                        android:textColor="@color/fontDark"/>
+                        android:background="#00000000"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/title_notice"
+                        android:textColor="@color/fontDark" />
 
 
                 </LinearLayout>
@@ -127,7 +127,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="回報問題"
+                        android:text="@string/return_problem"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -148,7 +148,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="關於我們"
+                        android:text="@string/about"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -169,7 +169,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="相關規範"
+                        android:text="@string/specification"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <View
@@ -195,7 +195,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="身分切換"
+                        android:text="@string/identity_change"
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>
@@ -217,7 +217,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="登入"
+                        android:text="@string/login"
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>
@@ -238,15 +238,9 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="註冊"
+                        android:text="@string/sign"
                         android:textColor="@color/fontDark" />
-
                 </LinearLayout>
-
-
-
-
-
             </LinearLayout>
         </ScrollView>
 
