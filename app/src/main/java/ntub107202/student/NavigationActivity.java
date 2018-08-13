@@ -46,6 +46,8 @@ public class NavigationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWorksheet.getscheduleJSON();
+        getWorksheet.getForumJSON();
         setContentView(R.layout.activity_navigation);
         init();
         mTextMessage = (TextView) findViewById(R.id.message);

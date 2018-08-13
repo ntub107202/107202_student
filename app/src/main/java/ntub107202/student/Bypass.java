@@ -15,7 +15,7 @@ public class Bypass extends AppCompatActivity {
         //取得伺服器上JSON資料
         getWorksheet.getJSON();
         getWorksheet.getjobJSON();
-        getWorksheet.getcalendarJSON();
+        getWorksheet.getscheduleJSON();
 
         button2 = findViewById(R.id.buttonStdEntry);
         button2.setOnClickListener(new View.OnClickListener() {
