@@ -43,11 +43,7 @@ public class Fragment_Forum extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_forum,container,false);
-        textView30 = (TextView)view.findViewById(R.id.text001);
         mList = (RecyclerView)view.findViewById(R.id.list_view);
-        if (getWorksheet.getRow9(0) != null) {
-            textView30.setVisibility(View.INVISIBLE);
-        }
         return view;
     }
     public void onHiddenChanged(boolean hidden) {

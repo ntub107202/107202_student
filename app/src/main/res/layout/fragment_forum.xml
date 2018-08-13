@@ -39,15 +39,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"/>
 
-                <TextView
-                    android:id="@+id/text001"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:text="@string/schedule_no_info"
-                    android:textColor="#CCCCCC"
-                    android:textSize="26dp" />
                 <!--
                                 <Button
                                     android:id="@+id/btn_go_add_calendar"
