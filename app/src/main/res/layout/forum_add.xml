@@ -22,20 +22,12 @@
             android:theme="?attr/actionBarTheme"
             app:titleTextColor="@android:color/white">
 
-            <Button
-                android:id="@+id/imageButton2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@null"
-                android:drawableBottom="@drawable/back"
-                app:srcCompat="@drawable/back" />
-
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="　　　　　心得撰寫　　　　　　"
+                android:text="心得撰寫"
                 android:textColor="@android:color/white"
                 android:textSize="18dp" />
 
@@ -44,12 +36,13 @@
                 style="?attr/buttonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:layout_gravity="center"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:minHeight="0dp"
-                android:minWidth="0dp"
 
+                android:minWidth="0dp"
                 android:text="分享"
                 android:textColor="@android:color/background_light"
                 android:textSize="18sp" />

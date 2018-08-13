@@ -77,7 +77,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Forum_add" />
-        <activity android:name=".Forum_show" />
         <activity android:name=".Personal_resume" />
         <activity android:name=".Findhostel_hostelinfo"></activity>
     </application>
