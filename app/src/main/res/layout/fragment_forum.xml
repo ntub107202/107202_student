@@ -54,8 +54,9 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_go_to_add_calendar"
+        android:id="@+id/fab_go_to_forum_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
