@@ -2,10 +2,12 @@ package ntub107202.student;
 
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
@@ -13,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,6 +47,15 @@ public class Fragment_Forum extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_forum,container,false);
         mList = (RecyclerView)view.findViewById(R.id.list_view);
+
+        FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab_go_to_forum_add) ;
+        fab.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Forum_add.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
     public void onHiddenChanged(boolean hidden) {
