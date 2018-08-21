@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/card_view_calender"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    android:layout_margin="5dp"
+    app:ignore="NamespaceTypo">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_S_pic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/b20170408195229_6368_0" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_hostel_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="民宿名稱"
+                        android:textColor="@color/fontDark"
+                        android:textSize="20dp" />
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="#00000000"
+                        app:srcCompat="@drawable/ic_favorite_border_black_24dp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_hostel_addr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="民宿地址"
+                        android:textColor="@color/fontDark"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        app:srcCompat="@drawable/ic_star_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/txt_hostel_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:text="評價"
+                        android:textColor="@color/fontDark" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_number_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:text="需求人數"
+                        android:textColor="@color/fontDark"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/txt_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="換宿天數"
+                        android:textColor="@color/fontDark"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_skill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="所需技能"
+                    android:textColor="@color/fontDark"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
