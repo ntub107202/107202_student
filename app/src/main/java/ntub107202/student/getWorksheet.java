@@ -18,10 +18,13 @@ public class getWorksheet {
         private static String[] row2= new String[100];
         private static String[] row3= new String[100];
         private static String[] row4= new String[100];
-        public static String[] row5= new String[100];
-        private static String[] row6= new String[100];
-        private static String[] row7= new String[100];
-        private static String[] row8= new String[100];
+        public static String[] row19= new String[100];
+        private static String[] row20= new String[100];
+        private static String[] row21= new String[100];
+        private static String[] row22= new String[100];
+        private static String[] row23= new String[100];
+        private static String[] row24= new String[100];
+        private static String[] row25= new String[100];
         private static String[] row9= new String[100];
         private static String[] row10= new String[100];
         private static String[] row11= new String[100];
@@ -37,6 +40,7 @@ public class getWorksheet {
         private static int worksheetLength ;
         public static int scheduleLength;
         public static int forumLength;
+        public static int hostelLength;
 
         public static void getJSON() {
 
@@ -66,7 +70,7 @@ public class getWorksheet {
             myAsyncTask.execute(Common.getUrl);
         }
 
-    public static void getjobJSON() {
+    public static void getHostelJSON() {
 
         getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
             @Override
@@ -76,22 +80,25 @@ public class getWorksheet {
 
                     JSONArray jsonArray = object.getJSONArray("result");
                     worksheetLength = jsonArray.length();
-
+                    hostelLength = worksheetLength;
                     int j=0;
 
                     for (int i = 0 ; i<getWorksheetLength() ; i++){
-                        row5[i] = jsonArray.getJSONObject(i).getString("row1");
-                        row6[i] = jsonArray.getJSONObject(i).getString("row2");
-                        row7[i] = jsonArray.getJSONObject(i).getString("row3");
-                        row8[i] = jsonArray.getJSONObject(i).getString("row4");
-                        Log.v("Row5", row5[i]);
+                        row19[i] = jsonArray.getJSONObject(i).getString("row1");
+                        row20[i] = jsonArray.getJSONObject(i).getString("row2");
+                        row21[i] = jsonArray.getJSONObject(i).getString("row3");
+                        row22[i] = jsonArray.getJSONObject(i).getString("row4");
+                        row23[i] = jsonArray.getJSONObject(i).getString("row5");
+                        row24[i] = jsonArray.getJSONObject(i).getString("row6");
+                        row25[i] = jsonArray.getJSONObject(i).getString("row7");
+                        Log.v("Row5", row19[i]);
                     }
                 } catch (Exception e) {
                     Log.v("ABC", Log.getStackTraceString(e));
                 }
             }
         });
-        myAsyncTask.execute(Common.getjob);
+        myAsyncTask.execute(Common.getHostel);
     }
     public static void getscheduleJSON() {
 
@@ -111,7 +118,7 @@ public class getWorksheet {
                         row10[i] = jsonArray.getJSONObject(i).getString("row2");
                         row11[i] = jsonArray.getJSONObject(i).getString("row3");
                         row12[i] = jsonArray.getJSONObject(i).getString("row4");
-                        Log.v("Row5", row5[i]);
+                        Log.v("Row5", row9[i]);
                     }
                 } catch (Exception e) {
                     Log.v("ABC", Log.getStackTraceString(e));
@@ -140,7 +147,7 @@ public class getWorksheet {
                         row16[i] = jsonArray.getJSONObject(i).getString("row4");
                         row17[i] = jsonArray.getJSONObject(i).getString("row5");
                         row18[i] = jsonArray.getJSONObject(i).getString("row6");
-                        Log.v("Row5", row5[i]);
+                        Log.v("Row5", row13[i]);
                     }
                 } catch (Exception e) {
                     Log.v("ABC", Log.getStackTraceString(e));
@@ -199,18 +206,29 @@ public class getWorksheet {
 //    public static String[] getRow4(){
 //        return row4;
 //    }
-        public static String getRow5(int i){
-            return row5[i];
+        public static String getRow19(int i){
+            return row19[i];
        }
-        public static String getRow6(int i){
-            return row6[i];
+        public static String getRow20(int i){
+            return row20[i];
         }
-        public static String getRow7(int i){
-            return row7[i];
+        public static String getRow21(int i){
+            return row21[i];
         }
-        public static String getRow8(int i){
-            return row8[i];
+        public static String getRow22(int i){
+            return row22[i];
         }
+        public static String getRow23(int i){
+            return row23[i];
+        }
+        public static String getRow24(int i){
+            return row24[i];
+        }
+        public static String getRow25(int i){
+            return row25[i];
+        }
+
+
         public static String getRow9(int i){
             return row9[i];
         }
