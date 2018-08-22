@@ -48,7 +48,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
-    <string name="collection_history">收藏紀錄</string>
+    <string name="collection">收藏紀錄</string>
+    <string name="hire_history">受雇紀錄</string>
     <string name="contact_history">聯絡紀錄</string>
     <string name="return_problem">回報問題</string>
     <string name="about">關於我們</string>
@@ -62,4 +63,7 @@
     <string name="hire_notice">雇用通知</string>
 
     <string name="sprc_no_info">尚在籌畫中...</string>
+
+    <string name="inbox">收件匣</string>
+    <string name="inbox_no_info">現在還沒收到任何雇用邀請喔！</string>
 </resources>

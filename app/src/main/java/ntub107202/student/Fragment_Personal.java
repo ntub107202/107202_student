@@ -16,6 +16,7 @@ public class Fragment_Personal extends Fragment {
         View view=inflater.inflate(R.layout.fragment_personal,container,false);
         Button button01 = (Button)view.findViewById(R.id.btn_hire_history);
         Button button02 = (Button)view.findViewById(R.id.btn_contact_history);
+        Button btn_collection = (Button)view.findViewById(R.id.btn_collection);
         Button button03 = (Button)view.findViewById(R.id.btn_return);
         Button button04 = (Button)view.findViewById(R.id.btn_about);
         Button button05 = (Button)view.findViewById(R.id.btn_specification);
@@ -35,6 +36,14 @@ public class Fragment_Personal extends Fragment {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getActivity(),Personal_Contacthistory.class);
+                startActivity(intent);
+            }
+        });
+        btn_collection.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(),Personal_Collection.class);
                 startActivity(intent);
             }
         });
