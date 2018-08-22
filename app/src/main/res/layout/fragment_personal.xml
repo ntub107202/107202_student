@@ -217,7 +217,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/sign"
+                        android:text="@string/register"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
             </LinearLayout>

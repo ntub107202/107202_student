@@ -55,7 +55,7 @@
     <string name="specification">相關規範</string>
     <string name="identity_change">身分切換</string>
     <string name="login">登入</string>
-    <string name="sign">註冊</string>
+    <string name="register">註冊</string>
 
     <string name="system_notice">系統通知</string>
     <string name="message_notice">訊息通知</string>
