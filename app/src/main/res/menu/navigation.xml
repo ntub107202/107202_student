@@ -10,7 +10,10 @@
         android:id="@+id/navigation_forum"
         android:icon="@drawable/ic_description_black_24dp"
         android:title="@string/title_forum" />
-
+    <item
+        android:id="@+id/navigation_inbox"
+        android:icon="@drawable/ic_inbox_black_24dp"
+        android:title="@string/inbox" />
     <item
         android:id="@+id/navigation_schedule"
         android:icon="@drawable/ic_business_center_black_24dp"
