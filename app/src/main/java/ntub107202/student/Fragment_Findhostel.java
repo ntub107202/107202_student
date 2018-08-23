@@ -48,6 +48,31 @@ public class Fragment_Findhostel extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_findhostel, container, false);
         mList = (RecyclerView) view.findViewById(R.id.list_view);
+        myDataset = new ArrayList<>();
+        myDataset2 = new ArrayList<>();
+        myDataset3 = new ArrayList<>();
+        myDataset4 = new ArrayList<>();
+        myDataset5 = new ArrayList<>();
+        myDataset6 = new ArrayList<>();
+        myDataset7 = new ArrayList<>();
+        myAdapter = new MyAdapter(myDataset);
+        for (int i = 0; i < getWorksheet.hostelLength; i++) {
+//                myDataset.add(i + "");
+            myDataset.add(getWorksheet.getRow19(i));
+            myDataset2.add(getWorksheet.getRow20(i));
+            myDataset3.add(getWorksheet.getRow21(i));
+            myDataset4.add(getWorksheet.getRow22(i));
+            myDataset5.add(getWorksheet.getRow23(i));
+            myDataset6.add(getWorksheet.getRow24(i));
+            myDataset7.add(getWorksheet.getRow25(i));
+            Log.d("get0000", String.valueOf(getWorksheet.hostelLength) + "hostelLength_resume");
+        }
+//            mList = (RecyclerView)view.findViewById(R.id.list_view);
+        layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mList.setLayoutManager(layoutManager);
+        mList.setAdapter(myAdapter);
+        //resume
         return view;
     }
 

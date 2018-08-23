@@ -17,7 +17,7 @@ public class Bypass extends AppCompatActivity {
         getWorksheet.getHostelJSON();
         getWorksheet.getForumJSON();
         getWorksheet.getscheduleJSON();
-
+        getWorksheet.getHostelJSON();
         button2 = findViewById(R.id.buttonStdEntry);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override

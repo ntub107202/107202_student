@@ -18,7 +18,7 @@ public class getWorksheet {
         private static String[] row2= new String[100];
         private static String[] row3= new String[100];
         private static String[] row4= new String[100];
-        public static String[] row19= new String[100];
+        private static String[] row19= new String[100];
         private static String[] row20= new String[100];
         private static String[] row21= new String[100];
         private static String[] row22= new String[100];
@@ -90,8 +90,8 @@ public class getWorksheet {
                         row22[i] = jsonArray.getJSONObject(i).getString("row4");
                         row23[i] = jsonArray.getJSONObject(i).getString("row5");
                         row24[i] = jsonArray.getJSONObject(i).getString("row6");
-                        row25[i] = jsonArray.getJSONObject(i).getString("row7");
-                        Log.v("Row5", row19[i]);
+//                        row25[i] = jsonArray.getJSONObject(i).getString("row7");
+                        Log.v("Row56", row20[i]);
                     }
                 } catch (Exception e) {
                     Log.v("ABC", Log.getStackTraceString(e));
