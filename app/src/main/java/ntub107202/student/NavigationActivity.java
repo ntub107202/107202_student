@@ -15,6 +15,7 @@ public class NavigationActivity extends AppCompatActivity {
     private Fragment_Inbox Fragment3_Inbox;
     private Fragment_Schedule Fragment4_Schedule;
     private Fragment_Personal Fragment5_Personal;
+    BottomNavigationView navigation;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -22,10 +23,12 @@ public class NavigationActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_bnb:
+                    getWorksheet.getHostelJSON();
                     mTextMessage.setText(R.string.title_bnb);
                     showNav(R.id.navigation_bnb);
                     return true;
                 case R.id.navigation_forum:
+                    getWorksheet.getForumJSON();
                     mTextMessage.setText(R.string.title_forum);
                     showNav(R.id.navigation_forum);
                     return true;
@@ -34,6 +37,7 @@ public class NavigationActivity extends AppCompatActivity {
                     showNav(R.id.navigation_inbox);
                     return true;
                 case R.id.navigation_schedule:
+                    getWorksheet.getscheduleJSON();
                     mTextMessage.setText(R.string.title_schedule);
                     showNav(R.id.navigation_schedule);
                     return true;
@@ -51,14 +55,60 @@ public class NavigationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWorksheet.getscheduleJSON();
-        getWorksheet.getForumJSON();
-        getWorksheet.getHostelJSON();
         setContentView(R.layout.activity_navigation);
         init();
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+    @Override
+    public void onResume() {
+        getWorksheet.getscheduleJSON();
+        getWorksheet.getForumJSON();
+        getWorksheet.getHostelJSON();
+        int id = getIntent().getIntExtra("id", 0);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();
+        switch (id) {
+            case 1:
+                beginTransaction.hide(Fragment2_Forum).hide(Fragment3_Inbox).hide(Fragment4_Schedule).hide(Fragment5_Personal);
+                beginTransaction.show(Fragment1_Findhostel);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                navigation.getMenu().getItem(0).setChecked(true);
+                break;
+            case 2:
+                beginTransaction.hide(Fragment1_Findhostel).hide(Fragment3_Inbox).hide(Fragment4_Schedule).hide(Fragment5_Personal);
+                beginTransaction.show(Fragment2_Forum);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                navigation.getMenu().getItem(1).setChecked(true);
+                break;
+            case 3:
+                beginTransaction.hide(Fragment2_Forum).hide(Fragment1_Findhostel).hide(Fragment5_Personal).hide(Fragment4_Schedule);
+                beginTransaction.show(Fragment3_Inbox);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                navigation.getMenu().getItem(2).setChecked(true);
+                break;
+            case 4:
+                beginTransaction.hide(Fragment2_Forum).hide(Fragment3_Inbox).hide(Fragment1_Findhostel).hide(Fragment5_Personal);
+                beginTransaction.show(Fragment4_Schedule);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                navigation.getMenu().getItem(2).setChecked(true);
+                break;
+            case 5:
+                beginTransaction.hide(Fragment1_Findhostel).hide(Fragment2_Forum).hide(Fragment3_Inbox).hide(Fragment4_Schedule);
+                beginTransaction.show(Fragment5_Personal);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                mTextMessage.setText("");
+                navigation.getMenu().getItem(3).setChecked(true);
+                break;
+        }
+
+        super.onResume();
     }
     //init（）用来初始化组件
     private void init(){

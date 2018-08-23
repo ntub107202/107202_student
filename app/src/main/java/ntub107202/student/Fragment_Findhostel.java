@@ -120,11 +120,11 @@ public class Fragment_Findhostel extends Fragment {
         public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
             holder.TextView0001.setText(mData.get(position));
             holder.TextView0002.setText(myDataset2.get(position));
-            holder.TextView0003.setText(myDataset3.get(position));
-            holder.TextView0004.setText(myDataset4.get(position));
-            holder.TextView0005.setText(myDataset5.get(position));
-            holder.TextView0006.setText(myDataset6.get(position));
-            holder.TextView0007.setImageBitmap(stringToBitmap(myDataset7.get(position)));
+            holder.TextView0003.setText(myDataset6.get(position));
+            holder.TextView0004.setText(myDataset5.get(position));
+            holder.TextView0005.setText(myDataset6.get(position));
+            holder.TextView0006.setText(myDataset3.get(position));
+            holder.TextView0007.setImageBitmap(stringToBitmap(myDataset4.get(position)));
         }
 
         @Override
