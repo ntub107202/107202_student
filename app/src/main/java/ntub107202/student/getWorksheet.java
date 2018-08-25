@@ -6,6 +6,7 @@ import ntub107202.student.Common.Common;
 import ntub107202.student.MyAsyncTask.getAsyncTask;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask2;
+import ntub107202.student.MyAsyncTask.postUpdateAsyncTask3;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -187,6 +188,17 @@ public class getWorksheet {
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
             myAsyncTask.execute(Common.postCalendar ,row1,row2,row3,row4,row5);
+        }
+    }
+    public static void postToQuestion(String row1) {
+        postUpdateAsyncTask3 myAsyncTask = new postUpdateAsyncTask3(new postUpdateAsyncTask3.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postQuestion ,row1);
         }
     }
 
