@@ -19,9 +19,12 @@
         <ImageView
             android:id="@+id/img_S_pic"
             android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_height="110dp"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/b20170408195229_6368_0" />
 
@@ -29,9 +32,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -44,6 +47,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
                     android:text="民宿名稱"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
@@ -59,7 +64,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
 
                 <TextView
                     android:id="@+id/txt_hostel_addr"
@@ -67,6 +73,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
                     android:text="民宿地址"
                     android:textColor="#b0b0b0"
                     android:textSize="10sp" />
@@ -107,12 +115,15 @@
 
                 <TextView
                     android:id="@+id/txt_skill"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
                     android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
                     android:text="所需技能"
-                    android:textColor="@color/fontDark"
-                    android:textSize="14sp" />
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="10sp" />
 
             </LinearLayout>
 
@@ -145,7 +156,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
                     android:layout_marginTop="5dp"
-                    android:text="天" />
+                    android:text="天"
+                    android:textSize="10sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -177,8 +189,24 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
                     android:layout_marginTop="5dp"
-                    android:text="人" />
+                    android:text="人"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/ib_popup_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/cardview_light_background"
+                    card_view:srcCompat="@drawable/ic_more_vert_black_24dp" />
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 

@@ -80,105 +80,86 @@
         <EditText
             android:id="@+id/editText2"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="0dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
+            android:layout_weight="1"
             android:ems="10"
+            android:gravity="top"
             android:hint="輸入心得文字......"
             android:inputType="textMultiLine" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#eeeeee"
-            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
             android:paddingTop="5dp">
 
-            <FrameLayout
+            <Button
+                android:id="@+id/button7"
+                style="?attr/buttonStyle"
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@android:color/background_light">
+                android:background="@drawable/shape_white"
+                android:drawableTop="@drawable/imageadd"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="5dp"
+                android:text="新增相片"
+                android:textSize="12sp" />
 
-                <Button
-                    android:id="@+id/button7"
-                    style="?attr/buttonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@null"
-                    android:drawableLeft="@drawable/imageadd"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:text="　新增相片　　　　　" />
-            </FrameLayout>
-
-            <FrameLayout
+            <Button
+                android:id="@+id/button8"
+                style="?attr/buttonStyle"
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@android:color/background_light">
+                android:background="@drawable/shape_white"
+                android:drawableTop="@drawable/youtube"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="5dp"
+                android:text="上傳影片"
+                android:textSize="12sp" />
 
-                <Button
-                    android:id="@+id/button8"
-                    style="?attr/buttonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@null"
-                    android:drawableLeft="@drawable/hostel"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:text="　搜尋地標　　　　　" />
-            </FrameLayout>
-
-            <FrameLayout
+            <Button
+                android:id="@+id/button9"
+                style="?attr/buttonStyle"
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@android:color/background_light">
+                android:background="@drawable/shape_white"
+                android:drawableTop="@drawable/location"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="5dp"
+                android:text="搜尋民宿"
+                android:textSize="12sp" />
 
-                <Button
-                    android:id="@+id/button9"
-                    style="?attr/buttonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@null"
-                    android:drawableLeft="@drawable/location"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:text="　搜尋民宿　　　　　" />
-            </FrameLayout>
-
-            <FrameLayout
+            <Button
+                android:id="@+id/button10"
+                style="?attr/buttonStyle"
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@android:color/background_light">
-
-                <Button
-                    android:id="@+id/button10"
-                    style="?attr/buttonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:background="@null"
-                    android:drawableLeft="@drawable/fb"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:text="　分享至Facebook　 " />
-            </FrameLayout>
+                android:background="@drawable/shape_white"
+                android:drawableTop="@drawable/fb"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="5dp"
+                android:text="分享至FB"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
