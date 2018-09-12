@@ -38,7 +38,7 @@
             android:minHeight="0dp"
 
             android:minWidth="0dp"
-            android:text="編輯"
+            android:text="儲存"
             android:textColor="@android:color/background_light"
             android:textSize="14sp" />
     </android.support.v7.widget.Toolbar>

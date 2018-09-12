@@ -65,6 +65,14 @@
 
                 </LinearLayout>
 
+                <ImageButton
+                    android:id="@+id/ib_popup_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/background_light"
+                    card_view:srcCompat="@drawable/ic_more_vert_black_24dp" />
+
 
             </TableRow>
 
@@ -196,6 +204,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
+                android:lineSpacingMultiplier="1.5"
                 android:text="心得文章輸入在這"
                 android:textSize="14sp" />
 

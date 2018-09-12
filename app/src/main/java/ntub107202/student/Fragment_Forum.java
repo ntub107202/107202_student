@@ -2,6 +2,7 @@ package ntub107202.student;
 
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,11 +14,15 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +63,7 @@ public class Fragment_Forum extends Fragment{
         });
         return view;
     }
+    
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
         if(hidden){
@@ -91,10 +97,13 @@ public class Fragment_Forum extends Fragment{
 
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         private List<String> mData;
+        private Context mContext;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             public TextView TextView0001, TextView0002 ,TextView0003, TextView0004 ,TextView0005;
             public  ImageView TextView0006;
+            public ImageButton ib_popup_menu;
+
 
             public ViewHolder(View v) {
                 super(v);
@@ -104,6 +113,7 @@ public class Fragment_Forum extends Fragment{
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
                 TextView0005 = (TextView) v.findViewById(R.id.textView0005);
                 TextView0006 = (ImageView) v.findViewById(R.id.image000006);
+                ib_popup_menu = (ImageButton) v.findViewById(R.id.ib_popup_menu);
             }
         }
 
@@ -114,20 +124,44 @@ public class Fragment_Forum extends Fragment{
 
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
+            mContext = parent.getContext();
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.forum_item, parent, false);
             MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
             return vh;
         }
 
         @Override
-        public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
+        public void onBindViewHolder(final MyAdapter.ViewHolder holder, int position) {
             holder.TextView0001.setText(mData.get(position));
             holder.TextView0002.setText(myDataset2.get(position));
             holder.TextView0003.setText(myDataset3.get(position));
             holder.TextView0004.setText(myDataset4.get(position));
             holder.TextView0005.setText(myDataset5.get(position));
             holder.TextView0006.setImageBitmap(stringToBitmap(myDataset6.get(position)));
+            holder.ib_popup_menu.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    PopupMenu popupMenu = new PopupMenu(mContext,holder.ib_popup_menu);
+                    popupMenu.inflate(R.menu.forum_popup_menu);
+                    popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem item) {
+                            switch (item.getItemId()){
+                                case  R.id.menu_collection:
+                                    Toast.makeText(mContext,"已收藏貼文",Toast.LENGTH_LONG).show();
+                                    break;
+                                case  R.id.menu_report:
+                                    Toast.makeText(mContext,"已檢舉貼文",Toast.LENGTH_LONG).show();
+                                    break;
+                                default:
+                                    break;
+                            }
+                            return false;
+                        }
+                    });
+                    popupMenu.show();
+                }
+            });
         }
 
         @Override
@@ -148,4 +182,6 @@ public class Fragment_Forum extends Fragment{
             return null;
         }
     }
+
+
 }
