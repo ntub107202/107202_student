@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="個人頁面"
+                android:text="@string/title_student"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
@@ -36,6 +36,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dp"
+                        android:src="@drawable/pencil" />
+
+                    <Button
+                        android:id="@+id/btn_edit_resume"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:background="#00000000"
+                        android:gravity="left|center_vertical"
+                        android:text="編輯履歷"
+                        android:textColor="@color/fontDark" />
+
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -53,7 +79,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="20dp"
                         android:gravity="left|center_vertical"
-                        android:text="收藏紀錄"
+                        android:text="@string/hire_history"
                         android:background="#00000000"
                         android:textColor="@color/fontDark"/>
 
@@ -78,7 +104,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="聯絡紀錄"
+                        android:text="@string/contact_history"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -90,17 +116,39 @@
                         android:layout_height="35dp"
                         android:layout_marginLeft="40dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_volume_up_black_24dp" />
+                        android:src="@drawable/ic_favorite" />
 
-                    <Switch
-                        android:id="@+id/switch_notice"
+                    <Button
+                        android:id="@+id/btn_collection"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="left|center_vertical"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="40dp"
-                        android:text="系統通知"
-                        android:textColor="@color/fontDark"/>
+                        android:background="#00000000"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/collection"
+                        android:textColor="@color/fontDark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_volume_up_black_24dp" />
+
+                    <Button
+                        android:id="@+id/btn_notice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:background="#00000000"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/title_notice"
+                        android:textColor="@color/fontDark" />
 
 
                 </LinearLayout>
@@ -127,7 +175,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="回報問題"
+                        android:text="@string/return_problem"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -148,7 +196,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="關於我們"
+                        android:text="@string/about"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -169,7 +217,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="相關規範"
+                        android:text="@string/specification"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <View
@@ -177,28 +225,7 @@
                     android:layout_height="1dp"
                     android:background="@color/txt_font"
                     android:layout_marginTop="10dp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_swap_horiz_black_24dp" />
 
-                    <Button
-                        android:id="@+id/btn_change"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:background="#00000000"
-                        android:gravity="left|center_vertical"
-                        android:text="身分切換"
-                        android:textColor="@color/fontDark" />
-
-                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -217,7 +244,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="登入"
+                        android:text="@string/login"
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>
@@ -238,15 +265,9 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="註冊"
+                        android:text="@string/register"
                         android:textColor="@color/fontDark" />
-
                 </LinearLayout>
-
-
-
-
-
             </LinearLayout>
         </ScrollView>
 

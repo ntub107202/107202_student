@@ -14,15 +14,24 @@ public class Fragment_Personal extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_personal,container,false);
+        Button button00 = (Button)view.findViewById(R.id.btn_edit_resume);
         Button button01 = (Button)view.findViewById(R.id.btn_hire_history);
         Button button02 = (Button)view.findViewById(R.id.btn_contact_history);
+        Button btn_collection = (Button)view.findViewById(R.id.btn_collection);
         Button button03 = (Button)view.findViewById(R.id.btn_return);
         Button button04 = (Button)view.findViewById(R.id.btn_about);
         Button button05 = (Button)view.findViewById(R.id.btn_specification);
-        Button button06 = (Button)view.findViewById(R.id.btn_change);
+        Button button06 = (Button) view.findViewById(R.id.btn_notice);
         Button button07 = (Button)view.findViewById(R.id.btn_login);
         Button button08 = (Button)view.findViewById(R.id.btn_reg);
+        button00.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(getActivity(),Personal_resume.class);
+                startActivity(intent);
+            }
+        });
         button01.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -36,6 +45,14 @@ public class Fragment_Personal extends Fragment {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getActivity(),Personal_Contacthistory.class);
+                startActivity(intent);
+            }
+        });
+        btn_collection.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(),Personal_Collection.class);
                 startActivity(intent);
             }
         });
@@ -67,10 +84,11 @@ public class Fragment_Personal extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getActivity(),Bypass.class);
+                Intent intent = new Intent(getActivity(),Personal_Notification.class);
                 startActivity(intent);
             }
         });
+
         button07.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {

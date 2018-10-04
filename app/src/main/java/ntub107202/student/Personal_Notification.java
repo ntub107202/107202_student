@@ -1,13 +1,12 @@
 package ntub107202.student;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class Forum_show extends AppCompatActivity {
-
+public class Personal_Notification extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forum_show);
+        setContentView(R.layout.personal_notice);
     }
 }
