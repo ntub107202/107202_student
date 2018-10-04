@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".Common.ApplicationController"
         android:allowBackup="true"
         android:icon="@mipmap/logoaaa"
         android:label="@string/app_name"
@@ -77,7 +78,7 @@
         </activity>
         <activity
             android:name=".Login"
-            android:label="107202">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -86,7 +87,7 @@
         </activity>
         <activity
             android:name=".Register"
-            android:label="107202">
+            android:label="@string/app_name">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
