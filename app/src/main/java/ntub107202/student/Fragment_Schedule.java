@@ -2,11 +2,14 @@ package ntub107202.student;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,8 +20,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import ntub107202.student.Schedule.bean.DateEntity;
+import ntub107202.student.Schedule.view.DataView;
 
 public class Fragment_Schedule extends Fragment {
+    private DataView dataView ;
+    private TextView info ;
+
     static TextView textView30;
     static TextView textView31;
     static TextView textView32;
@@ -42,11 +50,28 @@ public class Fragment_Schedule extends Fragment {
         View view=inflater.inflate(R.layout.fragment_schedule,container,false);
         textView30 = (TextView)view.findViewById(R.id.text001);
         mList = (RecyclerView)view.findViewById(R.id.list_view);
-        if (getWorksheet.getRow9(0) != null) {
+
+        if (getWorksheet.getRow10(0) != null) {
             textView30.setVisibility(View.INVISIBLE);
         }
+
+
+        info = (TextView)view.findViewById(R.id.info);
+        dataView = (DataView)view.findViewById(R.id.week);
+        dataView.setOnSelectListener(new DataView.OnSelectListener() {
+            @Override
+            public void onSelected(DateEntity date) {
+                info.setText("日期："+ date.date+"\n"+
+                        "周幾："+ date.weekName+"\n"+
+                        "今日："+ date.isToday+"\n"+
+                        "時間戳："+ date.million+"\n");
+                Log.e("wenzhiao--------------",date.toString());
+            }
+        });
+        dataView.getData("2018-10-1");
         return view;
     }
+
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
         if(hidden){
@@ -78,15 +103,37 @@ public class Fragment_Schedule extends Fragment {
         private List<String> mData;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
-            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004;
+            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004,TextView33;
 
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             public ViewHolder(View v) {
                 super(v);
                 TextView0001 = (TextView) v.findViewById(R.id.textView0001);
                 TextView0002 = (TextView) v.findViewById(R.id.textView0002);
                 TextView0003 = (TextView) v.findViewById(R.id.textView0003);
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
+                TextView33 = (TextView) v.findViewById(R.id.textView33);
+
+                TextView33.setOnClickListener(new View.OnClickListener() {
+                    Boolean flag = true;
+                    @Override
+                    public void onClick(View v) {
+                        if (flag) {
+                            flag = false;
+                            TextView0002.setMaxLines(5);
+                            TextView0002.setEllipsize(null); // 展开
+                            TextView33.setText("... 摺疊內容");
+                        } else {
+                            flag = true;
+                            TextView0002.setLines(1);
+                            TextView0002.setEllipsize(TextUtils.TruncateAt.END); // 收缩
+                            TextView33.setText("... 查看更多");
+                        }
+                    }
+                });
+
             }
+
         }
 
         public MyAdapter(List<String> data) {
@@ -94,6 +141,7 @@ public class Fragment_Schedule extends Fragment {
         }
 
 
+        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -114,5 +162,7 @@ public class Fragment_Schedule extends Fragment {
         public int getItemCount() {
             return mData.size();
         }
+
+
     }
 }
