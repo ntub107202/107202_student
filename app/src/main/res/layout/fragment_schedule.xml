@@ -28,7 +28,23 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
-
+        <ntub107202.student.Schedule.view.DataView
+            android:id="@+id/week"
+            android:layout_width="match_parent"
+            android:background="@color/color_ffffff"
+            android:layout_height="wrap_content">
+        </ntub107202.student.Schedule.view.DataView>
+        <TextView
+            android:id="@+id/info"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:gravity="center|left"
+            android:textSize="14sp"
+            android:textColor="@color/color_666666"
+            android:layout_height="wrap_content" />
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">

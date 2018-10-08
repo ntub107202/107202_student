@@ -50,7 +50,7 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="10dp"
         android:clickable="true"
-        app:srcCompat="@drawable/ic_event_note" />
+        app:srcCompat="@drawable/ic_create_black_24dp" />
 
 
 
