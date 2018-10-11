@@ -60,4 +60,46 @@
     <string name="sprc_no_info">尚在筹画中...</string>
     <string name="inbox">收件匣</string>
     <string name="inbox_no_info">现在还没收到任何雇用邀请喔！ </string>
+
+    <!--相關規範-->
+    <string name="spe1">欢迎使用国立台北商业大学（以下称「北商大」）所开发之「一家顺顺」应用程式（以下称「APP」），当您进入本APP浏览或存取其中之资料与资讯，即表示您已阅读、了解、接受并同意遵守以下条款与条件：</string>
+    <string name="spe2">一、使用规范</string>
+    <string name="spe3">贵用户同意：</string>
+    <string name="spe4">遵守任何适用之法律、约定条款以及良好的礼仪，并尊重他人隐私。 </string>
+    <string name="spe5">仅基于私人非商业用途使用本APP。 </string>
+    <string name="spe6">取得张贴、发布或提交资讯或资料所需之任何同意、允许或授权，并承担张贴、发布或提交资讯或资料所衍生之任何责任。 </string>
+    <string name="spe7">不张贴、发布或提交违法、误导性、侮辱性、猥亵、骚扰、诽谤或其他不适当之资讯，不散发或张贴垃圾邮件、超过合理容量之特大档案、病毒等。 </string>
+    <string name="spe8">不得修改、翻译、转售、再授权、租赁本APP或对本APP进行逆向工程，亦不得移除、规避、解码或以其它方式变更或妨碍任何适用之使用规范、或企图规避APP之内容复制保护功能或任何其他用于控制有关内容或其识别资料的存取或使用之科技。 </string>
+    <string name="spe9">不使用可能损害本APP或其他用户之利益或财产的任何其他科技。 </string>
+    <string name="spe10">不使用任何非北商大提供之自动系统或方式连接、获取、复制或监控本APP的任何部分。 </string>
+    <string name="spe11">贵用户同意在办理本APP注册时提供真实且完整资料，并保持该等资料为最新资料。贵用户必须谨慎保管用户名称及密码以防遭他人不当使用，并承担使用本APP所衍生之任何责任。 </string>
+    <string name="spe12">二、北商大之权限</string>
+    <string name="spe13">贵用户了解并授与北商大、其服务提供者及合作伙伴下列权利：</string>
+    <string name="spe14">于提供服务所必要之范围内，无偿使用、修改、改写、重制、散布、出版及展示贵用户于本APP公用区域或共享区域上所张贴、发布或提交之资讯或资料，包括与贵用户提供之内容有关之其他资讯或资料。 </string>
+    <string name="spe15">有权但无义务监督、调整或删除本APP之内容或 贵用户所张贴、发布或提交之资讯或资料。 </string>
+    <string name="spe16">为了保护本APP、本APP提供者、网路业者或是其他受影响或可能受影响之用户，有权限制使用本APP之权利或删除贵用户已注册之帐号。 </string>
+    <string name="spe17">得随时终止或变更APP与其内容以及有关条款而毋须事前通知贵用户。 </string>
+    <string name="spe18">三、隐私声明</string>
+    <string name="spe19">北商大因贵用户使用本APP而搜集之个人资讯将受到《隐私权政策》之保护。如 贵用户注册为本APP会员时即表示已阅读、理解并完全同意接受以下说明：</string>
+    <string name="spe20">北商大APP使用者</string>
+    <string name="spe21">《隐私权政策》适用范围</string>
+    <string name="spe22">北商大会收集的资讯</string>
+    <string name="spe23">北商大会如何使用收集到的资讯</string>
+    <string name="spe24">用户分享的资讯（资讯透明化和选择权）</string>
+    <string name="spe25">存取及更新您的个人资讯</string>
+    <string name="spe26">北商大分享的资讯</string>
+    <string name="spe27">用户个人资料保留期限</string>
+    <string name="spe28">资讯安全</string>
+    <string name="spe29">政策执行以及与主管机关配合情形</string>
+    <string name="spe30">变更及联系方式</string>
+    <string name="spe31">四、智慧财产权声明</string>
+    <string name="spe32">本APP及其内容（但不包含贵用户于本APP的讯息墙、公用区域或共享区域上所张贴、发布或提交之资讯或资料）之所有权、著作权及其他智慧财产权系属北商大所有。 </string>
+    <string name="spe33">五、免责声明</string>
+    <string name="spe34">贵用户须自行承担使用本APP之一切风险，北商大不负责任何因浏览或使用本APP而引致之损失，亦不提供任何种类、明示或默示的担保。 </string>
+    <string name="spe35">北商大承诺力求本APP内容之准确性及完整性，但内容如有错误或遗漏，北商大不承担任何赔偿责任。 </string>
+    <string name="spe36">北商大致力于维持本APP运作及执行，但对于贵用户因遭遇任何中断（包含但不限于电信服务之干扰及中断）所致之任何损失，北商大不负任何责任。 </string>
+    <string name="spe37">除注明北商大制作之内容外，其他任何内容，包括但不限于经由本APP连结的网页，北商大概不承担因意外（包括感染电脑或手机病毒）、诽谤、侵犯版权或智慧财产权所造成的损失或责任，包括但不限于利润、商誉、使用、资料损失或其他无形损失，北商大不承担任何直接、间接、附带、特别、衍生性或惩罚性赔偿或责任。是否使用本APP之服务下载或取得任何资料应由贵用户自行考量且自负风险，因前开任何资料之下载或取得而导致贵用户电脑或手机系统之任何损坏或资料流失，北商大不承担任何责任。 </string>
+    <string name="spe38">六、准据法及管辖法院</string>
+    <string name="spe39">本「使用规范与声明」之解释与适用，以及与本「使用规范与声明」有关或贵用户因使用本APP而产生之争议或纠纷，应依照台湾之法律予以处理。 </string>
+
 </resources>

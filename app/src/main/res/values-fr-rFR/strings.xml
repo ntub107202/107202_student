@@ -1,2 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!--相關規範-->
+    <string name="spe1">Bienvenue dans lapplication 一家順順 (ci-après dénommée APP) développée par l’Université nationale des affaires de Taipei (NTUB). Lorsque vous entrez dans cette application pour parcourir ou accéder aux informations, vous êtes Lisez, comprenez, acceptez et acceptez les termes et conditions suivants:</string>
+    <string name="spe2">1, l’utilisation de spécifications</string>
+    <string name="spe3">Vos utilisateurs sont d’accord:</string>
+    <string name="spe4">Respectez les lois applicables, les conditions convenues et les bonnes manières et respectez la vie privée des autres.</string>
+    <string name="spe5">Utilisez cette application uniquement pour un usage privé et non commercial.</string>
+    <string name="spe6">Obtenez tout consentement, permission ou autorisation nécessaire pour publier, poster ou soumettre des informations ou du matériel, et assumez toute responsabilité résultant de l’affichage, de la publication ou de la soumission d’informations ou de matériel.</string>
+    <string name="spe7">Ne postez pas, ne postez pas et ne soumettez pas d’informations illégales, trompeuses, insultantes, diffamatoires, harcelantes, gênantes ou inappropriées, ne distribuez pas et ne publiez pas de spam, de très gros fichiers dépassant une capacité raisonnable, de virus, etc.</string>
+    <string name="spe8">Vous ne pouvez pas modifier, traduire, revendre, concéder en sous-licence, louer l’APP ou procéder à un reverse engineering, ni supprimer, contourner, décoder, altérer ou obstruer les spécifications d’utilisation applicables ou tenter de contourner la protection contre la copie du contenu de l’APP. Une fonctionnalité ou toute autre technologie utilisée pour contrôler l’accès ou l’utilisation du contenu ou de ses éléments d’identification.</string>
+    <string name="spe9">N’utilisez aucune autre technologie susceptible de nuire aux intérêts ou à la propriété de cette application ou d’autres utilisateurs.</string>
+    <string name="spe10">N’utilisez aucun système ou méthode automatisé fourni par une université autre que la Chine du Nord pour connecter, acquérir, copier ou contrôler une partie quelconque de cette application.</string>
+    <string name="spe11">Votre utilisateur s’engage à fournir des informations véridiques et complètes au moment de l’enregistrement de cette application et à maintenir ces informations à jour. Vous devez soigneusement enregistrer le nom de votre utilisateur et votre mot de passe pour empêcher toute utilisation incorrecte par des tiers et assumer toute responsabilité résultant de l’utilisation de cette appli.</string>
+    <string name="spe12">2, autorisations NTUB</string>
+    <string name = "spe13"> Vous comprenez et accordez à NTUB, à ses fournisseurs de services et à ses partenaires les droits suivants: </string>
+    <string name="spe14"> Utilisez, modifiez, réécrivez, reproduisez, distribuez, publiez et affichez librement vos utilisateurs postés, postés ou soumis dans la zone publique ou partagée de l’APP dans la portée nécessaire pour fournir le service. Informations ou matériaux, y compris d’autres informations ou matériaux liés au contenu fourni par vos utilisateurs. </string>
+    <string name="spe15"> a le droit mais pas l’obligation de superviser, d’ajuster ou de supprimer le contenu de cette application ou les informations ou documents postés, postés ou soumis par vos utilisateurs. </string>
+    <string name="spe16"> Afin de protéger cette application, le fournisseur de l’application, le fournisseur d’accès Internet ou d’autres utilisateurs concernés ou potentiellement concernés, vous avez le droit de restreindre l’utilisation de cette application ou de supprimer le compte que votre utilisateur a enregistré. </string>
+    <string name="spe17"> Vous pouvez à tout moment résilier ou modifier l’application, son contenu et les conditions associées, sans préavis à vos utilisateurs. </string>
+    <string name = "spe18"> 3, déclaration de confidentialité </string>
+    <string name="spe19"> Les informations personnelles de NTUB collectées par vos utilisateurs à l’aide de cette application seront protégées par la politique de confidentialité. En vous inscrivant en tant que membre de cette application, vous indiquez que vous avez lu, compris et entièrement accepté les instructions suivantes: </string>
+    <string name="spe20"> Utilisateur APP NTUB </string>
+    <string name="spe21"> Portée de la politique de confidentialité </string>
+    <string name="spe22"> Informations collectées par NTUB </string>
+    <string name="spe23"> Comment NTUB utilisera les informations collectées </string>
+    <string name="spe24"> Informations partagées par l’utilisateur (transparence des informations et options) </string>
+    <string name="spe25"> Accéder à vos informations personnelles et les mettre à jour </string>
+    <string name="spe26"> Nouvelles informations partagées par l’Université de commerce de Beijing </string>
+    <string name="spe27"> Période de conservation du profil utilisateur </string>
+    <string name="spe28"> Sécurité de l’information </string>
+    <string name="spe29"> Mise en œuvre de la politique et coopération avec l’autorité compétente </string>
+    <string name="spe30"> Modifier et contacter </string>
+    <string name = "spe31"> 4, déclaration de droits de propriété intellectuelle </string>
+    <string name="spe32"> Propriété, droits d’auteur et autres informations relatives à cette application et à son contenu (à l’exclusion des informations et des documents postés, publiés ou soumis par les utilisateurs sur le mur des messages, les espaces publics ou les espaces partagés de cette application) Les droits de propriété appartiennent à NTUB. </string>
+    <string name="spe33"> 5, clause de non responsabilité </string>
+    <string name="spe34"> Vous êtes responsable de tous les risques liés à l’utilisation de cette application. L’Université de Beishang n’est pas responsable des pertes causées par la navigation ou l’utilisation de cette application, ni ne fournit aucune garantie, expresse ou implicite, quelle qu’elle soit. </string>
+    <string name="spe35"> NTUB s’engage à assurer l’exactitude et l’exhaustivité du contenu de cette application. NTUB n’assume aucune responsabilité pour les erreurs ou les omissions. </string>
+    <string name="spe36"> NTUB s’engage à maintenir le fonctionnement et l’exécution de cette application, mais NTUB n’est pas responsable des pertes causées par une interruption (y compris, mais sans limitation, une interférence et une interruption des services de télécommunication) par vos utilisateurs. </string>
+    <string name="spe37"> Sauf pour le contenu de NTUB, y compris, mais sans s’y limiter, les pages liées par cette application, NTUB ne sera pas responsable des accidents (y compris des infections par des virus informatiques ou de téléphones portables), de l’embarras, de la violation des droits d’auteur. NTUB n’assume aucune responsabilité ni dommages directs, indirects, accessoires, spéciaux, dérivés, punitifs ou immatériels, résultant de droits de propriété intellectuelle, y compris mais non limités à des bénéfices, de l’achalandage, de l’utilisation, de la perte de données ou d’autres pertes intangibles. Que vous utilisiez ou non les services de cette application pour télécharger ou obtenir des informations, vous le ferez à vos propres risques et périls. </string>
+    <string name="spe38"> 6, loi applicable et tribunal compétent </string>
+    <string name="spe39"> L’interprétation et l’application de ces règles et déclarations d’utilisation ainsi que les litiges ou litiges découlant de l’utilisation de cette appli par vos utilisateurs doivent être conformes à la législation de Taïwan. Traitement. </string>
+
+</resources>
