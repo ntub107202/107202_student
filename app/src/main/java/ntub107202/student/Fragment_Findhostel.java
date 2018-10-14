@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
@@ -45,6 +47,7 @@ public class Fragment_Findhostel extends Fragment {
     ArrayList<String> myDataset5;
     ArrayList<String> myDataset6;
     ArrayList<String> myDataset7;
+
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
 
@@ -122,6 +125,7 @@ public class Fragment_Findhostel extends Fragment {
             public TextView TextView0001, TextView0002, TextView0003, TextView0004, TextView0005,TextView0006;
             public ImageView TextView0007;
             public ImageButton ib_popup_menu;
+            public CardView cardView;
 
             public ViewHolder(View v) {
                 super(v);
@@ -133,6 +137,7 @@ public class Fragment_Findhostel extends Fragment {
                 TextView0006 = (TextView) v.findViewById(R.id.txt_hostel_star);
                 TextView0007 = (ImageView) v.findViewById(R.id.img_S_pic);
                 ib_popup_menu = (ImageButton) v.findViewById(R.id.ib_popup_menu);
+                cardView = (CardView) v.findViewById(R.id.card_view_calender);
             }
         }
 
@@ -142,10 +147,27 @@ public class Fragment_Findhostel extends Fragment {
 
 
         @Override
-        public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public MyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             mContext = parent.getContext();
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.findhostel_item, parent, false);
             MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
+
+            vh.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent i = new Intent(mContext, Findhostel_hostelinfo.class);
+                    i.putExtra("row1",mData.get(vh.getAdapterPosition()));
+                    i.putExtra("row2",myDataset2.get(vh.getAdapterPosition()));
+                    i.putExtra("row3",myDataset6.get(vh.getAdapterPosition()));
+                    i.putExtra("row4",myDataset5.get(vh.getAdapterPosition()));
+                    i.putExtra("row5",myDataset6.get(vh.getAdapterPosition()));
+                    i.putExtra("row6",myDataset4.get(vh.getAdapterPosition()));
+                    Log.d("get0000", "你好" + "hostelLength_resume");
+                    mContext.startActivity(i);
+                }
+            });
+
             return vh;
         }
 
