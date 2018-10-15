@@ -61,7 +61,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
-                            android:text="劉家驤"
+                            android:text="學生姓名"
                             android:textSize="24sp" />
 
                         <TextView
