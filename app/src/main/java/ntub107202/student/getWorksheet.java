@@ -91,7 +91,7 @@ public class getWorksheet {
                         row22[i] = jsonArray.getJSONObject(i).getString("row4");
                         row23[i] = jsonArray.getJSONObject(i).getString("row5");
                         row24[i] = jsonArray.getJSONObject(i).getString("row6");
-//                        row25[i] = jsonArray.getJSONObject(i).getString("row7");
+                        row25[i] = jsonArray.getJSONObject(i).getString("row7");
                         Log.v("Row56", row20[i]);
                     }
                 } catch (Exception e) {

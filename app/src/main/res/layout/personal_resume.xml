@@ -71,15 +71,46 @@
                 android:text="@string/lbl_upload_photo"
                 android:textSize="14sp" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
+            <ImageView
+                android:id="@+id/imageView10"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:layout_marginTop="5dp"
-                app:srcCompat="@android:drawable/ic_menu_upload" />
+                android:layout_marginTop="10dp"
+                app:srcCompat="@color/txt_font" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_white"
+                    android:text="點擊選取大頭照"
+                    android:textColor="@color/fontDark" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_white"
+                    android:text="點擊拍攝大頭照"
+                    android:textColor="@color/fontDark" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView3"
@@ -87,7 +118,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="5dp"
                 android:text="@string/lbl_inputName"
                 android:textSize="14sp" />
 
@@ -368,7 +398,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="20dp"
                     android:text="櫃台接待"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />

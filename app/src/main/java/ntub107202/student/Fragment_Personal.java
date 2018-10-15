@@ -28,7 +28,7 @@ public class Fragment_Personal extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getActivity(),Personal_resume.class);
+                Intent intent = new Intent(getActivity(),Personal_Resume.class);
                 startActivity(intent);
             }
         });
