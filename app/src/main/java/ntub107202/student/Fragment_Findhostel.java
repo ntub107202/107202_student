@@ -218,7 +218,7 @@ public class Fragment_Findhostel extends Fragment {
                     i.putExtra("hostelOwnerName",myDataset12.get(vh.getAdapterPosition()));
                     i.putExtra("hostelOwnerAccount",myDataset13.get(vh.getAdapterPosition()));
                     i.putExtra("hostelOwnerPhone",myDataset14.get(vh.getAdapterPosition()));
-                    i.putExtra("vacancDays",myDataset15.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancyDays",myDataset15.get(vh.getAdapterPosition()));
 
                     Log.d("get0000", "你好" + "hostelLength_resume");
                     mContext.startActivity(i);

@@ -52,7 +52,7 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
         String row12 = intent.getExtras().getString("hostelOwnerName");
         String row13 = intent.getExtras().getString("hostelOwnerAccount");
         String row14 = intent.getExtras().getString("hostelOwnerPhone");
-        String row15 = intent.getExtras().getString("vacancDays");
+        String row15 = intent.getExtras().getString("vacancyDays");
 
         Log.i("Log", "Register1:" + row1);
         Log.i("Log", "Register2:" + row2);
