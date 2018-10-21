@@ -46,6 +46,9 @@ public class Fragment_Forum extends Fragment{
     ArrayList<String> myDataset4;
     ArrayList<String> myDataset5;
     ArrayList<String> myDataset6;
+    ArrayList<String> myDataset7;
+    ArrayList<String> myDataset8;
+
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
     @Nullable
@@ -76,6 +79,9 @@ public class Fragment_Forum extends Fragment{
             myDataset4 = new ArrayList<>();
             myDataset5 = new ArrayList<>();
             myDataset6 = new ArrayList<>();
+            myDataset7 = new ArrayList<>();
+            myDataset8 = new ArrayList<>();
+
             myAdapter = new MyAdapter(myDataset);
             for(int i = 0; i < getWorksheet.forumLength; i++){
 //                myDataset.add(i + "");
@@ -85,6 +91,8 @@ public class Fragment_Forum extends Fragment{
                 myDataset4.add(getWorksheet.getRow16(i));
                 myDataset5.add(getWorksheet.getRow17(i));
                 myDataset6.add(getWorksheet.getRow18(i));
+                myDataset7.add(getWorksheet.getRow40(i));
+                myDataset8.add(getWorksheet.getRow41(i));
                 Log.d("get0000", String.valueOf(getWorksheet.forumLength)+"forumLength_resume");
             }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
@@ -101,8 +109,8 @@ public class Fragment_Forum extends Fragment{
         private Context mContext;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
-            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004 ,TextView0005,TextView33;
-            public  ImageView TextView0006;
+            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004 ,TextView0005,TextView33,TextViewAddress;
+            public  ImageView TextView0006,TextViewFace;
             public ImageButton ib_popup_menu;
 
 
@@ -113,7 +121,9 @@ public class Fragment_Forum extends Fragment{
                 TextView0003 = (TextView) v.findViewById(R.id.textView0003);
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
                 TextView0005 = (TextView) v.findViewById(R.id.textView0005);
+                TextViewAddress = (TextView) v.findViewById(R.id.textView9);
                 TextView0006 = (ImageView) v.findViewById(R.id.image000006);
+                TextViewFace = (ImageView) v.findViewById(R.id.imageView);
                 ib_popup_menu = (ImageButton) v.findViewById(R.id.ib_popup_menu);
                 TextView33 = (TextView) v.findViewById(R.id.textView33);
 
@@ -160,6 +170,8 @@ public class Fragment_Forum extends Fragment{
             holder.TextView0004.setText(myDataset4.get(position));
             holder.TextView0005.setText(myDataset5.get(position));
             holder.TextView0006.setImageBitmap(stringToBitmap(myDataset6.get(position)));
+            holder.TextViewAddress.setText(myDataset7.get(position));
+            holder.TextViewFace.setImageBitmap(stringToBitmap(myDataset8.get(position)));
             holder.ib_popup_menu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -47,7 +47,15 @@ public class Fragment_Findhostel extends Fragment {
     ArrayList<String> myDataset5;
     ArrayList<String> myDataset6;
     ArrayList<String> myDataset7;
-
+    ArrayList<String> myDataset8;
+    ArrayList<String> myDataset9;
+    ArrayList<String> myDataset10;
+    ArrayList<String> myDataset11;
+    ArrayList<String> myDataset12;
+    ArrayList<String> myDataset13;
+    ArrayList<String> myDataset14;
+    ArrayList<String> myDataset15;
+    ArrayList<String> myDataset16;
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
 
@@ -63,6 +71,15 @@ public class Fragment_Findhostel extends Fragment {
         myDataset5 = new ArrayList<>();
         myDataset6 = new ArrayList<>();
         myDataset7 = new ArrayList<>();
+        myDataset8 = new ArrayList<>();
+        myDataset9 = new ArrayList<>();
+        myDataset10 = new ArrayList<>();
+        myDataset11 = new ArrayList<>();
+        myDataset12 = new ArrayList<>();
+        myDataset13 = new ArrayList<>();
+        myDataset14 = new ArrayList<>();
+        myDataset15 = new ArrayList<>();
+        myDataset16 = new ArrayList<>();
         myAdapter = new MyAdapter(myDataset);
         for (int i = 0; i < getWorksheet.hostelLength; i++) {
 //                myDataset.add(i + "");
@@ -73,6 +90,15 @@ public class Fragment_Findhostel extends Fragment {
             myDataset5.add(getWorksheet.getRow23(i));
             myDataset6.add(getWorksheet.getRow24(i));
             myDataset7.add(getWorksheet.getRow25(i));
+            myDataset8.add(getWorksheet.getRow26(i));
+            myDataset9.add(getWorksheet.getRow27(i));
+            myDataset10.add(getWorksheet.getRow28(i));
+            myDataset11.add(getWorksheet.getRow29(i));
+            myDataset12.add(getWorksheet.getRow30(i));
+            myDataset13.add(getWorksheet.getRow31(i));
+            myDataset14.add(getWorksheet.getRow32(i));
+            myDataset15.add(getWorksheet.getRow33(i));
+            myDataset16.add(getWorksheet.getRow34(i));
             Log.d("get0000", String.valueOf(getWorksheet.hostelLength) + "hostelLength_resume");
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
@@ -96,6 +122,16 @@ public class Fragment_Findhostel extends Fragment {
             myDataset5 = new ArrayList<>();
             myDataset6 = new ArrayList<>();
             myDataset7 = new ArrayList<>();
+            myDataset8 = new ArrayList<>();
+            myDataset9 = new ArrayList<>();
+            myDataset10 = new ArrayList<>();
+            myDataset11 = new ArrayList<>();
+            myDataset12 = new ArrayList<>();
+            myDataset13 = new ArrayList<>();
+            myDataset14 = new ArrayList<>();
+            myDataset15 = new ArrayList<>();
+            myDataset16 = new ArrayList<>();
+
             myAdapter = new MyAdapter(myDataset);
             for (int i = 0; i < getWorksheet.hostelLength; i++) {
 //                myDataset.add(i + "");
@@ -106,6 +142,16 @@ public class Fragment_Findhostel extends Fragment {
                 myDataset5.add(getWorksheet.getRow23(i));
                 myDataset6.add(getWorksheet.getRow24(i));
                 myDataset7.add(getWorksheet.getRow25(i));
+                myDataset8.add(getWorksheet.getRow26(i));
+                myDataset9.add(getWorksheet.getRow27(i));
+                myDataset10.add(getWorksheet.getRow28(i));
+                myDataset11.add(getWorksheet.getRow29(i));
+                myDataset12.add(getWorksheet.getRow30(i));
+                myDataset13.add(getWorksheet.getRow31(i));
+                myDataset14.add(getWorksheet.getRow32(i));
+                myDataset15.add(getWorksheet.getRow33(i));
+                myDataset16.add(getWorksheet.getRow34(i));
+
                 Log.d("get0000", String.valueOf(getWorksheet.hostelLength) + "hostelLength_resume");
             }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
@@ -122,20 +168,21 @@ public class Fragment_Findhostel extends Fragment {
         private Context mContext;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
-            public TextView TextView0001, TextView0002, TextView0003, TextView0004, TextView0005,TextView0006;
-            public ImageView TextView0007;
+            public TextView TextViewHostelName, TextViewHostelAddr, TextViewNumPeople, TextViewDays,
+                    TextViewSkill,TextViewHostelStar;
+            public ImageView TextViewHostelPic;
             public ImageButton ib_popup_menu;
             public CardView cardView;
 
             public ViewHolder(View v) {
                 super(v);
-                TextView0001 = (TextView) v.findViewById(R.id.txt_hostel_name);
-                TextView0002 = (TextView) v.findViewById(R.id.txt_hostel_addr);
-                TextView0003 = (TextView) v.findViewById(R.id.txt_number_people);
-                TextView0004 = (TextView) v.findViewById(R.id.txt_days);
-                TextView0005 = (TextView) v.findViewById(R.id.txt_skill);
-                TextView0006 = (TextView) v.findViewById(R.id.txt_hostel_star);
-                TextView0007 = (ImageView) v.findViewById(R.id.img_S_pic);
+                TextViewHostelName = (TextView) v.findViewById(R.id.txt_hostel_name);
+                TextViewHostelAddr = (TextView) v.findViewById(R.id.txt_hostel_addr);
+                TextViewNumPeople = (TextView) v.findViewById(R.id.txt_number_people);
+                TextViewDays = (TextView) v.findViewById(R.id.txt_days);
+                TextViewSkill = (TextView) v.findViewById(R.id.txt_skill);
+                TextViewHostelStar = (TextView) v.findViewById(R.id.txt_hostel_star);
+                TextViewHostelPic = (ImageView) v.findViewById(R.id.img_S_pic);
                 ib_popup_menu = (ImageButton) v.findViewById(R.id.ib_popup_menu);
                 cardView = (CardView) v.findViewById(R.id.card_view_calender);
             }
@@ -157,14 +204,27 @@ public class Fragment_Findhostel extends Fragment {
                 public void onClick(View v) {
 
                     Intent i = new Intent(mContext, Findhostel_hostelinfo.class);
-                    i.putExtra("row1",mData.get(vh.getAdapterPosition()));
-                    i.putExtra("row2",myDataset2.get(vh.getAdapterPosition()));
-                    i.putExtra("row3",myDataset6.get(vh.getAdapterPosition()));
-                    i.putExtra("row4",myDataset5.get(vh.getAdapterPosition()));
-                    i.putExtra("row5",myDataset6.get(vh.getAdapterPosition()));
-                    i.putExtra("row6",myDataset4.get(vh.getAdapterPosition()));
+                    i.putExtra("hostelName",mData.get(vh.getAdapterPosition()));
+                    i.putExtra("hostelAddress",myDataset2.get(vh.getAdapterPosition()));
+                    i.putExtra("hostelPhoto",myDataset3.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancyName",myDataset4.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancySalary",myDataset5.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancyStartDate",myDataset6.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancyEndDate",myDataset7.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancyStartTime",myDataset8.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancEndTime",myDataset9.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancyNumPeople",myDataset10.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancyJob",myDataset11.get(vh.getAdapterPosition()));
+                    i.putExtra("hostelOwnerName",myDataset12.get(vh.getAdapterPosition()));
+                    i.putExtra("hostelOwnerAccount",myDataset13.get(vh.getAdapterPosition()));
+                    i.putExtra("hostelOwnerPhone",myDataset14.get(vh.getAdapterPosition()));
+                    i.putExtra("vacancyDays",myDataset15.get(vh.getAdapterPosition()));
+
                     Log.d("get0000", "你好" + "hostelLength_resume");
                     mContext.startActivity(i);
+
+
+
                 }
             });
 
@@ -173,13 +233,13 @@ public class Fragment_Findhostel extends Fragment {
 
         @Override
         public void onBindViewHolder(final MyAdapter.ViewHolder holder, int position) {
-            holder.TextView0001.setText(mData.get(position));
-            holder.TextView0002.setText(myDataset2.get(position));
-            holder.TextView0003.setText(myDataset7.get(position));
-            holder.TextView0004.setText(myDataset6.get(position));
-            holder.TextView0005.setText(myDataset5.get(position));
-            holder.TextView0006.setText(myDataset3.get(position));
-            holder.TextView0007.setImageBitmap(stringToBitmap(myDataset4.get(position)));
+            holder.TextViewHostelName.setText(mData.get(position));
+            holder.TextViewHostelAddr.setText(myDataset2.get(position));
+            holder.TextViewNumPeople.setText(myDataset10.get(position));
+            holder.TextViewDays.setText(myDataset15.get(position));
+            holder.TextViewSkill.setText(myDataset11.get(position));
+            holder.TextViewHostelStar.setText(myDataset16.get(position));
+            holder.TextViewHostelPic.setImageBitmap(stringToBitmap(myDataset3.get(position)));
             holder.ib_popup_menu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

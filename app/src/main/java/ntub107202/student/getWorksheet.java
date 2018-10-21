@@ -26,6 +26,16 @@ public class getWorksheet {
         private static String[] row23= new String[100];
         private static String[] row24= new String[100];
         private static String[] row25= new String[100];
+    private static String[] row26= new String[100];
+    private static String[] row27= new String[100];
+    private static String[] row28= new String[100];
+    private static String[] row29= new String[100];
+    private static String[] row30= new String[100];
+    private static String[] row31= new String[100];
+    private static String[] row32= new String[100];
+    private static String[] row33= new String[100];
+    private static String[] row34= new String[100];
+
         private static String[] row9= new String[100];
         private static String[] row10= new String[100];
         private static String[] row11= new String[100];
@@ -36,6 +46,8 @@ public class getWorksheet {
         private static String[] row16= new String[100];
         private static String[] row17= new String[100];
         private static String[] row18= new String[100];
+    private static String[] row40= new String[100];
+    private static String[] row41= new String[100];
 
 
         private static int worksheetLength ;
@@ -85,13 +97,23 @@ public class getWorksheet {
                     int j=0;
 
                     for (int i = 0 ; i<getWorksheetLength() ; i++){
-                        row19[i] = jsonArray.getJSONObject(i).getString("row1");
-                        row20[i] = jsonArray.getJSONObject(i).getString("row2");
-                        row21[i] = jsonArray.getJSONObject(i).getString("row3");
-                        row22[i] = jsonArray.getJSONObject(i).getString("row4");
-                        row23[i] = jsonArray.getJSONObject(i).getString("row5");
-                        row24[i] = jsonArray.getJSONObject(i).getString("row6");
-                        row25[i] = jsonArray.getJSONObject(i).getString("row7");
+                        row19[i] = jsonArray.getJSONObject(i).getString("hostelName");
+                        row20[i] = jsonArray.getJSONObject(i).getString("hostelAddress");
+                        row21[i] = jsonArray.getJSONObject(i).getString("hostelPhoto");
+                        row22[i] = jsonArray.getJSONObject(i).getString("vacancyName");
+                        row23[i] = jsonArray.getJSONObject(i).getString("vacancySalary");
+                        row24[i] = jsonArray.getJSONObject(i).getString("vacancyStartDate");
+                        row25[i] = jsonArray.getJSONObject(i).getString("vacancyEndDate");
+                        row26[i] = jsonArray.getJSONObject(i).getString("vacancyStartTime");
+                        row27[i] = jsonArray.getJSONObject(i).getString("vacancEndTime");
+                        row28[i] = jsonArray.getJSONObject(i).getString("vacancyNumPeople");
+                        row29[i] = jsonArray.getJSONObject(i).getString("vacancyJob");
+                        row30[i] = jsonArray.getJSONObject(i).getString("hostelOwnerName");
+                        row31[i] = jsonArray.getJSONObject(i).getString("hostelOwnerAccount");
+                        row32[i] = jsonArray.getJSONObject(i).getString("hostelOwnerPhone");
+                        row33[i] = jsonArray.getJSONObject(i).getString("vacancyDays");
+                        row34[i] = jsonArray.getJSONObject(i).getString("hostelRate");
+
                         Log.v("Row56", row20[i]);
                     }
                 } catch (Exception e) {
@@ -148,6 +170,8 @@ public class getWorksheet {
                         row16[i] = jsonArray.getJSONObject(i).getString("row4");
                         row17[i] = jsonArray.getJSONObject(i).getString("row5");
                         row18[i] = jsonArray.getJSONObject(i).getString("row6");
+                        row40[i] = jsonArray.getJSONObject(i).getString("row7");
+                        row41[i] = jsonArray.getJSONObject(i).getString("row8");
                         Log.v("Row5", row13[i]);
                     }
                 } catch (Exception e) {
@@ -239,6 +263,33 @@ public class getWorksheet {
         public static String getRow25(int i){
             return row25[i];
         }
+    public static String getRow26(int i){
+        return row26[i];
+    }
+    public static String getRow27(int i){
+        return row27[i];
+    }
+    public static String getRow28(int i){
+        return row28[i];
+    }
+    public static String getRow29(int i){
+        return row29[i];
+    }
+    public static String getRow30(int i){
+        return row30[i];
+    }
+    public static String getRow31(int i){
+        return row31[i];
+    }
+    public static String getRow32(int i){
+        return row32[i];
+    }
+    public static String getRow33(int i){
+        return row33[i];
+    }
+    public static String getRow34(int i){
+        return row34[i];
+    }
 
 
         public static String getRow9(int i){
@@ -271,4 +322,10 @@ public class getWorksheet {
         public static String getRow18(int i){
             return row18[i];
         }
+    public static String getRow40(int i){
+        return row40[i];
+    }
+    public static String getRow41(int i){
+        return row41[i];
+    }
     }
