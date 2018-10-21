@@ -49,7 +49,7 @@
                     android:layout_weight="1"
                     android:ellipsize="end"
                     android:singleLine="true"
-                    android:text="民宿名稱"
+                    android:text="@string/hotel_name"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -75,7 +75,7 @@
                     android:layout_weight="1"
                     android:ellipsize="end"
                     android:singleLine="true"
-                    android:text="民宿地址"
+                    android:text="@string/hotel_address"
                     android:textColor="#b0b0b0"
                     android:textSize="10sp" />
 
