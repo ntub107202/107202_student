@@ -32,12 +32,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="請詳細描述所遇到的問題，並留下常用的電子郵件信箱，我們會盡快聯繫您！" />
+            android:text="@string/reture_problem1" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="問題描述" />
+            android:text="@string/problem" />
 
         <EditText
             android:id="@+id/edit_problem"
@@ -45,7 +45,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="top|left"
-            android:hint="請輸入遇到問題的描述"
+            android:hint="@string/hint_problem"
             android:inputType="textMultiLine"
             android:minLines="10" />
         <Button
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="確認送出"
+            android:text="@string/sent"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

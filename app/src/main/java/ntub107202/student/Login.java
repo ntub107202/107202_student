@@ -2,6 +2,7 @@ package ntub107202.student;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -48,6 +49,14 @@ public class Login extends AppCompatActivity {
         buttonLogin = findViewById(R.id.button);
         email = (EditText) findViewById(R.id.editText4);
         password = (EditText) findViewById(R.id.editText6);
+
+        String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+        String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
+        if(! user.equals("") && ! pw.equals("")){
+            postATLogin();
+        }
+        Log.v("useraa", user);
+        Log.v("useraa", pw);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,6 +189,13 @@ public class Login extends AppCompatActivity {
                             String ret = parsePostLoginJSon(response);
                             if(ret.equals("成功"))
                             {
+                                String user = email.getText().toString();
+                                String pw = password.getText().toString();
+                                SharedPreferences pref = getSharedPreferences("userpw", MODE_PRIVATE);
+                                pref.edit()
+                                        .putString("USER", user)
+                                        .putString("PW", pw)
+                                        .commit();
                                 openBypass();
                             }
                             else {
@@ -234,5 +250,63 @@ public class Login extends AppCompatActivity {
 
         }
         return "失敗";
+    }
+
+    private void postATLogin()
+    {
+        // Service的URL
+        String url = "http://140.131.114.153/postStudentLogin.php";
+
+        //對應Postman StringRequest -> content-type=不設置
+
+        StringRequest request = new StringRequest(Request.Method.POST,url,
+                new Response.Listener<String>()
+                {
+                    @Override
+                    //respone = php回應的結果
+                    public void onResponse(String response)
+                    {
+                        Log.i("Log","result:" + response);
+                        try {
+                            String ret = parsePostLoginJSon(response);
+                            if(ret.equals("成功"))
+                            {
+                                openBypass();
+                            }
+                            else {
+                                Log.i("Log","帳密錯誤");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    // Request失敗處理
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+        )
+        {
+            @Override
+
+
+            //=postman keyvalue (formdata)
+            protected Map<String, String> getParams() {
+                Map<String, String> param = new HashMap<>();
+                String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+                String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
+                param.put("row1", user);
+                param.put("row2", pw);
+
+                return param;
+            }
+        };
+        // 將request放到RequestQueue，Volley會以非同步方式送出request
+        ApplicationController.getInstance().addToRequestQueue(request);
     }
 }
