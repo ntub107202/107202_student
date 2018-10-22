@@ -61,7 +61,7 @@ public class Fragment_Forum extends Fragment{
         fab.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Forum_add.class);
+                Intent intent = new Intent(getActivity(),Forum_Add.class);
                 startActivity(intent);
             }
         });

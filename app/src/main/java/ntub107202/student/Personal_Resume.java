@@ -15,15 +15,19 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
-public class Personal_resume extends AppCompatActivity {
+public class Personal_Resume extends AppCompatActivity {
     private Button startCameraButton = null;
     private Button choiceFromAlbumButton = null;
     private ImageView pictureImageView = null;
@@ -38,6 +42,11 @@ public class Personal_resume extends AppCompatActivity {
     private Uri photoUri = null;
     private Uri photoOutputUri = null; // 图片最终的输出文件的 Uri
 
+    private static String pic1;
+    private static String pic2;
+
+    private ImageButton imageButton1 = null;
+    private ImageView choiceFromAlbumButton2 = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,19 +56,38 @@ public class Personal_resume extends AppCompatActivity {
         choiceFromAlbumButton = (Button) findViewById(R.id.button7);
         choiceFromAlbumButton.setOnClickListener(clickListener);
         pictureImageView = (ImageView) findViewById(R.id.imageView10);
+        choiceFromAlbumButton2 = (ImageView) findViewById(R.id.imageView6);
+        choiceFromAlbumButton2.setOnClickListener(clickListener);
 
+        //计算图片左右间距之和
+        int padding = 15;
+        int spacePx = (int) (UIUtil.dp2px(this, padding) * 2);
+        //计算图片宽度
+        int imageWidth = UIUtil.getScreenWidth(this) - spacePx;
+        //计算宽高比，注意数字后面要加上f表示浮点型数字
+        float scale = 16f / 9f;
+        float scale2 = 16f / 9f;
+        //根据图片宽度和比例计算图片高度
+        int imageHeight = (int) (imageWidth / scale);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams( imageWidth,imageHeight);
+        //设置左右边距
+        params.leftMargin = (int) UIUtil.dp2px(this, padding);
+        params.rightMargin = (int) UIUtil.dp2px(this, padding);
+        choiceFromAlbumButton2.setLayoutParams(params);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+
 
         /*
          * 先判断用户以前有没有对我们的应用程序允许过读写内存卡内容的权限，
          * 用户处理的结果在 onRequestPermissionResult 中进行处理
          */
-        if(ContextCompat.checkSelfPermission(Personal_resume.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        if(ContextCompat.checkSelfPermission(Personal_Resume.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             // 申请读写内存卡内容的权限
-            ActivityCompat.requestPermissions(Personal_resume.this,
+            ActivityCompat.requestPermissions(Personal_Resume.this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_SDCARD_PERMISSION_REQUEST_CODE);
         }
     }
@@ -69,12 +97,12 @@ public class Personal_resume extends AppCompatActivity {
             // 调用相机拍照
             if(v == startCameraButton) {
                 // 同上面的权限申请逻辑
-                if(ContextCompat.checkSelfPermission(Personal_resume.this, Manifest.permission.CAMERA)
+                if(ContextCompat.checkSelfPermission(Personal_Resume.this, Manifest.permission.CAMERA)
                         != PackageManager.PERMISSION_GRANTED) {
                     /*
                      * 下面是对调用相机拍照权限进行申请
                      */
-                    ActivityCompat.requestPermissions(Personal_resume.this,
+                    ActivityCompat.requestPermissions(Personal_Resume.this,
                             new String[]{Manifest.permission.CAMERA,}, TAKE_PHOTO_PERMISSION_REQUEST_CODE);
                 } else {
                     startCamera();
@@ -82,6 +110,9 @@ public class Personal_resume extends AppCompatActivity {
                 // 从相册获取
             } else if(v == choiceFromAlbumButton) {
                 choiceFromAlbum();
+            }
+            else if(v == choiceFromAlbumButton2) {
+                choiceFromAlbum2();
             }
         }
     };
@@ -130,7 +161,13 @@ public class Personal_resume extends AppCompatActivity {
         choiceFromAlbumIntent.setType("image/*");
         startActivityForResult(choiceFromAlbumIntent, CHOICE_FROM_ALBUM_REQUEST_CODE);
     }
-
+    private void choiceFromAlbum2() {
+        // 打开系统图库的 Action，等同于: "android.intent.action.GET_CONTENT"
+        Intent choiceFromAlbumIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        // 设置数据类型为图片类型
+        choiceFromAlbumIntent.setType("image/*");
+        startActivityForResult(choiceFromAlbumIntent, 6);
+    }
     /**
      * 裁剪图片
      */
@@ -153,7 +190,18 @@ public class Personal_resume extends AppCompatActivity {
                 photoOutputUri = Uri.parse("file:////sdcard/image_output.jpg"));
         startActivityForResult(cropPhotoIntent, CROP_PHOTO_REQUEST_CODE);
     }
-
+    private void cropPhoto2(Uri inputUri) {
+        // 调用系统裁剪图片的 Action
+        Intent cropPhotoIntent = new Intent("com.android.camera.action.CROP");
+        // 设置数据Uri 和类型
+        cropPhotoIntent.setDataAndType(inputUri, "image/*");
+        // 授权应用读取 Uri，这一步要有，不然裁剪程序会崩溃
+        cropPhotoIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        // 设置图片的最终输出目录
+        cropPhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+                photoOutputUri = Uri.parse("file:////sdcard/image_output.jpg"));
+        startActivityForResult(cropPhotoIntent, 7);
+    }
     /**
      * 在这里进行用户权限授予结果处理
      * @param requestCode 权限要求码，即我们申请权限时传入的常量
@@ -213,7 +261,56 @@ public class Personal_resume extends AppCompatActivity {
                         Toast.makeText(this, "找不到照片", Toast.LENGTH_SHORT).show();
                     }
                     break;
+                case 6:
+                    cropPhoto2(data.getData());
+                    break;
+                // 裁剪图片
+                case 7:
+                    File file2 = new File(photoOutputUri.getPath());
+                    if(file2.exists()) {
+                        Bitmap bitmap = BitmapFactory.decodeFile(photoOutputUri.getPath());
+                        BitmapToString2(bitmap);
+                        choiceFromAlbumButton2.setImageBitmap(bitmap);
+//                        file.delete(); // 选取完后删除照片
+                    } else {
+                        Toast.makeText(this, "找不到照片", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+            }
             }
         }
+    public static String BitmapToString(Bitmap bitmap) {
+        String des = null;
+        try {
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+            out.flush();
+            out.close();
+            byte[] buffer = out.toByteArray();
+            byte[] encode = Base64.encode(buffer, Base64.DEFAULT);
+            des = new String(encode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        pic1=des;
+        return des;
+    }
+    public static String BitmapToString2(Bitmap bitmap) {
+        String des = null;
+        try {
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+            out.flush();
+            out.close();
+            byte[] buffer = out.toByteArray();
+            byte[] encode = Base64.encode(buffer, Base64.DEFAULT);
+            des = new String(encode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        pic2=des;
+        return des;
     }
 }
+
+
