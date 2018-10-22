@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="還沒有任何聯絡紀錄喔！"
+            android:text="@string/contacthistory_no_info"
             android:textColor="#CCCCCC"
             android:textSize="26dp" />
 

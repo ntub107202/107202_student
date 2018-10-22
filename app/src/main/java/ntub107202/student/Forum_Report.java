@@ -8,6 +8,6 @@ public class Forum_Report extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forum__report);
+        setContentView(R.layout.forum_report);
     }
 }

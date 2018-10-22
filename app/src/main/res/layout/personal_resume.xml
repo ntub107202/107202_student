@@ -38,7 +38,7 @@
             android:minHeight="0dp"
 
             android:minWidth="0dp"
-            android:text="儲存"
+            android:text="@string/store"
             android:textColor="@android:color/background_light"
             android:textSize="14sp" />
     </android.support.v7.widget.Toolbar>
@@ -96,7 +96,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_white"
-                    android:text="點擊選取大頭照"
+                    android:text="@string/pick_photo"
                     android:textColor="@color/fontDark" />
 
                 <Button
@@ -108,7 +108,7 @@
                     android:layout_marginRight="50dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_white"
-                    android:text="點擊拍攝大頭照"
+                    android:text="@string/take_pic"
                     android:textColor="@color/fontDark" />
             </LinearLayout>
 
@@ -129,7 +129,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
                 android:ems="10"
-                android:hint="請輸入您的姓名"
+                android:hint="@string/lbl_plzinputName"
                 android:inputType="textPersonName"
                 android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
                 android:textSize="18sp" />
@@ -160,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:buttonTint="@android:color/holo_blue_dark"
-                    android:text="男"
+                    android:text="@string/male"
                     android:textColor="@color/fontDark"
                     android:textSize="20dp" />
 
@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:buttonTint="@android:color/holo_red_light"
-                    android:text="女"
+                    android:text="@string/female"
                     android:textColor="@color/fontDark"
                     android:textSize="20dp" />
             </RadioGroup>
@@ -285,7 +285,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:text="就學狀態"
+                android:text="@string/lbl_state_study"
                 android:textSize="14sp" />
 
             <RadioGroup
@@ -381,7 +381,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="5dp"
-                    android:text="庭園整理"
+                    android:text="@string/og"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -389,7 +389,7 @@
                     android:id="@+id/checkBox2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="餐廳服務"
+                    android:text="@string/rs"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -398,7 +398,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:text="櫃台接待"
+                    android:text="@string/cr"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -415,7 +415,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="房務清潔"
+                    android:text="@string/rc"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -425,7 +425,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
-                    android:text="資料整理"
+                    android:text="@string/od"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -453,7 +453,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:text="網站管理"
+                    android:text="@string/web"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -463,7 +463,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:text="美術設計"
+                    android:text="@string/art"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -472,7 +472,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="攝影"
+                    android:text="@string/photograph"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -491,7 +491,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:text="園藝設計"
+                    android:text="@string/gardening"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -500,7 +500,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="料理"
+                    android:text="@string/cook"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -528,7 +528,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="機車駕照"
+                    android:text="@string/motorcycle"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -537,7 +537,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:text="汽車駕照"
+                    android:text="@string/car"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -564,7 +564,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="跳舞"
+                    android:text="@string/dance"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -573,7 +573,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="14dp"
-                    android:text="唱歌"
+                    android:text="@string/sing"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -582,7 +582,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="14dp"
-                    android:text="樂器"
+                    android:text="@string/music"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -609,7 +609,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="英語"
+                    android:text="@string/English"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -618,7 +618,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="14dp"
-                    android:text="日語"
+                    android:text="@string/Japanese"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -627,7 +627,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="14dp"
-                    android:text="閩南語"
+                    android:text="@string/Minnan"
                     android:textColor="@color/fontDark"
                     android:textSize="18sp" />
 
@@ -816,7 +816,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="請輸入聯絡人姓名"
+                android:hint="@string/lbl_inputName"
                 android:inputType="textPersonName" />
 
             <TextView
@@ -838,7 +838,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="請輸入電話號碼"
+                android:hint="@string/hint_phone"
                 android:inputType="textPersonName" />
 
             <TextView
@@ -858,7 +858,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:text="上傳生活照片"
+                android:text="@string/pick_photo"
                 android:textSize="14sp" />
 
             <ImageButton
