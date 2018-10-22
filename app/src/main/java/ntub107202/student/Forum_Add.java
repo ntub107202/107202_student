@@ -23,7 +23,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 
-public class Forum_add extends AppCompatActivity {
+public class Forum_Add extends AppCompatActivity {
     private Button startCameraButton = null;
     private Button choiceFromAlbumButton = null;
     private ImageView pictureImageView = null;
@@ -56,10 +56,10 @@ public class Forum_add extends AppCompatActivity {
          * 先判断用户以前有没有对我们的应用程序允许过读写内存卡内容的权限，
          * 用户处理的结果在 onRequestPermissionResult 中进行处理
          */
-        if(ContextCompat.checkSelfPermission(Forum_add.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        if(ContextCompat.checkSelfPermission(Forum_Add.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             // 申请读写内存卡内容的权限
-            ActivityCompat.requestPermissions(Forum_add.this,
+            ActivityCompat.requestPermissions(Forum_Add.this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_SDCARD_PERMISSION_REQUEST_CODE);
         }
     }
@@ -69,12 +69,12 @@ public class Forum_add extends AppCompatActivity {
             // 调用相机拍照
             if(v == startCameraButton) {
                 // 同上面的权限申请逻辑
-                if(ContextCompat.checkSelfPermission(Forum_add.this, Manifest.permission.CAMERA)
+                if(ContextCompat.checkSelfPermission(Forum_Add.this, Manifest.permission.CAMERA)
                         != PackageManager.PERMISSION_GRANTED) {
                     /*
                      * 下面是对调用相机拍照权限进行申请
                      */
-                    ActivityCompat.requestPermissions(Forum_add.this,
+                    ActivityCompat.requestPermissions(Forum_Add.this,
                             new String[]{Manifest.permission.CAMERA,}, TAKE_PHOTO_PERMISSION_REQUEST_CODE);
                 } else {
                     startCamera();

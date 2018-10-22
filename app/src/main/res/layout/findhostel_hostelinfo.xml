@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="民宿資訊"
+                android:text="@string/hotel_info"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
@@ -69,14 +69,14 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/fontDark"
                             android:textSize="20dp"
-                            android:text="民宿名稱"/>
+                            android:text="@string/hotel_name"/>
                         <TextView
                             android:id="@+id/txt_hostel_addr"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="16dp"
                             android:textColor="@color/fontDark"
-                            android:text="民宿地址"/>
+                            android:text="@string/hotel_address"/>
 
                     </LinearLayout>
 
@@ -84,7 +84,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="職缺資訊"
+                    android:text="@string/job_info"
                     android:textColor="@color/fontDark"
                     android:background="#CCCCCC"
                     android:padding="12dp"/>
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="職缺名稱"
+                    android:text="@string/job_title"
                     android:textColor="@color/txt_font"
                     android:textSize="12dp" />
 
@@ -103,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="職缺名稱"
+                    android:text="@string/job_title"
                     android:textColor="@color/fontDark" />
 
                 <TextView
@@ -111,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="待遇"
+                    android:text="@string/salary"
                     android:textColor="@color/txt_font"
                     android:textSize="12dp" />
 
@@ -120,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="金額/日"
+                    android:text="@string/salary_day"
                     android:textColor="@color/fontDark" />
 
                 <TextView
@@ -128,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="換宿時間"
+                    android:text="@string/time"
                     android:textColor="@color/txt_font"
                     android:textSize="12dp" />
 
@@ -198,7 +198,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="需求人數"
+                    android:text="@string/numder_people"
                     android:textColor="@color/txt_font"
                     android:textSize="12dp" />
                 <TextView
@@ -206,7 +206,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="需求人數"
+                    android:text="@string/numder_people"
                     android:textColor="@color/fontDark"/>
 
                 <TextView
@@ -238,14 +238,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="12dp"
-                    android:text="聯絡人"
+                    android:text="@string/contact"
                     android:textColor="@color/txt_font"/>
                 <TextView
                     android:id="@+id/txt_contact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="聯絡人"
+                    android:text="@string/contact"
                     android:textColor="@color/fontDark"/>
 
                 <TextView
@@ -253,14 +253,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="12dp"
-                    android:text="E-mail"
+                    android:text="@string/email"
                     android:textColor="@color/txt_font"/>
                 <TextView
                     android:id="@+id/txt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="信箱"
+                    android:text="@string/email"
                     android:textColor="@color/fontDark"/>
 
                 <TextView
@@ -268,14 +268,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="12dp"
-                    android:text="手機"
+                    android:text="@string/phone"
                     android:textColor="@color/txt_font"/>
                 <TextView
                     android:id="@+id/txt_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="電話號碼"
+                    android:text="@string/phone"
                     android:textColor="@color/fontDark"/>
                 <LinearLayout
                     android:layout_width="match_parent"

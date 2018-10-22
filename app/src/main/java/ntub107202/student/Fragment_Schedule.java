@@ -139,12 +139,12 @@ public class Fragment_Schedule extends Fragment {
                             flag = false;
                             TextView0002.setMaxLines(5);
                             TextView0002.setEllipsize(null); // 展开
-                            TextView33.setText("... 摺疊內容");
+                            TextView33.setText("摺疊內容");
                         } else {
                             flag = true;
                             TextView0002.setLines(1);
                             TextView0002.setEllipsize(TextUtils.TruncateAt.END); // 收缩
-                            TextView33.setText("... 查看更多");
+                            TextView33.setText("查看更多");
                         }
                     }
                 });

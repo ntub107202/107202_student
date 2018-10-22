@@ -61,7 +61,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
-                            android:text="劉家驤"
+                            android:text="@string/name"
                             android:textSize="24sp" />
 
                         <TextView
@@ -69,7 +69,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="10636011@ntub.edu.tw" />
+                            android:text="@string/email" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -81,14 +81,15 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="帳號狀態：" />
+                                android:text="@string/account_state" />
 
                             <TextView
                                 android:id="@+id/textView32"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="未綁定" />
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/unbound" />
 
                             <ImageButton
                                 android:id="@+id/imageButton"
@@ -136,7 +137,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="編輯履歷"
+                        android:text="@string/edit_resume"
                         android:textColor="@color/fontDark" />
 
 

@@ -61,7 +61,7 @@
                     android:layout_gravity="bottom|right"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="... 查看更多"
+                    android:text="@string/more"
                     android:textColor="#0066cc" />
 
             </LinearLayout>

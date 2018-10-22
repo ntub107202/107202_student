@@ -51,7 +51,7 @@
                         android:id="@+id/textView0001"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="劉家驤"
+                        android:text="@string/name"
                         android:textColor="#707487"
                         android:textSize="14sp" />
 
@@ -61,7 +61,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
-                        android:text="腳印民宿"
+                        android:text="@string/hotel_name"
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -108,7 +108,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:text="新北市瑞芳區九份輕便路95號2樓"
+                    android:text="@string/hotel_address"
                     android:textSize="10sp" />
 
                 <TextView
@@ -192,7 +192,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:text="個讚"
+                    android:text="@string/like"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -224,7 +224,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="... 查看更多"
+                    android:text="@string/more"
                     android:textColor="#0066cc" />
             </LinearLayout>
 
