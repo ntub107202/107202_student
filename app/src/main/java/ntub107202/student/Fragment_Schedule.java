@@ -103,7 +103,9 @@ public class Fragment_Schedule extends Fragment {
                 myDataset4.add(getWorksheet.getRow12(i));
                 myDataset5.add(getWorksheet.getRow8(i));
             }
-
+            if(myDataset10.size() == 0){
+                textView30.setVisibility(View.GONE);
+            }
 
 
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
