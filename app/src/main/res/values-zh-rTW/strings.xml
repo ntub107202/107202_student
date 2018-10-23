@@ -43,7 +43,6 @@
     <string name="about1">我們團隊希望可以藉由手機應用程式的開發讓打工換宿變得更方便也更有效率，並解決雙方資訊不對稱與安全性問題。</string>
     <string name="about2">作為一個媒合民宿主和學生的平台，我們的logo是一隻蜜蜂，同時也是個蜂巢，代表著學生與民宿主的關係。蜜蜂象徵著學生們在換宿時依舊能保持勤奮、自律、團隊工作的精神，六邊形的蜂巢象徵著民宿就像是學生們的第二個家。一家順順這個名字源自於我們對換宿的期望，大家像個一家人互相照顧，順心順利的相互合作。</string>
 
-
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -103,7 +102,6 @@
     <string name="phone">手機</string>
     <string name="hint_phone">請輸入電話</string>
 
-
     <string name="collection">收藏紀錄</string>
     <string name="hire_history">受雇紀錄</string>
     <string name="contact_history">聯絡紀錄</string>
@@ -127,7 +125,8 @@
     <string name="hint_problem">請輸入遇到問題的描述，越詳細越好喔！</string>
     <string name="sent">確認送出</string>
 
-    <string name="hotel_name">民宿店名</string>
+    <string name="hotel_name">民宿名稱</string>
+    <string name="hotel_info">民宿資訊</string>
     <string name="hotel_address">民宿地址</string>
     <string name="hotel_phone">民宿電話</string>
     <string name="license">營業執照</string>
@@ -240,5 +239,28 @@
     <string name="whisper">幫您尋找的是各地具有冒險精神，勇於嘗試新事物的小幫手。若您也願意嘗試新的事物，接受各地旅友離鄉背井，到你所愛的地方體驗你所愛的事物，歡迎跟我們聯繫！</string>
     <string name="student_reg">學生註冊</string>
     <string name="student_enter">學生入口</string>
-
+    <string name="work_days">換宿天數</string>
+    <string name="day">天</string>
+    <string name="pepole">人</string>
+    <string name="forum_add">心得撰寫</string>
+    <string name="post">發佈</string>
+    <string name="pick_photo">選取相片</string>
+    <string name="take_pic">拍攝相片</string>
+    <string name="pick_hotel">選取民宿</string>
+    <string name="share_fb">分享至FB</string>
+    <string name="hint_input_forum">輸入心得文字</string>
+    <string name="forum_edit">心得編輯</string>
+    <string name="edit">編輯</string>
+    <string name="more">查看更多</string>
+    <string name="like">喜歡</string>
+    <string name="week_work">以下為本週工作</string>
+    <string name="account_state">帳號狀態</string>
+    <string name="edit_resume">編輯履歷</string>
+    <string name="unbound">未綁定</string>
+    <string name="collection_no_info">還沒有任何收藏紀錄喔！</string>
+    <string name="contacthistory_no_info">還沒有任何聯絡紀錄喔！</string>
+    <string name="hirehistory_no_info">還沒有任何雇用紀錄喔！</string>
+    <string name="store">儲存</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
 </resources>

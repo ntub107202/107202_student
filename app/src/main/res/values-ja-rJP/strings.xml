@@ -1,5 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">一家順順</string>
+    <string name="title_people">履歴を編集</string>
+    <string name="title_publish">情報の公開</string>
+    <string name="title_work">作業の手配</string>
+    <string name="title_page">雇用者ページ</string>
+    <string name="lbl_indiv_info">個人情報</string>
+    <string name="lbl_upload_photo">大きな写真をアップロードする</string>
+    <string name="lbl_inputName">名前を入力してください</string>
+    <string name="lbl_plzinputName">あなたの名前を入力してください</string>
+    <string name="lbl_gender">ジェンダー</string>
+    <string name="lbl_birth">誕生日</string>
+    <string name="lbl_home">住宅地</string>
+    <string name="lbl_school">学校</string>
+    <string name="lbl_depart">部門名</string>
+    <string name="lbl_state_study">学校出席</string>
+    <string name="title_humansearch">タレント検索</string>
+    <string name="lbl_intro">自己紹介</string>
+    <string name="lbl_interest">インタレスト</string>
+    <string name="lbl_skill">一般技能</string>
+    <string name="lbl_pro_skill">プロのスキル</string>
+    <string name="lbl_drive">運転技術</string>
+    <string name="lbl_talentperf">タレントショー</string>
+    <string name="lbl_language">言語能力</string>
+    <string name="lbl_workexp">職務経験</string>
+    <string name="lbl_reason">ワーキングホリデーの理由</string>
+    <string name="lbl_eathabit">食べる習慣</string>
+    <string name="lbl_wrkperiod">ワーキングホリデーの期間</string>
+    <string name="lbl_contact">連絡先情報</string>
+    <string name="lbl_liang">連絡先</string>
+    <string name="lbl_phone">携帯電話</string>
+    <string name="lbl_lifephoto">人生の写真</string>
+    <string name="title_humaninfo">タレント情報</string>
+
+    <string name="title_bnb">宿泊施設を探す</string>
+    <string name="title_forum">エクスチェンジ体験</string>
+    <string name="title_schedule">作業スケジューリング</string>
+    <string name="title_student">個人ページ</string>
+    <string name="title_notice">通知設定</string>
+    <string name="schedule_no_info">就業予定はまだありません！</string>
+
+    <string name="about1">私たちのチームは、モバイルアプリケーションの開発により、より便利で効率的な作業と宿泊を実現し、情報の非対称性とセキュリティの問題を解決することを望んでいます。</string>
+    <string name="about2">仲人と学生のためのプラットフォームとして、私たちのロゴは学生と所有者の関係を表すハチとハイブです。 ミツバチは、学生が宿舎を変えたときに、勤勉さ、自己規律、チームワークの精神を維持することができると象徴しています。 一家順順の名前は、宿泊施設の変更が予想されているため、家族のようにお互いを気遣い、円滑かつ円滑に協力します。</string>
+
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="add_job">新しい求人情報</string>
+    <string name="publish_hotel">ホームステイの掲載</string>
+    <string name="job_info">求人情報</string>
+    <string name="job_title">役職</string>
+    <string name="hint_job_title">職名を入力してください</string>
+    <string name="salary">給料</string>
+    <string name="hint_salary">金額を入力してください</string>
+    <string name="salary_day">/ 日</string>
+    <string name="no">いいえ</string>
+    <string name="service">サービス</string>
+    <string name="stay">宿泊施設を含む</string>
+    <string name="snorkel">シュノーケリング</string>
+    <string name="food">食べるものを含む</string>
+    <string name="moto">機関車を提供する</string>
+    <string name="fish">釣り</string>
+    <string name="time">日付</string>
+    <string name="hint_date">クリックして日付を選択する</string>
+    <string name="time_1">タイムスロット 1</string>
+    <string name="hint_time">クリックして時間を選択する</string>
+    <string name="add_time">新しい時</string>
+    <string name="numder_people">必要人数</string>
+    <string name="hint_number_people">人数を入力してください</string>
+    <string name="work_content">作業内容</string>
+    <string name="work_item1">作業項目 1</string>
+    <string name="hint_work_content">あなたの仕事の内容を入力してください</string>
+    <string name="add_work_item">新しい項目</string>
+    <string name="skill">必要な技能</string>
+    <string name="general_skill">一般技能</string>
+    <string name="og">庭仕上げ</string>
+    <string name="cr">カウンター受信</string>
+    <string name="rc">ハウスキーピング</string>
+    <string name="od">データ編成</string>
+    <string name="rs">レストランサービス</string>
+    <string name="profession_skill">プロのスキル</string>
+    <string name="cook">料理</string>
+    <string name="art">アートデザイン</string>
+    <string name="photograph">写真</string>
+    <string name="web">ウェブサイト管理</string>
+    <string name="gardening">ガーデニング</string>
+    <string name="show">芸術的なパフォーマンス</string>
+    <string name="dance">ダンス</string>
+    <string name="sing">歌う</string>
+    <string name="music">楽器</string>
+    <string name="language_skill">言語能力</string>
+    <string name="English">英語</string>
+    <string name="Japanese">日本語</string>
+    <string name="Minnan">ミナン</string>
+    <string name="driving_skill">運転技術</string>
+    <string name="motorcycle">機関車運転免許証</string>
+    <string name="car">車の運転免許証</string>
+    <string name="publish_date">場所期間</string>
+    <string name="contact_info">応募方法</string>
+    <string name="contact">連絡先</string>
+    <string name="contact_name">連絡先の名前を入力してください</string>
+    <string name="email">E-mail</string>
+    <string name="hint_email">あなたのメールアドレスを入力してください</string>
+    <string name="phone">携帯電話</string>
+    <string name="hint_phone">電話番号を入力してください</string>
+
+    <string name="collection">コレクションレコード</string>
+    <string name="hire_history">雇用記録</string>
+    <string name="contact_history">連絡先レコード</string>
+    <string name="return_problem">問題を返す</string>
+    <string name="about">私たちについて</string>
+    <string name="specification">関連する仕様</string>
+    <string name="identity_change"> IDスイッチ</string>
+    <string name="login">ログイン</string>
+    <string name="register">レジスタ</string>
+
+    <string name="work_info">ジョブ情報</string>
+    <string name="work_title">作品タイトル</string>
+    <string name="work_type">作業タイプ</string>
+    <string name="everyday_work">ルーチン作業</string>
+    <string name="once_work">ワンタイム制作</string>
+    <string name="work_time">作業時間</string>
+    <string name="member">人員を調整する</string>
+
+    <string name="reture_problem1">遭遇した問題や条件を可能な限り記述してください。できるだけ早く関係するスタッフが対応します！ご協力いただきありがとうございます！ </string>
+    <string name="problem">問題の説明</string>
+    <string name="hint_problem">問題の説明を入力してください。より詳細な方が良いでしょう！ </string>
+    <string name="sent">送信確認</string>
+
+    <string name="hotel_name"> B＆B名</string>
+    <string name="hotel_info"> B＆B情報</string>
+    <string name="hotel_address"> B＆Bアドレス</string>
+    <string name="hotel_phone"> B＆B Phone </string>
+    <string name="license">ビジネスライセンス</string>
+    <string name="hotel_photo"> B＆B Photo </string>
+
+    <string name="name"> name </string>
+    <string name="basic_info">基本情報</string>
+
+    <string name="system_notice">システム通知</string>
+    <string name="message_notice">メッセージ通知</string>
+    <string name="hire_notice">採用通知</string>
+
+    <string name="sprc_no_info">まだ計画中です... </string>
+
+    <string name="inbox">受信トレイ</string>
+    <string name="inbox_no_info">雇用の招待状はまだ届いていません。 </string>
+
+    <string name="equipment">デバイス</string>
+    <string name="table">テーブル</string>
+    <string name="chair">議長</string>
+    <string name="wardrobe">クローゼット</string>
+    <string name="bed">ベッド</string>
+    <string name="refrigerator">冷蔵庫</string>
+    <string name="air_conditioning">空調</string>
+    <string name="tv">テレビ</string>
+    <string name="water_heater">温水器</string>
+    <string name="washing_machine">洗濯機</string>
+    <string name="wi_fi"> Wi-Fi </string>
+    <string name="ch4"> 4番目の</string>
+    <string name="gas">天然ガス</string>
+
+    <string-array name="address_list">
+        <item>基隆市</item>
+        <item>台北市</item>
+        <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>南投縣</item>
+        <item>彰化縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>宜蘭縣</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣</item>
+    </string-array>
+    <string name="spin_address">請選擇縣市</string>
+    <string name="spin_area">請選擇區域</string>
+
     <!--相關規範-->
     <string name="spe1">台北商業大学（以下、「北商大」という）が開発した「一家順順」アプリ（以下「APP」という）へようこそ。このアプリを入力すると、情報や情報を参照したりアクセスしたりすることができます。あなたは、以下の利用規約を読み、理解し、同意し、同意したものとします：</string>
     <string name="spe2">1、仕様の使用</string>
@@ -41,4 +231,41 @@
     <string name="spe38">6、該当する法律および管轄裁判所</string>
     <string name="spe39">本利用規約の解釈と適用、およびユーザーによる本アプリケーションの使用に起因する紛争または紛争は、台湾の法律に準拠します。</string>
 
+    <string name="hint_enter">直接アクセスしてください。</string>
+    <string name="hint_passwd">パスワードを入力してください</string>
+    <string name="hint_account">アカウントを入力してください</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="other_login">他の方法でログインする</string>
+    <string name="forget_passwd">パスワードを忘れましたか？ </string>
+    <string name="hint_confirm_passwd">パスワードを確認してください</string>
+    <string name="agree">アカウントを登録することに同意します</string>
+    <string name="create_account">学生アカウントを作成する</string>
+    <string name="whisper">あなたに冒険をしている小さなヘルパーを見つけて、新しいことを試す勇気を持っています。あなたが新しいものを試してみたいなら、あらゆる人生の旅行者を受け入れ、あなたが愛していることを体験するためにあなたの好きな場所に行って、私達に連絡してください！ </string>
+    <string name="student_reg">学生登録</string>
+    <string name="student_enter">学生の入り口</string>
+    <string name="work_days">滞在する日数</string>
+    <string name="day">日</string>
+    <string name="pepole">人々</string>
+    <string name="forum_add">経験執筆</string>
+    <string name="post">リリース</string>
+    <string name="pick_photo">写真を選択</string>
+    <string name="take_pic">写真を撮る</string>
+    <string name="pick_hotel"> B＆Bを選択</string>
+    <string name="share_fb"> FBに共有</string>
+    <string name="hint_input_forum">エクスペリエンステキストを入力してください</string>
+    <string name="forum_edit">経験編集</string>
+    <string name="edit">編集</string>
+    <string name="more">もっと見る</string>
+    <string name="like">好き</string>
+    <string name="week_work">今週の次の作品</string>
+    <string name="account_state">アカウントのステータス</string>
+    <string name="edit_resume">編集履歴</string>
+    <string name="unbound">アンバウンド</string>
+    <string name="collection_no_info">まだコレクションはありません！</string>
+    <string name="contacthistory_no_info">連絡先のレコードはまだありません！</string>
+    <string name="hirehistory_no_info">雇用記録はまだありません！</string>
+    <string name="store">ストレージ</string>
+    <string name="male">男性</string>
+    <string name="female">女性</string>
 </resources>

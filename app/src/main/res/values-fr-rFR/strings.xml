@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">一家順順</string>
+    <string name="title_people">Modifier l’historique</string>
+    <string name="title_publish">Publication d’informations</string>
+    <string name="title_work">Arrangement de travail</string>
+    <string name="title_page">Page Employeur</string>
+    <string name="lbl_indiv_info">Informations personnelles</string>
+    <string name="lbl_upload_photo">Télécharger une grande photo</string>
+    <string name="lbl_inputName">S’il vous plaît entrer un nom</string>
+    <string name="lbl_plzinputName">S’il vous plaît entrez votre nom</string>
+    <string name="lbl_gender">Genre</string>
+    <string name="lbl_birth">Anniversaire</string>
+    <string name="lbl_home">Adresse résidentielle</string>
+    <string name="lbl_school">Ecole</string>
+    <string name="lbl_depart">Nom du département</string>
+    <string name="lbl_state_study">La fréquentation scolaire</string>
+    <string name="title_humansearch">Recherche de talents</string>
+    <string name="lbl_intro">Auto-introduction</string>
+    <string name="lbl_interest">Intérêt</string>
+    <string name="lbl_skill">Compétence générale</string>
+    <string name="lbl_pro_skill">Compétences professionnelles</string>
+    <string name="lbl_drive">Compétences de conduite</string>
+    <string name="lbl_talentperf">Spectacle de talent</string>
+    <string name="lbl_language">Capacité en langue étrangère</string>
+    <string name="lbl_workexp">Expérience de travail</string>
+    <string name="lbl_reason">Raison du logement</string>
+    <string name="lbl_eathabit">Habitudes alimentaires</string>
+    <string name="lbl_wrkperiod">Pendant la période d’hébergement</string>
+    <string name="lbl_contact">Informations de contact</string>
+    <string name="lbl_liang">Personne à contacter</string>
+    <string name="lbl_phone">Téléphone portable</string>
+    <string name="lbl_lifephoto">Photo de la vie</string>
+    <string name="title_humaninfo">Informations sur les talents</string>
+
     <!--相關規範-->
     <string name="spe1">Bienvenue dans lapplication 一家順順 (ci-après dénommée APP) développée par l’Université nationale des affaires de Taipei (NTUB). Lorsque vous entrez dans cette application pour parcourir ou accéder aux informations, vous êtes Lisez, comprenez, acceptez et acceptez les termes et conditions suivants:</string>
     <string name="spe2">1, l’utilisation de spécifications</string>
