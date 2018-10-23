@@ -11,73 +11,49 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Findhostel_hostelinfo extends AppCompatActivity {
-    public TextView TextView0001, TextView0002, TextView0003, TextView0004, TextView0005,
-    TextView0006, TextView0007, TextView0008, TextView0009, TextView0010,
-            TextView0011, TextView0012, TextView0013;
-    public ImageView TextView0014;
+    public TextView hostelName, hostelAddr, jobTitle, salary, startDate,
+            endDate, startTime, endTime, numberOfPeople, work,
+            contact, email, phone;
+    public ImageView imgHostelPic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.findhostel_hostelinfo);
 
-        TextView0001 = (TextView) findViewById(R.id.txt_hostel_name);
-        TextView0002 = (TextView) findViewById(R.id.txt_hostel_addr);
-        TextView0003 = (TextView) findViewById(R.id.txt_job_title);
-        TextView0004 = (TextView) findViewById(R.id.txt_salary);
-        TextView0005 = (TextView) findViewById(R.id.start_date);
-        TextView0006 = (TextView) findViewById(R.id.end_date);
-        TextView0007 = (TextView) findViewById(R.id.startTime);
-        TextView0008 = (TextView) findViewById(R.id.endTime);
-        TextView0009 = (TextView) findViewById(R.id.txt_number_people);
-        TextView0010 = (TextView) findViewById(R.id.txt_work);
-        TextView0011 = (TextView) findViewById(R.id.txt_contact);
-        TextView0012 = (TextView) findViewById(R.id.txt_email);
-        TextView0013 = (TextView) findViewById(R.id.txt_phone);
-        TextView0014 = (ImageView) findViewById(R.id.imageView_hostel_pic);
+        Bundle bundle=getIntent().getExtras();
+        int position=bundle.getInt("position");
+
+        hostelName = (TextView) findViewById(R.id.txt_hostel_name);//row19
+        hostelAddr = (TextView) findViewById(R.id.txt_hostel_addr);//20
+        jobTitle = (TextView) findViewById(R.id.txt_job_title);//22
+        salary = (TextView) findViewById(R.id.txt_salary);//23
+        startDate = (TextView) findViewById(R.id.start_date);//24
+        endDate = (TextView) findViewById(R.id.end_date);//25
+        startTime = (TextView) findViewById(R.id.startTime);//26
+        endTime = (TextView) findViewById(R.id.endTime);//27
+        numberOfPeople = (TextView) findViewById(R.id.txt_number_people);//28
+        work = (TextView) findViewById(R.id.txt_work);//29
+        contact = (TextView) findViewById(R.id.txt_contact);//30
+        email = (TextView) findViewById(R.id.txt_email);//31
+        phone = (TextView) findViewById(R.id.txt_phone);//32
+        imgHostelPic = (ImageView) findViewById(R.id.imageView_hostel_pic);//21
 
 
-        Intent intent = getIntent();
-        String row1 = intent.getExtras().getString("hostelName");
-        String row2 = intent.getExtras().getString("hostelAddress");
-        String row3 = intent.getExtras().getString("hostelPhoto");
-        String row4 = intent.getExtras().getString("vacancyName");
-        String row5 = intent.getExtras().getString("vacancySalary");
-        String row6 = intent.getExtras().getString("vacancyStartDate");
-        String row7 = intent.getExtras().getString("vacancyEndDate");
-        String row8 = intent.getExtras().getString("vacancyStartTime");
-        String row9 = intent.getExtras().getString("vacancEndTime");
-        String row10 = intent.getExtras().getString("vacancyNumPeople");
-        String row11 = intent.getExtras().getString("vacancyJob");
-        String row12 = intent.getExtras().getString("hostelOwnerName");
-        String row13 = intent.getExtras().getString("hostelOwnerAccount");
-        String row14 = intent.getExtras().getString("hostelOwnerPhone");
-        String row15 = intent.getExtras().getString("vacancyDays");
-
-        Log.i("Log", "Register1:" + row1);
-        Log.i("Log", "Register2:" + row2);
-        Log.i("Log", "Register3:" + row3);
-        Log.i("Log", "Register4:" + row4);
-        Log.i("Log", "Register5:" + row5);
-        Log.i("Log", "Register6:" + row6);
-        Log.i("Log", "Register7:" + row7);
-
-
-        TextView0001.setText(row1);
-        TextView0002.setText(row2);
-        TextView0003.setText(row4);
-        TextView0004.setText(row5);
-        TextView0005.setText(row6);
-        TextView0006.setText(row7);
-        TextView0007.setText(row8);
-        TextView0008.setText(row9);
-        TextView0009.setText(row10);
-        TextView0010.setText(row11);
-        TextView0011.setText(row12);
-        TextView0012.setText(row13);
-        TextView0013.setText(row14);
-        TextView0014.setImageBitmap(stringToBitmap(row3));
-
+        hostelName.setText(getWorksheet.getRow19(position));
+        hostelAddr.setText(getWorksheet.getRow20(position));
+        jobTitle.setText(getWorksheet.getRow22(position));
+        salary.setText(getWorksheet.getRow23(position));
+        startDate.setText(getWorksheet.getRow24(position));
+        endDate.setText(getWorksheet.getRow25(position));
+        startTime.setText(getWorksheet.getRow26(position));
+        endTime.setText(getWorksheet.getRow27(position));
+        numberOfPeople.setText(getWorksheet.getRow28(position));
+        work.setText(getWorksheet.getRow29(position));
+        contact.setText(getWorksheet.getRow30(position));
+        email.setText(getWorksheet.getRow31(position));
+        phone.setText(getWorksheet.getRow32(position));
+        imgHostelPic.setImageBitmap(stringToBitmap(getWorksheet.getRow21(position)));
     }
         public Bitmap stringToBitmap(String string) {
             Bitmap bitmap = null;
