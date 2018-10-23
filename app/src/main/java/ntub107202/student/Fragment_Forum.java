@@ -56,7 +56,8 @@ public class Fragment_Forum extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_forum,container,false);
         mList = (RecyclerView)view.findViewById(R.id.list_view);
-
+        getWorksheet.gethostelnameJSON();
+        getWorksheet.getStudentnameJSON();
         FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab_go_to_forum_add) ;
         fab.setOnClickListener(new Button.OnClickListener(){
             @Override
