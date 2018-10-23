@@ -69,7 +69,7 @@ public class Register extends AppCompatActivity {
         findViewById(R.id.button13).setOnClickListener((v)->
         {
             postStudentRegister();
-
+            openLogin();
         });
 
     }
