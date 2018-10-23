@@ -3,10 +3,12 @@ package ntub107202.student;
 import android.util.Log;
 
 import ntub107202.student.Common.Common;
+import ntub107202.student.MyAsyncTask.NavigationAsyncTask;
 import ntub107202.student.MyAsyncTask.getAsyncTask;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask2;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask3;
+import ntub107202.student.MyAsyncTask.postUpdateAsyncTask4;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -14,7 +16,7 @@ import org.json.JSONObject;
 //-------------
 
 public class getWorksheet {
-
+        private  static  String Sname = new String();
         private static String[] row1= new String[100];
         private static String[] row2= new String[100];
         private static String[] row3= new String[100];
@@ -26,16 +28,17 @@ public class getWorksheet {
         private static String[] row23= new String[100];
         private static String[] row24= new String[100];
         private static String[] row25= new String[100];
-    private static String[] row26= new String[100];
-    private static String[] row27= new String[100];
-    private static String[] row28= new String[100];
-    private static String[] row29= new String[100];
-    private static String[] row30= new String[100];
-    private static String[] row31= new String[100];
-    private static String[] row32= new String[100];
-    private static String[] row33= new String[100];
-    private static String[] row34= new String[100];
-
+        private static String[] row26= new String[100];
+        private static String[] row27= new String[100];
+        private static String[] row28= new String[100];
+        private static String[] row29= new String[100];
+        private static String[] row30= new String[100];
+        private static String[] row31= new String[100];
+        private static String[] row32= new String[100];
+        private static String[] row33= new String[100];
+        private static String[] row34= new String[100];
+        private static String[] row35= new String[100];
+        private static String[] row36= new String[100];
         private static String[] row8= new String[100];
         private static String[] row9= new String[100];
         private static String[] row10= new String[100];
@@ -51,11 +54,15 @@ public class getWorksheet {
     private static String[] row40= new String[100];
     private static String[] row41= new String[100];
 
+    private static String[] row42= new String[100];
+
 
         private static int worksheetLength ;
         public static int scheduleLength;
         public static int forumLength;
         public static int hostelLength;
+        public static int hostelnameLength;
+        public static int studentnameLength;
 
         public static void getJSON() {
 
@@ -186,6 +193,53 @@ public class getWorksheet {
         });
         myAsyncTask.execute(Common.getForum);
     }
+
+    public static void gethostelnameJSON() {
+
+        getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    hostelnameLength = worksheetLength;
+                    int j=0;
+
+                    for (int i = 0 ; i<getWorksheetLength() ; i++){
+                        row36[i] = jsonArray.getJSONObject(i).getString("row1");
+                        row35[i] = jsonArray.getJSONObject(i).getString("row2");
+                        Log.v("66668", getWorksheet.row36[i]);
+//                        Log.v("66668", getWorksheet.row35[i]);
+
+                    }
+                } catch (Exception e) {
+                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myAsyncTask.execute(Common.getHostelname);
+    }
+
+    public static void getStudentnameJSON() {
+
+        NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    for (int i = 0 ; i<getWorksheetLength() ; i++){
+                        row42[i] = jsonArray.getJSONObject(i).getString("row1");
+                    }
+                } catch (Exception e) {
+//                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myNavigationAsyncTask.execute(Common.getStudentname, Login.getUser());
+    }
         public static void postToPHP(String row1, String row2, String row3) {
             postUpdateAsyncTask myAsyncTask = new postUpdateAsyncTask(new postUpdateAsyncTask.TaskListener() {
                 @Override
@@ -217,6 +271,17 @@ public class getWorksheet {
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
             myAsyncTask.execute(Common.postCalendar ,row1,row2,row3,row4,row5);
+        }
+    }
+    public static void postToForum(String row1, String row2, String row3, String row4, String row5, String row6) {
+        postUpdateAsyncTask4 myAsyncTask = new postUpdateAsyncTask4(new postUpdateAsyncTask4.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postForum ,row1,row2,row3,row4,row5,row6);
         }
     }
     public static void postToQuestion(String row1) {
@@ -268,34 +333,39 @@ public class getWorksheet {
         public static String getRow25(int i){
             return row25[i];
         }
-    public static String getRow26(int i){
-        return row26[i];
-    }
-    public static String getRow27(int i){
-        return row27[i];
-    }
-    public static String getRow28(int i){
-        return row28[i];
-    }
-    public static String getRow29(int i){
-        return row29[i];
-    }
-    public static String getRow30(int i){
-        return row30[i];
-    }
-    public static String getRow31(int i){
-        return row31[i];
-    }
-    public static String getRow32(int i){
-        return row32[i];
-    }
-    public static String getRow33(int i){
-        return row33[i];
-    }
-    public static String getRow34(int i){
-        return row34[i];
-    }
-
+        public static String getRow26(int i){
+            return row26[i];
+        }
+        public static String getRow27(int i){
+            return row27[i];
+        }
+        public static String getRow28(int i){
+            return row28[i];
+        }
+        public static String getRow29(int i){
+            return row29[i];
+        }
+        public static String getRow30(int i){
+            return row30[i];
+        }
+        public static String getRow31(int i){
+            return row31[i];
+        }
+        public static String getRow32(int i){
+            return row32[i];
+        }
+        public static String getRow33(int i){
+            return row33[i];
+        }
+        public static String getRow34(int i){
+            return row34[i];
+        }
+        public static String getRow35(int i){
+            return row35[i];
+        }
+        public static String getRow36(int i){
+            return row36[i];
+        }
         public static String getRow8(int i){
         return row8[i];
     }
@@ -334,5 +404,9 @@ public class getWorksheet {
     }
     public static String getRow41(int i){
         return row41[i];
+    }
+
+    public static String getRow42(int i){
+        return row42[i];
     }
     }

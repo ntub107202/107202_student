@@ -29,6 +29,7 @@ public class NavigationActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_forum:
                     getWorksheet.getForumJSON();
+                    getWorksheet.getStudentnameJSON();
                     mTextMessage.setText(R.string.title_forum);
                     showNav(R.id.navigation_forum);
                     return true;

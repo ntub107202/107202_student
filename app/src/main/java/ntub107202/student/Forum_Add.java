@@ -15,13 +15,27 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
+import android.text.format.DateFormat;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Time;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Forum_Add extends AppCompatActivity {
     private Button startCameraButton = null;
@@ -38,10 +52,15 @@ public class Forum_Add extends AppCompatActivity {
     private Uri photoUri = null;
     private Uri photoOutputUri = null; // 图片最终的输出文件的 Uri
 
+    private static String pic1;
+    private static String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forum_add);
+        getWorksheet.gethostelnameJSON();
+        getWorksheet.getStudentnameJSON();
+
         startCameraButton = (Button) findViewById(R.id.button8);
         startCameraButton.setOnClickListener(clickListener);
         choiceFromAlbumButton = (Button) findViewById(R.id.button7);
@@ -51,6 +70,80 @@ public class Forum_Add extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        Button button11 = (Button) findViewById(R.id.button11);
+        ImageView imageView10 = (ImageView) findViewById(R.id.imageView10);
+        EditText editText2 = (EditText) findViewById(R.id.editText2);
+        Calendar mCal = Calendar.getInstance();
+        CharSequence s = DateFormat.format("yyyy-MM-dd kk:mm:ss", mCal.getTime());
+
+        TextView textView3 = (TextView) findViewById(R.id.textView3);
+        final Spinner choose_hostel = (Spinner)findViewById(R.id.choose_hostel);
+        final ArrayList<String> myList2 = new ArrayList<String>();
+        for(int i = 0; i < getWorksheet.hostelnameLength; i++) {
+            myList2.add(getWorksheet.getRow36(i));
+//            Log.v("88989898",getWorksheet.getRow36(i));
+//            Log.v("88989898",myList2.get(i));
+        }
+        getWorksheet.getStudentnameJSON();
+        textView3.setText(getWorksheet.getRow42(0));
+//        Log.v("666666666", getWorksheet.getRow42(0));
+
+
+        ArrayAdapter<String> myList = new ArrayAdapter<String>(Forum_Add.this,
+                android.R.layout.simple_spinner_dropdown_item,
+                myList2);
+
+        choose_hostel.setAdapter(myList);
+        Date date = new Date();
+        SimpleDateFormat bartDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String str = bartDateFormat.format(date);
+        Log.v("time", str.toString());
+        Log.v("post", Login.getUser());
+        Log.v("post",getWorksheet.getRow35((int)choose_hostel.getSelectedItemId()));
+        Log.v("post", str);
+        Log.v("post", editText2.getText().toString());
+//        Log.v("post", pic1);
+        //--------------------------
+        //取得伺服器上JSON資料
+        //--------------------------
+        button11.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v("post", Login.getUser());
+                Log.v("post",getWorksheet.getRow35((int)choose_hostel.getSelectedItemId()));
+                Log.v("post", str);
+                Log.v("post", editText2.getText().toString());
+                Log.v("post", pic1);
+                String good = "0" ;
+                //choose_hostel.getSelectedItem().toString(),
+//                getWorksheet.postToForum("1", "1", "2011-09-05" , "1", "1" , "1");
+                getWorksheet.postToForum(Login.getUser(), getWorksheet.getRow35((int)choose_hostel.getSelectedItemId()).toString(), str , good, editText2.getText().toString() , pic1);
+
+//                getWorksheet.getJSON();
+//                getWorksheet.getHostelJSON();
+//                getWorksheet.getscheduleJSON();
+//                getWorksheet.getForumJSON();
+                Intent intent = new Intent(Forum_Add.this,NavigationActivity.class);
+                intent.putExtra("id",2);
+                startActivity(intent);
+            }
+        });
+
+        choose_hostel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+               Toast.makeText(Forum_Add.this, "你選的是" + choose_hostel.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
+
+
 
         /*
          * 先判断用户以前有没有对我们的应用程序允许过读写内存卡内容的权限，
@@ -200,6 +293,7 @@ public class Forum_Add extends AppCompatActivity {
                     File file = new File(photoOutputUri.getPath());
                     if(file.exists()) {
                         Bitmap bitmap = BitmapFactory.decodeFile(photoOutputUri.getPath());
+                        BitmapToString(bitmap);
                         pictureImageView.setImageBitmap(bitmap);
 //                        file.delete(); // 选取完后删除照片
                     } else {
@@ -208,6 +302,24 @@ public class Forum_Add extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    public static String BitmapToString(Bitmap bitmap) {
+        String des = null;
+        try {
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+            out.flush();
+            out.close();
+            byte[] buffer = out.toByteArray();
+            byte[] encode = Base64.encode(buffer, Base64.DEFAULT);
+            des = new String(encode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        pic1=des;
+        Log.v("555555555",pic1);
+        return des;
     }
 }
 

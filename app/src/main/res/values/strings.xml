@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="hostelname">請選取民宿</string>
+    <string-array name="hostelnamelist">
+        <item></item>
+    </string-array>
+
     <string name="app_name">一家順順</string>
     <string name="title_people">編輯履歷</string>
     <string name="title_publish">刊登資訊</string>

@@ -38,6 +38,7 @@ public class Login extends AppCompatActivity {
     private EditText password;
     private String valid_email;
     private String valid_password;
+    private static String user ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +51,8 @@ public class Login extends AppCompatActivity {
         email = (EditText) findViewById(R.id.editText4);
         password = (EditText) findViewById(R.id.editText6);
 
-        String user = getSharedPreferences("userpwS", MODE_PRIVATE).getString("USER", "");
-        String pw = getSharedPreferences("userpwS", MODE_PRIVATE).getString("PW", "");
+        user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+        String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
         if(! user.equals("") && ! pw.equals("")){
             postATLogin();
         }
@@ -80,6 +81,7 @@ public class Login extends AppCompatActivity {
         });
 
     }
+    public static String getUser(){return user;}
     public void openBypass(){
         Intent intent =new Intent(this, Bypass.class);
         startActivity(intent);
