@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hostelname">請選取民宿</string>
     <string-array name="hostelnamelist">
@@ -190,7 +191,6 @@
     </string-array>
     <string name="spin_address">請選擇縣市</string>
     <string name="spin_area">請選擇區域</string>
-
 
 
     <!--相關規範-->

@@ -1,6 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">一家順順</string>
+    <string name="title_people">Edit Resume</string>
+    <string name="title_publish">Publish Information</string>
+    <string name="title_work">Work Calender</string>
+    <string name="title_page">Boss Page</string>
+    <string name="lbl_indiv_info">Personal Information</string>
+    <string name="lbl_upload_photo">Upload Sticker</string>
+    <string name="lbl_inputName">Please enter your name</string>
+    <string name="lbl_plzinputName">Please enter your name</string>
+    <string name="lbl_gender">Gender</string>
+    <string name="lbl_birth">Birthday</string>
+    <string name="lbl_home">Residential Address</string>
+    <string name="lbl_school">Current School</string>
+    <string name="lbl_depart">Department</string>
+    <string name="lbl_state_study">School State</string>
+    <string name="title_humansearch">Talent Search</string>
+    <string name="lbl_intro">Self Introduction</string>
+    <string name="lbl_interest">Interest</string>
+    <string name="lbl_skill">Skill</string>
+    <string name="lbl_pro_skill">Profession Skill</string>
+    <string name="lbl_drive">Drive Skill</string>
+    <string name="lbl_talentperf">Art Show</string>
+    <string name="lbl_language">Language</string>
+    <string name="lbl_workexp">Work Experience</string>
+    <string name="lbl_reason">Reason Of Work Exchange</string>
+    <string name="lbl_eathabit">Eating Habits</string>
+    <string name="lbl_wrkperiod">During Work Exchange</string>
+    <string name="lbl_contact">Contact Way</string>
+    <string name="lbl_liang">Contact Person</string>
+    <string name="lbl_phone">Phone</string>
+    <string name="lbl_lifephoto">Daily Life Photo</string>
+    <string name="title_humaninfo">Talent Information</string>
+
+    <string name="title_bnb">Find Hotel</string>
+    <string name="title_forum">Exchange experience</string>
+    <string name="title_schedule">Work scheduling</string>
+    <string name="title_student">Personal page</string>
+    <string name="title_notice">Notification settings </string>
+    <string name="schedule_no_info">No work schedule yet! </string>
+
+    <string name="about1">Our team hopes that the development of mobile applications will make working and more convenient and more efficient, and solve the problem of information asymmetry and security. </string>
+    <string name="about2">As a platform for matchmakers and students, our logo is a bee and a hive, representing the relationship between the student and the owner. The bees symbolize that students can still maintain the spirit of diligence, self-discipline and teamwork when they change accommodation. The hexagonal hive symbolizes that the home is like the second home of the students. The name of a Shun Shun is derived from our expectation of a change of accommodation. Everyone cares for each other like a family, and cooperates smoothly and smoothly. </string>
+
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="add_job">Add Publish Information</string>
+    <string name="publish_hotel">Publish Hotel</string>
+    <string name="job_info">Job Information</string>
+    <string name="job_title">Job name</string>
+    <string name="hint_job_title">Please enter job name</string>
+    <string name="salary">Salary</string>
+    <string name="hint_salary">Please enter the amount</string>
+    <string name="salary_day">/ Day</string>
+    <string name="no">No</string>
+    <string name="service">Service</string>
+    <string name="stay">Place to stay</string>
+    <string name="snorkel">Snorkeling</string>
+    <string name="food">Eating</string>
+    <string name="moto">Scooter</string>
+    <string name="fish">Fishing</string>
+    <string name="time">Date</string>
+    <string name="hint_date">Click to select date</string>
+    <string name="time_1">Time 1</string>
+    <string name="hint_time">Click to select time</string>
+    <string name="add_time">Add Time</string>
+    <string name="numder_people">Number Of People</string>
+    <string name="hint_number_people">Please enter number of people</string>
+    <string name="work_content">Work Content</string>
+    <string name="work_item1">Work Item 1</string>
+    <string name="hint_work_content">Please enter work content</string>
+    <string name="add_work_item">Add Item</string>
+    <string name="skill">Required Skills</string>
+    <string name="general_skill">General Skills</string>
+    <string name="og">Organize Garden</string>
+    <string name="cr">Counter Reception</string>
+    <string name="rc">Room Clean</string>
+    <string name="od">Organize Data</string>
+    <string name="rs">Restaurant Service</string>
+    <string name="profession_skill">Professional Skills</string>
+    <string name="cook">Cooking</string>
+    <string name="art">Art Design</string>
+    <string name="photograph">Photography</string>
+    <string name="web">Website Management</string>
+    <string name="gardening">Gardening</string>
+    <string name="show">Art Show</string>
+    <string name="dance">Dance</string>
+    <string name="sing">Sing</string>
+    <string name="music">Musical Instrument</string>
+    <string name="language_skill">Languages</string>
+    <string name="English">English</string>
+    <string name="Japanese">Japanese</string>
+    <string name="Minnan">Minnan</string>
+    <string name="driving_skill">Driving Skills</string>
+    <string name="motorcycle">Scooter driver’s license</string>
+    <string name="car">Car driver’s license</string>
+    <string name="publish_date">Publish Date</string>
+    <string name="contact_info">Contact Information</string>
+    <string name="contact">Contact Person</string>
+    <string name="contact_name">Please enter contact person name</string>
+    <string name="email">E-mail</string>
+    <string name="hint_email">Please enter e-mail</string>
+    <string name="phone">Phone</string>
+    <string name="hint_phone">Please enter phone number</string>
+
+    <string name="collection">Collection history</string>
+    <string name="hire_history">Hire history</string>
+    <string name="contact_history">contact history</string>
+    <string name="return_problem">Return problem </string>
+    <string name="about">About us</string>
+    <string name="specification">Specifications </string>
+    <string name="identity_change">Identity switch </string>
+    <string name="login">Login</string>
+    <string name="register">Register </string>
+
+    <string name="work_info">Job information </string>
+    <string name="work_title">Work title </string>
+    <string name="work_type">Work Type</string>
+    <string name="everyday_work">Everyday</string>
+    <string name="once_work">Once</string>
+    <string name="work_time">Work Time</string>
+    <string name="member">Member</string>
+
+    <string name="reture_problem1">Please describe as much as possible the problems and conditions encountered, the relevant staff will deal with as soon as possible! Thank you for your cooperation and assistance! </string>
+    <string name="problem"> problem description </string>
+    <string name="hint_problem">Please enter a description of the problem, the more detailed the better! </string>
+    <string name="sent">confirm send </string>
+
+    <string name="hotel_name">Hotel name</string>
+    <string name="hotel_info">Hotel information</string>
+    <string name="hotel_address">Hotel address</string>
+    <string name="hotel_phone">Hotel Phone </string>
+    <string name="license">Business license </string>
+    <string name="hotel_photo">Hotel Photo </string>
+
+    <string name="name">Name</string>
+    <string name="basic_info">Basic information </string>
+
+    <string name="system_notice">System notification </string>
+    <string name="message_notice">Message notification </string>
+    <string name="hire_notice">Hiring notice</string>
+
+    <string name="sprc_no_info"> Still in the process of planning...</string>
+
+    <string name="inbox">Inbox </string>
+    <string name="inbox_no_info">Now haven’t received any employment invitations yet! </string>
+
+    <string name="equipment">Device</string>
+    <string name="table">Table</string>
+    <string name="chair">Chair</string>
+    <string name="wardrobe">Closet</string>
+    <string name="bed">Bed</string>
+    <string name="refrigerator">Fridge</string>
+    <string name="air_conditioning">Air-conditioning</string>
+    <string name="tv">TV</string>
+    <string name="water_heater">Water heater </string>
+    <string name="washing_machine">Washing machine</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="ch4">Channel four</string>
+    <string name="gas">Natural gas</string>
+
+    <string-array name="address_list">
+        <item>基隆市</item>
+        <item>台北市</item>
+        <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>南投縣</item>
+        <item>彰化縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>宜蘭縣</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣</item>
+    </string-array>
+    <string name="spin_address">Please select the county</string>
+    <string name="spin_area">Please select the area</string>
+
     <!--相關規範-->
+    <string name="spe1">Welcome to the 一家順順 application (hereinafter referred to as "APP") developed by National Taipei University of Business (hereinafter referred to as "NTUB"). When you enter this app to browse or access it The information and information means that you have read, understood, accepted and agreed to the following terms and conditions:</string>
     <string name="spe2"> 1, use specification </string>
     <string name="spe3">Your user agrees: </string>
     <string name="spe4">Follow any applicable laws, agreed terms, and good manners, and respect the privacy of others. </string>
@@ -40,4 +231,41 @@
     <string name="spe38">6, the law of law and the court of jurisdiction </string>
     <string name="spe39">The interpretation and application of this "Rules and Statements of Use" and the disputes or disputes arising out of the use of this App by your users shall be in accordance with the laws of Taiwan. deal with. </string>
 
+    <string name="hint_enter">Direct access please click me </string>
+    <string name="hint_passwd">Please enter a password </string>
+    <string name="hint_account">Please enter an account </string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="other_login">Login in other ways</string>
+    <string name="forget_passwd">Forgot your password? </string>
+    <string name="hint_confirm_passwd">Please confirm the password </string>
+    <string name="agree">I agree to register an account</string>
+    <string name="create_account">Create student account </string>
+    <string name="whisper">Helps you find small helpers who are adventurous and have the courage to try new things. If you are willing to try new things, accept travellers from all walks of life and go to your favorite places to experience what you love, welcome to contact us! </string>
+    <string name="student_reg">Student registration </string>
+    <string name="student_enter"> student entrance </string>
+    <string name="work_days">days to stay</string>
+    <string name="day">day</string>
+    <string name="pepole">people</string>
+    <string name="forum_add"> Experience writing</string>
+    <string name="post">Post</string>
+    <string name="pick_photo">Select photo</string>
+    <string name="take_pic"> take a photo</string>
+    <string name="pick_hotel">Select Hotel</string>
+    <string name="share_fb">Share to FB</string>
+    <string name="hint_input_forum"> enter the experience text </string>
+    <string name="forum_edit">Experience editing</string>
+    <string name="edit">edit</string>
+    <string name="more">View more </string>
+    <string name="like">Likes </string>
+    <string name="week_work">The following work for this week</string>
+    <string name="account_state">Account Status</string>
+    <string name="edit_resume">Edit resume</string>
+    <string name="unbound">Unbound</string>
+    <string name="collection_no_info">No collections yet!</string>
+    <string name="contacthistory_no_info">No contact records yet!</string>
+    <string name="hirehistory_no_info">No employment records yet!</string>
+    <string name="store">Storage</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
 </resources>

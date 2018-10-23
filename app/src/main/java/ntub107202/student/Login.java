@@ -193,7 +193,7 @@ public class Login extends AppCompatActivity {
                             {
                                 String user = email.getText().toString();
                                 String pw = password.getText().toString();
-                                SharedPreferences pref = getSharedPreferences("userpw", MODE_PRIVATE);
+                                SharedPreferences pref = getSharedPreferences("userpwS", MODE_PRIVATE);
                                 pref.edit()
                                         .putString("USER", user)
                                         .putString("PW", pw)
@@ -300,8 +300,8 @@ public class Login extends AppCompatActivity {
             //=postman keyvalue (formdata)
             protected Map<String, String> getParams() {
                 Map<String, String> param = new HashMap<>();
-                String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
-                String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
+                String user = getSharedPreferences("userpwS", MODE_PRIVATE).getString("USER", "");
+                String pw = getSharedPreferences("userpwS", MODE_PRIVATE).getString("PW", "");
                 param.put("row1", user);
                 param.put("row2", pw);
 
