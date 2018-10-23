@@ -202,8 +202,6 @@
         android:layout_height="50dp"
         android:background="#ffffff"
         android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="16dp"
         android:orientation="horizontal">
 
         <TextView
@@ -244,8 +242,9 @@
 
         <TextView
             android:id="@+id/ok"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:gravity="center"

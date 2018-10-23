@@ -17,7 +17,7 @@
     <string name="title_humansearch">人才搜尋</string>
     <string name="lbl_intro">自我介紹</string>
     <string name="lbl_interest">興趣</string>
-    <string name="lbl_skill">一般技能(可複選)</string>
+    <string name="lbl_skill">一般技能</string>
     <string name="lbl_pro_skill">專業技能</string>
     <string name="lbl_drive">駕駛技能</string>
     <string name="lbl_talentperf">才藝表演</string>
@@ -48,6 +48,61 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="publish_hotel">刊登民宿</string>
+    <string name="job_info">職缺資訊</string>
+    <string name="job_title">職缺名稱</string>
+    <string name="salary">待遇</string>
+    <string name="salary_day">/ 日</string>
+    <string name="no">無</string>
+    <string name="service">其他待遇</string>
+    <string name="stay">包含住宿</string>
+    <string name="snorkel">浮潛</string>
+    <string name="food">包含吃食</string>
+    <string name="moto">提供機車</string>
+    <string name="fish">釣魚</string>
+    <string name="time">時間</string>
+    <string name="hint_date">點擊選擇日期</string>
+    <string name="time_1">時段 1</string>
+    <string name="hint_time">點擊選擇時間</string>
+    <string name="add_time">新增時段</string>
+    <string name="numder_people">需求人數</string>
+    <string name="hint_number_people">請輸入人數</string>
+    <string name="work_content">工作內容</string>
+    <string name="work_item1">工作項目 1</string>
+    <string name="skill">所需技能</string>
+    <string name="general_skill">一般技能</string>
+    <string name="og">庭園整理</string>
+    <string name="cr">櫃台接待</string>
+    <string name="rc">房務清潔</string>
+    <string name="od">資料整理</string>
+    <string name="rs">餐廳服務</string>
+    <string name="profession_skill">專業技能</string>
+    <string name="cook">料理</string>
+    <string name="art">美術設計</string>
+    <string name="photograph">攝影</string>
+    <string name="web">網站管理</string>
+    <string name="gardening">園藝</string>
+    <string name="show">藝術表演</string>
+    <string name="dance">舞蹈</string>
+    <string name="sing">唱歌</string>
+    <string name="music">樂器演奏</string>
+    <string name="language_skill">語言能力</string>
+    <string name="English">英文</string>
+    <string name="Japanese">日文</string>
+    <string name="Minnan">閩南語</string>
+    <string name="driving_skill">駕駛技能</string>
+    <string name="motorcycle">機車駕照</string>
+    <string name="car">汽車駕照</string>
+    <string name="publish_date">刊登期間</string>
+    <string name="contact_info">應徵方式</string>
+    <string name="contact">聯絡人</string>
+    <string name="contact_name">請輸入聯絡人姓名</string>
+    <string name="email">E-mail</string>
+    <string name="hint_email">請輸入電子信箱</string>
+    <string name="phone">手機</string>
+    <string name="hint_phone">請輸入電話</string>
+
+
     <string name="collection">收藏紀錄</string>
     <string name="hire_history">受雇紀錄</string>
     <string name="contact_history">聯絡紀錄</string>
@@ -58,6 +113,29 @@
     <string name="login">登入</string>
     <string name="register">註冊</string>
 
+    <string name="work_info">工作資訊</string>
+    <string name="work_title">工作標題</string>
+    <string name="work_type">工作類型</string>
+    <string name="everyday_work">日常性工作</string>
+    <string name="once_work">一次性工作</string>
+    <string name="work_time">工作時間</string>
+    <string name="member">安排人員</string>
+
+    <string name="reture_problem1">請盡可能詳細描述所遇到的問題與狀況，相關工作人員會盡快處理！感謝您的配合與協助！</string>
+    <string name="problem">問題描述</string>
+    <string name="hint_problem">請輸入遇到問題的描述，越詳細越好喔！</string>
+    <string name="sent">確認送出</string>
+
+    <string name="hotel_name">民宿名稱</string>
+    <string name="hotel_info">民宿資訊</string>
+    <string name="hotel_address">民宿地址</string>
+    <string name="hotel_phone">民宿電話</string>
+    <string name="license">營業執照</string>
+    <string name="hotel_photo">民宿照片</string>
+
+    <string name="name">姓名</string>
+    <string name="basic_info">基本資訊</string>
+
     <string name="system_notice">系統通知</string>
     <string name="message_notice">訊息通知</string>
     <string name="hire_notice">雇用通知</string>
@@ -66,6 +144,49 @@
 
     <string name="inbox">收件匣</string>
     <string name="inbox_no_info">現在還沒收到任何雇用邀請喔！</string>
+
+    <string name="equipment">設備</string>
+    <string name="table">桌子</string>
+    <string name="chair">椅子</string>
+    <string name="wardrobe">衣櫃</string>
+    <string name="bed">床</string>
+    <string name="refrigerator">冰箱</string>
+    <string name="air_conditioning">冷氣</string>
+    <string name="tv">電視</string>
+    <string name="water_heater">熱水器</string>
+    <string name="washing_machine">洗衣機</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="ch4">第四台</string>
+    <string name="gas">天然瓦斯</string>
+
+    <string-array name="address_list">
+        <item>基隆市</item>
+        <item>台北市</item>
+        <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>南投縣</item>
+        <item>彰化縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>宜蘭縣</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣</item>
+    </string-array>
+    <string name="spin_address">請選擇縣市</string>
+    <string name="spin_area">請選擇區域</string>
+
+
 
     <!--相關規範-->
     <string name="spe1">歡迎使用國立台北商業大學（以下稱「北商大」）所開發之「一家順順」應用程式（以下稱「APP」），當您進入本APP瀏覽或存取其中之資料與資訊，即表示您已閱讀、瞭解、接受並同意遵守以下條款與條件：</string>
@@ -108,5 +229,42 @@
     <string name="spe38">六、準據法及管轄法院</string>
     <string name="spe39">本「使用規範與聲明」之解釋與適用，以及與本「使用規範與聲明」有關或 貴用戶因使用本APP而產生之爭議或糾紛，應依照臺灣之法律予以處理。</string>
 
+    <string name="hint_enter">直接進入請點我</string>
+    <string name="hint_passwd">請輸入密碼</string>
+    <string name="hint_account">請輸入帳號</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="other_login">以其他方式登入</string>
+    <string name="forget_passwd">忘記密碼？</string>
+    <string name="hint_confirm_passwd">請確認密碼</string>
+    <string name="agree">我同意註冊帳戶</string>
+    <string name="create_account">創建學生帳戶</string>
+    <string name="whisper">幫您尋找的是各地具有冒險精神，勇於嘗試新事物的小幫手。若您也願意嘗試新的事物，接受各地旅友離鄉背井，到你所愛的地方體驗你所愛的事物，歡迎跟我們聯繫！</string>
+    <string name="student_reg">學生註冊</string>
+    <string name="student_enter">學生入口</string>
+    <string name="work_days">換宿天數</string>
+    <string name="day">天</string>
+    <string name="pepole">人</string>
+    <string name="forum_add">心得撰寫</string>
+    <string name="post">發佈</string>
+    <string name="pick_photo">選取相片</string>
+    <string name="take_pic">拍攝相片</string>
+    <string name="pick_hotel">選取民宿</string>
+    <string name="share_fb">分享至FB</string>
+    <string name="hint_input_forum">輸入心得文字</string>
+    <string name="forum_edit">心得編輯</string>
+    <string name="edit">編輯</string>
+    <string name="more">查看更多</string>
+    <string name="like">喜歡</string>
+    <string name="week_work">以下為本週工作</string>
+    <string name="account_state">帳號狀態</string>
+    <string name="edit_resume">編輯履歷</string>
+    <string name="unbound">未綁定</string>
+    <string name="collection_no_info">還沒有任何收藏紀錄喔！</string>
+    <string name="contacthistory_no_info">還沒有任何聯絡紀錄喔！</string>
+    <string name="hirehistory_no_info">還沒有任何雇用紀錄喔！</string>
+    <string name="store">儲存</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
 
 </resources>

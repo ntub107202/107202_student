@@ -135,12 +135,12 @@ public class Fragment_Forum extends Fragment{
                             flag = false;
                             TextView0005.setMaxLines(10);
                             TextView0005.setEllipsize(null); // 展开
-                            TextView33.setText("... 摺疊內容");
+                            TextView33.setText("摺疊內容");
                         } else {
                             flag = true;
                             TextView0005.setLines(1);
                             TextView0005.setEllipsize(TextUtils.TruncateAt.END); // 收缩
-                            TextView33.setText("... 查看更多");
+                            TextView33.setText("查看更多");
                         }
                     }
                 });

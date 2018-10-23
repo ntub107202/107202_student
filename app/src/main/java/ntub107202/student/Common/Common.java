@@ -17,6 +17,6 @@ public class Common {
     public static String postCalendar="http://140.131.114.153/postCalendar";
     public static String postQuestion="http://140.131.114.153/postQuestion";
     public static String getHostel="http://140.131.114.153/getHostel";
-    public static String getSchedule="http://140.131.114.153/getSchedule";
+    public static String getSchedule="http://140.131.114.153/getSchedule0";
     public static String getForum="http://140.131.114.153/getForum";
 }
