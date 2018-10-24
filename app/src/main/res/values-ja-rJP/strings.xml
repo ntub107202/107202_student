@@ -268,4 +268,8 @@
     <string name="store">ストレージ</string>
     <string name="male">男性</string>
     <string name="female">女性</string>
+
+    <string name="logout">ログアウト</string>
+    <string name="accept">同意する</string>
+    <string name="denied">拒否</string>
 </resources>

@@ -263,4 +263,8 @@
     <string name="store">儲存</string>
     <string name="male">男</string>
     <string name="female">女</string>
+
+    <string name="logout">登出</string>
+    <string name="accept">接受</string>
+    <string name="denied">拒絕</string>
 </resources>

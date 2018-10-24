@@ -268,4 +268,8 @@
     <string name="store"> storage </string>
     <string name="male"> male </string>
     <string name="female"> female </string>
+
+    <string name="logout">logout</string>
+    <string name="accept">accept</string>
+    <string name="denied">rechazar</string>
 </resources>
