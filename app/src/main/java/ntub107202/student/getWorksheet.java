@@ -53,11 +53,14 @@ public class getWorksheet {
         private static String[] row17= new String[100];
         private static String[] row18= new String[100];
 
-    private static String[] row40= new String[100];
-    private static String[] row41= new String[100];
+        private static String[] row40= new String[100];
+        private static String[] row41= new String[100];
 
-    private static String[] row42= new String[100];
+        private static String[] row42= new String[100];
+        private static String[] row43= new String[100];
 
+        public static String username;
+        public static String userpic;
 
         private static int worksheetLength ;
         public static int scheduleLength;
@@ -233,9 +236,16 @@ public class getWorksheet {
                 try {
                     JSONObject object = new JSONObject(result);
                     JSONArray jsonArray = object.getJSONArray("result");
-                    for (int i = 0 ; i<getWorksheetLength() ; i++){
-                        row42[i] = jsonArray.getJSONObject(i).getString("row1");
+                    for (int i = 0 ; i<1 ; i++){
+                        row42[0] = jsonArray.getJSONObject(0).getString("row1");
+                        row43[0] = jsonArray.getJSONObject(0).getString("row2");
+                        Log.v("QQQQQQ42",row42[0]);
+                        Log.v("QQQQQQ43",row43[0]);
                     }
+                    username =row42[0];
+                    userpic = row43[0];
+                    Log.v("QQQQQQ42",username);
+                    Log.v("QQQQQQ43",userpic);
                 } catch (Exception e) {
 //                    Log.v("ABC", Log.getStackTraceString(e));
                 }
@@ -243,6 +253,8 @@ public class getWorksheet {
         });
         myNavigationAsyncTask.execute(Common.getStudentname, Login.getUser());
     }
+            public static String getusername(){return username;}
+            public static String getuserpic(){return userpic;}
         public static void postToPHP(String row1, String row2, String row3) {
             postUpdateAsyncTask myAsyncTask = new postUpdateAsyncTask(new postUpdateAsyncTask.TaskListener() {
                 @Override
@@ -415,14 +427,17 @@ public class getWorksheet {
         public static String getRow18(int i){
             return row18[i];
         }
-    public static String getRow40(int i){
-        return row40[i];
-    }
-    public static String getRow41(int i){
-        return row41[i];
-    }
+        public static String getRow40(int i){
+            return row40[i];
+        }
+        public static String getRow41(int i){
+            return row41[i];
+        }
 
-    public static String getRow42(int i){
-        return row42[i];
-    }
+        public static String getRow42(int i){
+            return row42[i];
+        }
+        public static String getRow43(int i){
+            return row43[i];
+        }
     }

@@ -51,9 +51,10 @@ public class Login extends AppCompatActivity {
         email = (EditText) findViewById(R.id.editText4);
         password = (EditText) findViewById(R.id.editText6);
 
-        user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
-        String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
+        user = getSharedPreferences("userpwS", MODE_PRIVATE).getString("USER", "");
+        String pw = getSharedPreferences("userpwS", MODE_PRIVATE).getString("PW", "");
         if(! user.equals("") && ! pw.equals("")){
+
             postATLogin();
         }
         Log.v("useraa", user);
@@ -273,6 +274,7 @@ public class Login extends AppCompatActivity {
                             String ret = parsePostLoginJSon(response);
                             if(ret.equals("成功"))
                             {
+                                getWorksheet.getStudentnameJSON();
                                 openBypass();
                             }
                             else {
