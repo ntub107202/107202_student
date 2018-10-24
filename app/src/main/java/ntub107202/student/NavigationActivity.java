@@ -1,11 +1,20 @@
 package ntub107202.student;
 
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class NavigationActivity extends AppCompatActivity {
@@ -29,7 +38,7 @@ public class NavigationActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_forum:
                     getWorksheet.getForumJSON();
-                    getWorksheet.getStudentnameJSON();
+//                    getWorksheet.getStudentnameJSON();
                     mTextMessage.setText(R.string.title_forum);
                     showNav(R.id.navigation_forum);
                     return true;
@@ -61,12 +70,42 @@ public class NavigationActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setPositiveButton("點擊關閉", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        final AlertDialog dialog = builder.create();
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogLayout = inflater.inflate(R.layout.ad_banner, null);
+        dialog.setView(dialogLayout);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        dialog.show();
+
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface d) {
+                ImageView image = (ImageView) dialog.findViewById(R.id.goProDialogImage);
+                Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                        R.drawable.ad2);
+                float imageWidthInPX = (float)image.getWidth();
+
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(Math.round(imageWidthInPX),
+                        Math.round(imageWidthInPX * (float)icon.getHeight() / (float)icon.getWidth()));
+                image.setLayoutParams(layoutParams);
+
+
+            }
+        });
     }
     @Override
     public void onResume() {
         getWorksheet.getscheduleJSON();
         getWorksheet.getForumJSON();
         getWorksheet.getHostelJSON();
+        getWorksheet.getStudentnameJSON();
         int id = getIntent().getIntExtra("id", 0);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();

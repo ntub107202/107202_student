@@ -59,7 +59,7 @@ public class Forum_Add extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forum_add);
         getWorksheet.gethostelnameJSON();
-        getWorksheet.getStudentnameJSON();
+//        getWorksheet.getStudentnameJSON();
 
         startCameraButton = (Button) findViewById(R.id.button8);
         startCameraButton.setOnClickListener(clickListener);
@@ -77,6 +77,7 @@ public class Forum_Add extends AppCompatActivity {
         Calendar mCal = Calendar.getInstance();
         CharSequence s = DateFormat.format("yyyy-MM-dd kk:mm:ss", mCal.getTime());
 
+        ImageView imageView = (ImageView)findViewById(R.id.imageView);
         TextView textView3 = (TextView) findViewById(R.id.textView3);
         final Spinner choose_hostel = (Spinner)findViewById(R.id.choose_hostel);
         final ArrayList<String> myList2 = new ArrayList<String>();
@@ -85,8 +86,10 @@ public class Forum_Add extends AppCompatActivity {
 //            Log.v("88989898",getWorksheet.getRow36(i));
 //            Log.v("88989898",myList2.get(i));
         }
-        getWorksheet.getStudentnameJSON();
+//        getWorksheet.getStudentnameJSON();
         textView3.setText(getWorksheet.getRow42(0));
+        imageView.setImageBitmap(stringToBitmap(getWorksheet.getRow43(0)));
+                Log.v("QQQQQQ",getWorksheet.getRow42(0));
 //        Log.v("666666666", getWorksheet.getRow42(0));
 
 
@@ -133,7 +136,7 @@ public class Forum_Add extends AppCompatActivity {
         choose_hostel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               Toast.makeText(Forum_Add.this, "你選的是" + choose_hostel.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+//               Toast.makeText(Forum_Add.this, "你選的是" + choose_hostel.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -320,6 +323,20 @@ public class Forum_Add extends AppCompatActivity {
         pic1=des;
         Log.v("555555555",pic1);
         return des;
+    }
+
+    public Bitmap stringToBitmap(String string) {
+        Bitmap bitmap = null;
+        try {
+            byte[] bitmapArray = Base64.decode(string, Base64.DEFAULT);
+            bitmap = BitmapFactory.decodeByteArray(bitmapArray, 0, bitmapArray.length);
+            return bitmap;
+        } catch (NullPointerException e) {
+            e.getMessage();
+            return null;
+        } catch (OutOfMemoryError e) {
+            return null;
+        }
     }
 }
 
