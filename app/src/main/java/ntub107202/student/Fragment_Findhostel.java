@@ -160,7 +160,7 @@ public class Fragment_Findhostel extends Fragment {
                 spnDistrict.setAdapter(cityDistrict);
                 district = spnDistrict.getSelectedItem().toString();
                 myAdapter.getFilter().filter(city);
-                Toast.makeText(getActivity().getBaseContext(), "你選的是" + city + district, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity().getBaseContext(), "你選的是" + city + district, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -176,7 +176,7 @@ public class Fragment_Findhostel extends Fragment {
                 district = spnDistrict.getSelectedItem().toString();
                 myAdapter.getFilter().filter(city);
 
-                Toast.makeText(getActivity().getBaseContext(), "你選的是" + city + district, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity().getBaseContext(), "你選的是" + city + district, Toast.LENGTH_SHORT).show();
             }
 
             @Override
