@@ -1,5 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">一家順順</string>
+    <string name="title_people">editar historial</string>
+    <string name="title_publish">publicando información</string>
+    <string name="title_work">acuerdo de trabajo</string>
+    <string name="title_page">página del empleador</string>
+    <string name="lbl_indiv_info">Información personal</string>
+    <string name="lbl_upload_photo">Cargar una foto grande</string>
+    <string name="lbl_inputName">Ingrese un nombre</string>
+    <string name="lbl_plzinputName">Ingrese su nombre</string>
+    <string name="lbl_gender">gender</string>
+    <string name="lbl_birth">cumpleaños</string>
+    <string name="lbl_home">lugar de residencia</string>
+    <string name="lbl_school">escuela</string>
+    <string name="lbl_depart">nombre del departamento</string>
+    <string name="lbl_state_study">estado de la escuela</string>
+    <string name="title_humansearch">Búsqueda de talento</string>
+    <string name="lbl_intro">auto introducción</string>
+    <string name="lbl_interest">interest</string>
+    <string name="lbl_skill">Habilidades generales</string>
+    <string name="lbl_pro_skill">Habilidades profesionales</string>
+    <string name="lbl_drive">habilidades de conducción</string>
+    <string name="lbl_talentperf">show de talentos</string>
+    <string name="lbl_language">Habilidad de idioma extranjero</string>
+    <string name="lbl_workexp">experiencia laboral</string>
+    <string name="lbl_reason">Motivo de reemplazo</string>
+    <string name="lbl_eathabit">hábitos alimenticios</string>
+    <string name="lbl_wrkperiod">durante el período de alojamiento</string>
+    <string name="lbl_contact">Contacto </string>
+    <string name="lbl_liang">Contacto</string>
+    <string name="lbl_phone">móvil</string>
+    <string name="lbl_lifephoto">Foto de vida</string>
+    <string name="title_humaninfo">Información de talento</string>
+
+    <string name="title_bnb">buscar alojamiento</string>
+    <string name="title_forum">experiencia de intercambio</string>
+    <string name="title_schedule">programación de trabajos</string>
+    <string name="title_student">página personal</string>
+    <string name="title_notice"> Configuración de notificación </string>
+    <string name="schedule_no_info"> ¡Aún no hay horario de trabajo! </string>
+
+    <string name="about1">Nuestro equipo espera que el desarrollo de las aplicaciones móviles haga que funcione, sea más conveniente y más eficiente, y resuelva el problema de la asimetría y la seguridad de la información.</string>
+    <string name="about2">Como una plataforma para casamenteras y estudiantes, nuestro logo es una colmena y una abeja, que representa la relación entre el estudiante y el propietario. Las abejas simbolizan que los estudiantes aún pueden mantener el espíritu de diligencia, autodisciplina y trabajo en equipo cuando cambian de alojamiento. La colmena hexagonal simboliza que el hogar es como el segundo hogar de los estudiantes.Este nombre se deriva de nuestra expectativa de acomodación, todos, como una familia, se cuidan mutuamente y cooperan sin problemas entre ellos.</string>
+
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="add_job">Agregar un nuevo trabajo</string>
+    <string name="publish_hotel">casas publicadas</string>
+    <string name="job_info">información del trabajo</string>
+    <string name="job_title">nombre del trabajo</string>
+    <string name="hint_job_title">Ingrese el nombre del título del trabajo</string>
+    <string name="salary">treatment</string>
+    <string name="hint_salary">Ingrese una cantidad numérica</string>
+    <string name="salary_day">/ day</string>
+    <string name="no">no</string>
+    <string name="service">Otro tratamiento</string>
+    <string name="stay">contiene alojamiento</string>
+    <string name="snorkel">snorkeling</string>
+    <string name="food">contiene comer</string>
+    <string name="moto">proporcionar locomotora</string>
+    <string name="fish">pesca</string>
+    <string name="time">time</string>
+    <string name="hint_date">Haga clic para seleccionar la fecha</string>
+    <string name="time_1">período de tiempo 1</string>
+    <string name="hint_time">Haz clic para seleccionar el tiempo</string>
+    <string name="add_time">nuevo período de tiempo</string>
+    <string name="numder_people">número de personas requeridas</string>
+    <string name="hint_number_people">Ingrese el número de personas</string>
+    <string name="work_content">contenido de trabajo</string>
+    <string name="work_item1">elemento de trabajo 1</string>
+    <string name="hint_work_content">Ingrese el contenido del trabajo</string>
+    <string name="add_work_item">Agregar un nuevo elemento </string>
+    <string name="skill">habilidades requeridas</string>
+    <string name="general_skill">habilidades generales</string>
+    <string name="og">Acabado de jardín</string>
+    <string name="cr">recepción del mostrador</string>
+    <string name="rc">limpieza del servicio de limpieza</string>
+    <string name="od">intercalación de datos</string>
+    <string name="rs">servicio de restaurante</string>
+    <string name="profession_skill">habilidades profesionales</string>
+    <string name="cook">cocinar</string>
+    <string name="art">diseño de arte</string>
+    <string name="photograph">fotografía</string>
+    <string name="web">administración del sitio</string>
+    <string name="gardening">jardinería</string>
+    <string name="show">rendimiento artístico</string>
+    <string name="dance">dance</string>
+    <string name="sing">singing</string>
+    <string name="music">rendimiento del instrumento musical</string>
+    <string name="language_skill">capacidad del lenguaje</string>
+    <string name="English">Inglés</string>
+    <string name="Japanese">japonés</string>
+    <string name="Minnan">Minnan</string>
+    <string name="driving_skill">habilidades de conducción</string>
+    <string name="motorcycle">licencia de conducir de locomotora</string>
+    <string name="car">licencia de conducir del automóvil</string>
+    <string name="publish_date">período de publicación</string>
+    <string name="contact_info">método de aplicación</string>
+    <string name="contact">Contacto</string>
+    <string name="contact_name">Ingrese el nombre del contacto</string>
+    <string name="email">Correo electrónico</string>
+    <string name="hint_email">Ingrese la dirección de correo electrónico de contacto</string>
+    <string name="phone">phone</string>
+    <string name="hint_phone">Ingrese el número de teléfono de contacto</string>
+
+    <string name="collection"> Registro de colección </string>
+    <string name="hire_history"> registro de empleo </string>
+    <string name="contact_history"> registro de contacto </string>
+    <string name="return_problem"> return problem </string>
+    <string name="about"> about us </string>
+    <string name="specification"> especificaciones relacionadas </string>
+    <string name="identity_change"> interruptor de identidad </string>
+    <string name="login"> login </string>
+    <string name="register"> register </string>
+
+    <string name="work_info"> información del trabajo </string>
+    <string name="work_title"> título del trabajo </string>
+    <string name="work_type"> tipo de trabajo </string>
+    <string name="everyday_work"> rutina de trabajo </string>
+    <string name="once_work"> trabajo de una sola vez </string>
+    <string name="work_time"> time working </string>
+    <string name="member"> organizar personal </string>
+
+    <string name="reture_problem1"> Por favor, describa lo más posible los problemas y las condiciones encontradas, ¡el personal relevante se ocupará de ello lo antes posible! ¡Gracias por su cooperación y asistencia! </string>
+    <string name="problem"> descripción del problema </string>
+    <string name="hint_problem"> Por favor ingrese una descripción del problema, ¡cuanto más detallado mejor! </string>
+    <string name="sent"> confirmar enviar </string>
+
+    <string name="hotel_name"> nombre de B＆B </string>
+    <string name="hotel_info"> información del B＆B </string>
+    <string name="hotel_address"> dirección de B＆B </string>
+    <string name="hotel_phone"> B＆B Phone </string>
+    <string name="license"> licencia comercial </string>
+    <string name="hotel_photo"> B＆B Photo </string>
+        
+    <string name="name"> name </string>
+    <string name="basic_info"> Información básica </string>
+        
+    <string name="system_notice"> notificación del sistema </string>
+    <string name="message_notice"> Notificación de mensaje </string>
+    <string name="hire_notice"> aviso de contratación </string>
+        
+    <string name="sprc_no_info"> aún en proceso de planificación ... </string>
+        
+    <string name="inbox"> inbox </string>
+    <string name="inbox_no_info"> ¡Ahora todavía no he recibido ninguna invitación de empleo! </string>
+
+    <string name="equipment">Equipo</string>
+    <string name="table">Tabla</string>
+    <string name="chair">Presidente</string>
+    <string name="wardrobe">Armario</string>
+    <string name="bed">Cama</string>
+    <string name="refrigerator">Refrigerador</string>
+    <string name="air_conditioning">Aire acondicionado</string>
+    <string name="tv">Televisión</string>
+    <string name="water_heater">Calentador de agua</string>
+    <string name="washing_machine">Lavadora</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="ch4">Canal 4</string>
+    <string name="gas">Gas natural</string>
+
+    <string-array name="address_list">
+        <item>基隆市</item>
+        <item>台北市</item>
+        <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>南投縣</item>
+        <item>彰化縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>宜蘭縣</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣</item>
+    </string-array>
+    <string name="spin_address">Por favor seleccione el condado</string>
+    <string name="spin_area">Por favor seleccione una región</string>
+
     <!--相關規範-->
     <string name="spe1"> Bienvenido a la aplicación 一家順順 (en adelante, APP) desarrollada por la Universidad Nacional de Negocios de Taipei (en adelante, "NTUB"). Cuando ingresa esta aplicación para navegar o acceder a ella La información e información significa que ha leído, comprendido, aceptado y aceptado los siguientes términos y condiciones: </string>
     <string name="spe2"> 1, use la especificación </string>
@@ -41,4 +231,45 @@
     <string name="spe38"> 6, ley aplicable y tribunal de jurisdicción </string>
     <string name="spe39"> La interpretación y aplicación de estas "Reglas y declaraciones de uso" y las disputas o disputas que surjan del uso de esta Aplicación por parte de sus usuarios serán de acuerdo con las leyes de Taiwán. Procesamiento. </string>
 
+    <string name="hint_enter"> Acceso directo, haga clic en mí </string>
+    <string name="hint_passwd"> Introduzca una contraseña </string>
+    <string name="hint_account"> Ingrese una cuenta </string>
+    <string name="facebook"> Facebook </string>
+    <string name="google"> Google </string>
+    <string name="other_login"> Inicie sesión de otras maneras </string>
+    <string name="forget_passwd"> ¿Olvidó su contraseña? </string>
+    <string name="hint_confirm_passwd"> Confirme la contraseña </string>
+    <string name="agreement"> Acepto registrar una cuenta </string>
+    <string name="create_account"> Crear cuenta de estudiante </string>
+    <string name="whisper"> Lo ayuda a encontrar pequeños ayudantes que son aventureros y tienen el coraje de probar cosas nuevas. Si está dispuesto a probar cosas nuevas, acepte viajeros de todos los ámbitos de la vida y vaya a sus lugares favoritos para experimentar lo que ama, ¡bienvenido a contactarnos! </string>
+    <string name="student_reg"> Registro de estudiantes </string>
+    <string name="student_enter"> entrada de estudiante </string>
+    <string name="work_days"> días para quedarse </string>
+    <string name="day"> day </string>
+    <string name="pepole"> people </string>
+    <string name="forum_add"> Experiencia escribiendo </string>
+    <string name="post"> release </string>
+    <string name="pick_photo"> Seleccionar foto </string>
+    <string name="take_pic"> toma una foto </string>
+    <string name="pick_hotel"> Select B＆B </string>
+    <string name="share_fb"> Share to FB </string>
+    <string name="hint_input_forum"> ingrese el texto de la experiencia </string>
+    <string name="forum_edit"> Edición de experiencia </string>
+    <string name="edit"> edit </string>
+    <string name="more"> Ver más </string>
+    <string name="like"> like </string>
+    <string name="week_work"> El siguiente trabajo para esta semana </string>
+    <string name="account_state"> Estado de la cuenta </string>
+    <string name="edit_resume"> historial de edición </string>
+    <string name="unbound"> ​​unbound </string>
+    <string name="collection_no_info"> ¡Aún no hay colecciones! </string>
+    <string name="contacthistory_no_info"> ¡Aún no hay registros de contactos! </string>
+    <string name="hirehistory_no_info"> ¡Aún no hay registros de empleo! </string>
+    <string name="store"> storage </string>
+    <string name="male"> male </string>
+    <string name="female"> female </string>
+
+    <string name="logout">logout</string>
+    <string name="accept">accept</string>
+    <string name="denied">rechazar</string>
 </resources>
