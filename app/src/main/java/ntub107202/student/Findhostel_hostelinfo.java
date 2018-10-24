@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,15 +16,17 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
     public TextView hostelName, hostelAddr, jobTitle, salary, startDate,
             endDate, startTime, endTime, numberOfPeople, work,
             contact, email, phone;
+    public String hostelNum, hostelOwnerAccount;
     public ImageView imgHostelPic;
+    public Button btnResume;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.findhostel_hostelinfo);
 
-        Bundle bundle=getIntent().getExtras();
-        int position=bundle.getInt("position");
+        Bundle bundle = getIntent().getExtras();
+        int position = bundle.getInt("position");
 
         hostelName = (TextView) findViewById(R.id.txt_hostel_name);//row19
         hostelAddr = (TextView) findViewById(R.id.txt_hostel_addr);//20
@@ -39,6 +43,8 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
         phone = (TextView) findViewById(R.id.txt_phone);//32
         imgHostelPic = (ImageView) findViewById(R.id.imageView_hostel_pic);//21
 
+        btnResume =  findViewById(R.id.btn_resume);
+
 
         hostelName.setText(getWorksheet.getRow19(position));
         hostelAddr.setText(getWorksheet.getRow20(position));
@@ -54,8 +60,28 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
         email.setText(getWorksheet.getRow31(position));
         phone.setText(getWorksheet.getRow32(position));
         imgHostelPic.setImageBitmap(stringToBitmap(getWorksheet.getRow21(position)));
+
+        hostelNum = getWorksheet.getRow35(position);
+        hostelOwnerAccount = getWorksheet.getRow31(position);
+
+        String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+        Log.d("get5487", "我是User" + user);
+
+        Log.d("get5487", "fuck123fuck" + getWorksheet.getRow35(position));
+        Log.d("get5487", "fuck123fuck" + getWorksheet.getRow31(position));
+
+        btnResume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getWorksheet.postToResume(user, hostelOwnerAccount, hostelNum);
+                Log.d("get5487", "我是User" + user);
+                Log.d("get5487", "fuck123fuck" + getWorksheet.getRow35(position));
+                Log.d("get5487", "fuck123fuck" + getWorksheet.getRow31(position));
+            }
+        });
     }
-        public Bitmap stringToBitmap(String string) {
+
+    public Bitmap stringToBitmap(String string) {
             Bitmap bitmap = null;
             try {
                 byte[] bitmapArray = Base64.decode(string, Base64.DEFAULT);
@@ -68,4 +94,8 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
                 return null;
             }
         }
+
+    public void postStudentResume() {
+
+    }
 }

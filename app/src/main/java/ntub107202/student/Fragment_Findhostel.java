@@ -62,6 +62,7 @@ public class Fragment_Findhostel extends Fragment {
     ArrayList<String> myDataset14;
     ArrayList<String> myDataset15;
     ArrayList<String> myDataset16;
+    ArrayList<String> myDataset17;
     MyAdapter myAdapter;
 
     static LinearLayoutManager layoutManager;
@@ -93,6 +94,8 @@ public class Fragment_Findhostel extends Fragment {
         myDataset14 = new ArrayList<>();
         myDataset15 = new ArrayList<>();
         myDataset16 = new ArrayList<>();
+        myDataset17 = new ArrayList<>();
+
         myAdapter = new MyAdapter(myDataset);
         for (int i = 0; i < getWorksheet.hostelLength; i++) {
 //                myDataset.add(i + "");
@@ -112,7 +115,9 @@ public class Fragment_Findhostel extends Fragment {
             myDataset14.add(getWorksheet.getRow32(i));
             myDataset15.add(getWorksheet.getRow33(i));
             myDataset16.add(getWorksheet.getRow34(i));
-            Log.d("get5487", "fuckfuck" + myDataset);
+            myDataset17.add(getWorksheet.getRow35(i));
+
+            Log.d("get5487", "fuckfuck" + myDataset17);
             Log.d("get0000", String.valueOf(getWorksheet.hostelLength) + "hostelLength_resume");
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
@@ -208,6 +213,7 @@ public class Fragment_Findhostel extends Fragment {
             myDataset14 = new ArrayList<>();
             myDataset15 = new ArrayList<>();
             myDataset16 = new ArrayList<>();
+            myDataset17 = new ArrayList<>();
 
             myAdapter = new MyAdapter(myDataset);
             for (int i = 0; i < getWorksheet.hostelLength; i++) {
@@ -228,6 +234,8 @@ public class Fragment_Findhostel extends Fragment {
                 myDataset14.add(getWorksheet.getRow32(i));
                 myDataset15.add(getWorksheet.getRow33(i));
                 myDataset16.add(getWorksheet.getRow34(i));
+                myDataset17.add(getWorksheet.getRow35(i));
+                Log.d("get00010","123456789" + getWorksheet.getRow34(i) );
 
                 Log.d("get0000", String.valueOf(getWorksheet.hostelLength) + "hostelLength_resume");
             }
@@ -270,6 +278,7 @@ public class Fragment_Findhostel extends Fragment {
                         hostelOwnerPhone = myDataset14;
                         vacancyDays = myDataset15;
                         star = myDataset16;
+
 
                     }else if(!city.equals("選擇縣市") && district.equals("鄉鎮市區")){
                         List<String> hName = new ArrayList<>();

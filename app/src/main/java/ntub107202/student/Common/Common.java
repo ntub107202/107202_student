@@ -19,4 +19,5 @@ public class Common {
     public static String getHostel="http://140.131.114.153/getHostel";
     public static String getSchedule="http://140.131.114.153/getSchedule0";
     public static String getForum="http://140.131.114.153/getForum";
+    public static String postResumeStudent2Hostel="http://140.131.114.153/postResumeStudent2Hostel";
 }
