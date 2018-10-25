@@ -9,6 +9,7 @@ import ntub107202.student.MyAsyncTask.postUpdateAsyncTask;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask2;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask3;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask4;
+import ntub107202.student.MyAsyncTask.postUpdateAsyncTask5;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -37,6 +38,7 @@ public class getWorksheet {
         private static String[] row32= new String[100];
         private static String[] row33= new String[100];
         private static String[] row34= new String[100];
+        private static String[] row45= new String[100];
         private static String[] row35= new String[100];
         private static String[] row36= new String[100];
         private static String[] row8= new String[100];
@@ -125,6 +127,7 @@ public class getWorksheet {
                         row32[i] = jsonArray.getJSONObject(i).getString("hostelOwnerPhone");
                         row33[i] = jsonArray.getJSONObject(i).getString("vacancyDays");
                         row34[i] = jsonArray.getJSONObject(i).getString("hostelRate");
+                        row45[i] = jsonArray.getJSONObject(i).getString("hostelNum");
 
                         Log.v("Row56", row20[i]);
                     }
@@ -307,7 +310,17 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postQuestion ,row1);
         }
     }
-
+    public static void postToResume(String row1, String row2, String row3) {
+        postUpdateAsyncTask5 myAsyncTask = new postUpdateAsyncTask5(new postUpdateAsyncTask5.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postResumeStudent2Hostel ,row1,row2,row3);
+        }
+    }
         public static int getWorksheetLength(){
             return worksheetLength;
         }
@@ -378,6 +391,9 @@ public class getWorksheet {
         public static String getRow36(int i){
             return row36[i];
         }
+         public static String getRow45(int i){
+        return row45[i];
+    }
         public static String getRow8(int i){
         return row8[i];
     }
