@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
-    android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="160dp"
-    card_view:cardCornerRadius="4dp"
-    android:layout_margin="5dp">
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
             android:id="@+id/img01"
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_gravity="center_vertical"
             android:background="@color/txt_font"
             android:scaleType="centerCrop" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:gravity="center_vertical"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/textView0001"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/hotel_name"
                 android:textSize="20sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,7 +47,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lbl_school" />
+                    android:text="@string/hotel_address" />
 
                 <TextView
                     android:id="@+id/textView0002"
@@ -52,8 +55,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:ellipsize="end"
-                    android:text="TextView"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:text="@string/hotel_address" />
             </LinearLayout>
 
             <LinearLayout
@@ -66,7 +69,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lbl_workexp" />
+                    android:text="@string/hotel_phone" />
 
                 <TextView
                     android:id="@+id/textView0003"
@@ -74,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:ellipsize="end"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,7 +90,7 @@
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lbl_reason" />
+                    android:text="@string/work_content" />
 
                 <TextView
                     android:id="@+id/textView0004"
@@ -95,27 +98,30 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:ellipsize="end"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
+                    android:background="@color/colorPrimary"
                     android:text="@string/accept"
-                    android:background="@color/colorPrimary"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white" />
+
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:text="@string/denied"
                     android:background="@color/colorPrimary"
-                    android:textColor="@android:color/white"/>
+                    android:text="@string/denied"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
 
         </LinearLayout>
