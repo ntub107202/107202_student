@@ -106,6 +106,7 @@ public class NavigationActivity extends AppCompatActivity {
         getWorksheet.getForumJSON();
         getWorksheet.getHostelJSON();
         getWorksheet.getStudentnameJSON();
+        getWorksheet.getResumeJSON();
         int id = getIntent().getIntExtra("id", 0);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();
