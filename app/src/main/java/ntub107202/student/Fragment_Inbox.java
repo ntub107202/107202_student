@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,15 +28,43 @@ public class Fragment_Inbox extends Fragment {
     ArrayList<String> myDatasetJobName;
     ArrayList<String> myDatasetJobContent;
     ArrayList<String> myDatasetImg;
-
+    TextView textView0;
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
-
+    private int TIME = 3000;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_inbox, container, false);
         mList = (RecyclerView) view.findViewById(R.id.list_view);
+        textView0 = (TextView)view.findViewById(R.id.txt_noinbox);
+        //每隔1s执行一次.
+
+//        Handler handler=new Handler();
+//        Runnable runnable=new Runnable() {
+//            @Override
+//            public void run() {
+//// TODO Auto-generated method stub
+////要做的事情
+//                handler.postDelayed(this, 2000);
+//        }
+
+        Handler handler = new Handler();
+         // 在初始化方法里.
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+            try {
+                 handler.postDelayed(this, TIME);
+                getWorksheet.getResumeJSON();
+                setResumeview();
+                    Log.i("print","1-------------");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+          }
+        };
+        handler.postDelayed(runnable, TIME);
 
         return view;
     }
@@ -73,6 +102,9 @@ public class Fragment_Inbox extends Fragment {
 //            Log.d("get5478787", myDatasetJobName.get(i) );
 //            Log.d("get5478787", myDatasetJobContent.get(i) );
 //            Log.d("get5478787", myDatasetImg.get(i));
+        }
+        if (getWorksheet.getRow50(0) != null) {
+            textView0.setVisibility(View.INVISIBLE);
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
         layoutManager = new LinearLayoutManager(getActivity());
