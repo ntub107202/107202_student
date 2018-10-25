@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="民宿資訊"
+                android:text="@string/hotel_info"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
@@ -40,11 +40,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <ImageView
                     android:id="@+id/imageView_hostel_pic"
                     android:layout_width="match_parent"
+                    android:layout_height="200dp"
                     android:layout_margin="10dp"
-                    android:layout_height="150dp"
                     app:srcCompat="@color/fontDark" />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,14 +69,14 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/fontDark"
                             android:textSize="20dp"
-                            android:text="民宿名稱"/>
+                            android:text="@string/hotel_name"/>
                         <TextView
                             android:id="@+id/txt_hostel_addr"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="16dp"
                             android:textColor="@color/fontDark"
-                            android:text="民宿地址"/>
+                            android:text="@string/hotel_address"/>
 
                     </LinearLayout>
 
@@ -83,147 +84,139 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="職缺資訊"
+                    android:text="@string/job_info"
                     android:textColor="@color/fontDark"
                     android:background="#CCCCCC"
                     android:padding="12dp"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:textSize="12dp"
-                    android:text="職缺名稱"
-                    android:textColor="@color/txt_font"/>
+                    android:layout_marginTop="5dp"
+                    android:text="@string/job_title"
+                    android:textColor="@color/txt_font"
+                    android:textSize="12dp" />
+
                 <TextView
                     android:id="@+id/txt_job_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="職缺名稱"
-                    android:textColor="@color/fontDark"/>
+                    android:text="@string/job_title"
+                    android:textColor="@color/fontDark" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:textSize="12dp"
-                    android:text="待遇"
-                    android:textColor="@color/txt_font"/>
+                    android:layout_marginTop="5dp"
+                    android:text="@string/salary"
+                    android:textColor="@color/txt_font"
+                    android:textSize="12dp" />
+
                 <TextView
                     android:id="@+id/txt_salary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="金額/日"
-                    android:textColor="@color/fontDark"/>
+                    android:text="@string/salary_day"
+                    android:textColor="@color/fontDark" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:textSize="12dp"
-                    android:text="其他待遇"
-                    android:textColor="@color/txt_font"/>
+                    android:layout_marginTop="5dp"
+                    android:text="@string/time"
+                    android:textColor="@color/txt_font"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="開始日期"
+                        android:textColor="@color/fontDark" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:text="~" />
+
+                    <TextView
+                        android:id="@+id/end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="結束日期"
+                        android:textColor="@color/fontDark" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/startTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="開始時段"
+                        android:textColor="@color/fontDark" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:text="~" />
+
+                    <TextView
+                        android:id="@+id/endTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="結束時段"
+                        android:textColor="@color/fontDark" />
+
+                </LinearLayout>
+
                 <TextView
-                    android:id="@+id/txt_other_pay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="其他待遇"
-                    android:textColor="@color/fontDark"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="12dp"
-                    android:text="換宿時間"
-                    android:textColor="@color/txt_font"/>
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="日期"
-                    android:textColor="@color/fontDark"/>
-                <TextView
-                    android:id="@+id/time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="時段"
-                    android:textColor="@color/fontDark"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="12dp"
-                    android:text="需求人數"
-                    android:textColor="@color/txt_font"/>
+                    android:layout_marginTop="5dp"
+                    android:text="@string/numder_people"
+                    android:textColor="@color/txt_font"
+                    android:textSize="12dp" />
                 <TextView
                     android:id="@+id/txt_number_people"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="需求人數"
-                    android:textColor="@color/fontDark"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="12dp"
-                    android:text="所需技能"
-                    android:textColor="@color/txt_font"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:textSize="12dp"
-                    android:text="一般技能"
-                    android:textColor="@color/txt_font"/>
-
-                <TextView
-                    android:id="@+id/txt_skill"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="一般技能"
-                    android:textColor="@color/fontDark"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:textSize="12dp"
-                    android:text="專業技能"
-                    android:textColor="@color/txt_font"/>
-
-                <TextView
-                    android:id="@+id/txt_p_skill"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="專業技能"
-                    android:textColor="@color/fontDark"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:textSize="12dp"
-                    android:text="語言能力"
-                    android:textColor="@color/txt_font"/>
-
-                <TextView
-                    android:id="@+id/txt_language"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="語言能力"
+                    android:text="@string/numder_people"
                     android:textColor="@color/fontDark"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
                     android:text="工作內容"
-                    android:textColor="@color/txt_font"/>
+                    android:textColor="@color/txt_font"
+                    android:textSize="12dp" />
                 <TextView
                     android:id="@+id/txt_work"
                     android:layout_width="match_parent"
@@ -231,26 +224,28 @@
                     android:layout_marginLeft="20dp"
                     android:text="工作內容"
                     android:textColor="@color/fontDark"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="應徵方式"
-                    android:textColor="@color/fontDark"
+                    android:layout_marginTop="5dp"
                     android:background="#CCCCCC"
-                    android:padding="12dp"/>
+                    android:padding="12dp"
+                    android:text="應徵方式"
+                    android:textColor="@color/fontDark" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="12dp"
-                    android:text="聯絡人"
+                    android:text="@string/contact"
                     android:textColor="@color/txt_font"/>
                 <TextView
                     android:id="@+id/txt_contact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="聯絡人"
+                    android:text="@string/contact"
                     android:textColor="@color/fontDark"/>
 
                 <TextView
@@ -258,14 +253,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="12dp"
-                    android:text="E-mail"
+                    android:text="@string/email"
                     android:textColor="@color/txt_font"/>
                 <TextView
                     android:id="@+id/txt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="信箱"
+                    android:text="@string/email"
                     android:textColor="@color/fontDark"/>
 
                 <TextView
@@ -273,14 +268,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:textSize="12dp"
-                    android:text="手機"
+                    android:text="@string/phone"
                     android:textColor="@color/txt_font"/>
                 <TextView
                     android:id="@+id/txt_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="電話號碼"
+                    android:text="@string/phone"
                     android:textColor="@color/fontDark"/>
                 <LinearLayout
                     android:layout_width="match_parent"

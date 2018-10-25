@@ -36,7 +36,8 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="0dp"
-                    android:background="@drawable/bee" />
+                    android:background="@drawable/bee"
+                    android:scaleType="centerCrop" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -50,7 +51,7 @@
                         android:id="@+id/textView0001"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="劉家驤"
+                        android:text="@string/name"
                         android:textColor="#707487"
                         android:textSize="14sp" />
 
@@ -60,7 +61,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
-                        android:text="腳印民宿"
+                        android:text="@string/hotel_name"
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -107,7 +108,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:text="新北市瑞芳區九份輕便路95號2樓"
+                    android:text="@string/hotel_address"
                     android:textSize="10sp" />
 
                 <TextView
@@ -191,22 +192,41 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:text="個讚"
+                    android:text="@string/like"
                     android:textSize="14sp" />
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView0005"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="5dp"
-                android:lineSpacingMultiplier="1.5"
-                android:text="心得文章輸入在這"
-                android:textSize="14sp" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView0005"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:lineSpacingExtra="9dp"
+                    android:lines="1"
+                    android:singleLine="false"
+                    android:text="心得文章輸入在這"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/more"
+                    android:textColor="#0066cc" />
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -3,10 +3,13 @@ package ntub107202.student;
 import android.util.Log;
 
 import ntub107202.student.Common.Common;
+import ntub107202.student.MyAsyncTask.NavigationAsyncTask;
 import ntub107202.student.MyAsyncTask.getAsyncTask;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask2;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask3;
+import ntub107202.student.MyAsyncTask.postUpdateAsyncTask4;
+import ntub107202.student.MyAsyncTask.postUpdateAsyncTask5;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -14,7 +17,7 @@ import org.json.JSONObject;
 //-------------
 
 public class getWorksheet {
-
+        private  static  String Sname = new String();
         private static String[] row1= new String[100];
         private static String[] row2= new String[100];
         private static String[] row3= new String[100];
@@ -26,6 +29,19 @@ public class getWorksheet {
         private static String[] row23= new String[100];
         private static String[] row24= new String[100];
         private static String[] row25= new String[100];
+        private static String[] row26= new String[100];
+        private static String[] row27= new String[100];
+        private static String[] row28= new String[100];
+        private static String[] row29= new String[100];
+        private static String[] row30= new String[100];
+        private static String[] row31= new String[100];
+        private static String[] row32= new String[100];
+        private static String[] row33= new String[100];
+        private static String[] row34= new String[100];
+        private static String[] row45= new String[100];
+        private static String[] row35= new String[100];
+        private static String[] row36= new String[100];
+        private static String[] row8= new String[100];
         private static String[] row9= new String[100];
         private static String[] row10= new String[100];
         private static String[] row11= new String[100];
@@ -36,12 +52,31 @@ public class getWorksheet {
         private static String[] row16= new String[100];
         private static String[] row17= new String[100];
         private static String[] row18= new String[100];
+    private static String[] row50= new String[100];
+    private static String[] row51= new String[100];
+    private static String[] row52= new String[100];
+    private static String[] row53= new String[100];
+    private static String[] row54= new String[100];
+    private static String[] row55= new String[100];
+    private static String[] row56= new String[100];
+    private static String[] row57= new String[100];
+    private static String[] row58= new String[100];
+        private static String[] row40= new String[100];
+        private static String[] row41= new String[100];
 
+        private static String[] row42= new String[100];
+        private static String[] row43= new String[100];
+
+        public static String username;
+        public static String userpic;
 
         private static int worksheetLength ;
         public static int scheduleLength;
         public static int forumLength;
         public static int hostelLength;
+        public static int hostelnameLength;
+        public static int studentnameLength;
+        public static int     resumeLength;
 
         public static void getJSON() {
 
@@ -85,13 +120,24 @@ public class getWorksheet {
                     int j=0;
 
                     for (int i = 0 ; i<getWorksheetLength() ; i++){
-                        row19[i] = jsonArray.getJSONObject(i).getString("row1");
-                        row20[i] = jsonArray.getJSONObject(i).getString("row2");
-                        row21[i] = jsonArray.getJSONObject(i).getString("row3");
-                        row22[i] = jsonArray.getJSONObject(i).getString("row4");
-                        row23[i] = jsonArray.getJSONObject(i).getString("row5");
-                        row24[i] = jsonArray.getJSONObject(i).getString("row6");
-//                        row25[i] = jsonArray.getJSONObject(i).getString("row7");
+                        row19[i] = jsonArray.getJSONObject(i).getString("hostelName");
+                        row20[i] = jsonArray.getJSONObject(i).getString("hostelAddress");
+                        row21[i] = jsonArray.getJSONObject(i).getString("hostelPhoto");
+                        row22[i] = jsonArray.getJSONObject(i).getString("vacancyName");
+                        row23[i] = jsonArray.getJSONObject(i).getString("vacancySalary");
+                        row24[i] = jsonArray.getJSONObject(i).getString("vacancyStartDate");
+                        row25[i] = jsonArray.getJSONObject(i).getString("vacancyEndDate");
+                        row26[i] = jsonArray.getJSONObject(i).getString("vacancyStartTime");
+                        row27[i] = jsonArray.getJSONObject(i).getString("vacancEndTime");
+                        row28[i] = jsonArray.getJSONObject(i).getString("vacancyNumPeople");
+                        row29[i] = jsonArray.getJSONObject(i).getString("vacancyJob");
+                        row30[i] = jsonArray.getJSONObject(i).getString("hostelOwnerName");
+                        row31[i] = jsonArray.getJSONObject(i).getString("hostelOwnerAccount");
+                        row32[i] = jsonArray.getJSONObject(i).getString("hostelOwnerPhone");
+                        row33[i] = jsonArray.getJSONObject(i).getString("vacancyDays");
+                        row34[i] = jsonArray.getJSONObject(i).getString("hostelRate");
+                        row45[i] = jsonArray.getJSONObject(i).getString("hostelNum");
+
                         Log.v("Row56", row20[i]);
                     }
                 } catch (Exception e) {
@@ -114,11 +160,14 @@ public class getWorksheet {
                     scheduleLength = worksheetLength;
                     int j=0;
 
+
                     for (int i = 0 ; i<getWorksheetLength() ; i++){
+
                         row9[i] = jsonArray.getJSONObject(i).getString("row1");
                         row10[i] = jsonArray.getJSONObject(i).getString("row2");
                         row11[i] = jsonArray.getJSONObject(i).getString("row3");
                         row12[i] = jsonArray.getJSONObject(i).getString("row4");
+                        row8[i] = jsonArray.getJSONObject(i).getString("row5");
                         Log.v("Row5", row9[i]);
                     }
                 } catch (Exception e) {
@@ -148,6 +197,8 @@ public class getWorksheet {
                         row16[i] = jsonArray.getJSONObject(i).getString("row4");
                         row17[i] = jsonArray.getJSONObject(i).getString("row5");
                         row18[i] = jsonArray.getJSONObject(i).getString("row6");
+                        row40[i] = jsonArray.getJSONObject(i).getString("row7");
+                        row41[i] = jsonArray.getJSONObject(i).getString("row8");
                         Log.v("Row5", row13[i]);
                     }
                 } catch (Exception e) {
@@ -157,6 +208,90 @@ public class getWorksheet {
         });
         myAsyncTask.execute(Common.getForum);
     }
+
+    public static void gethostelnameJSON() {
+
+        getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    hostelnameLength = worksheetLength;
+                    int j=0;
+
+                    for (int i = 0 ; i<getWorksheetLength() ; i++){
+                        row36[i] = jsonArray.getJSONObject(i).getString("row1");
+                        row35[i] = jsonArray.getJSONObject(i).getString("row2");
+                        Log.v("66668", getWorksheet.row36[i]);
+//                        Log.v("66668", getWorksheet.row35[i]);
+
+                    }
+                } catch (Exception e) {
+                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myAsyncTask.execute(Common.getHostelname);
+    }
+
+    public static void getStudentnameJSON() {
+
+        NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    for (int i = 0 ; i<1 ; i++){
+                        row42[0] = jsonArray.getJSONObject(0).getString("row1");
+                        row43[0] = jsonArray.getJSONObject(0).getString("row2");
+                    }
+                    username =row42[0];
+                    userpic = row43[0];
+                    Log.v("QQQQQQ42",username);
+                    Log.v("QQQQQQ43",userpic);
+                } catch (Exception e) {
+//                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myNavigationAsyncTask.execute(Common.getStudentname, Login.getUser());
+    }
+    public static void getResumeJSON() {
+
+        NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    resumeLength = worksheetLength;
+                    for (int i = 0 ; i<resumeLength; i++){
+                        row50[i] = jsonArray.getJSONObject(i).getString("row1");
+                        row51[i] = jsonArray.getJSONObject(i).getString("row2");
+                        row52[i] = jsonArray.getJSONObject(i).getString("row3");
+                        row53[i] = jsonArray.getJSONObject(i).getString("row4");
+                        row54[i] = jsonArray.getJSONObject(i).getString("row5");
+                        Log.v("wtf",row50[i]);
+                        Log.v("wtf",row51[i]);
+                        Log.v("wtf",row52[i]);
+                        Log.v("wtf",row53[i]);
+                        Log.v("wtf","value"+worksheetLength);
+
+                    }
+                } catch (Exception e) {
+//                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myNavigationAsyncTask.execute(Common.getResumeS, Login.getUser());
+    }
+            public static String getusername(){return username;}
+            public static String getuserpic(){return userpic;}
         public static void postToPHP(String row1, String row2, String row3) {
             postUpdateAsyncTask myAsyncTask = new postUpdateAsyncTask(new postUpdateAsyncTask.TaskListener() {
                 @Override
@@ -190,6 +325,17 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postCalendar ,row1,row2,row3,row4,row5);
         }
     }
+    public static void postToForum(String row1, String row2, String row3, String row4, String row5, String row6) {
+        postUpdateAsyncTask4 myAsyncTask = new postUpdateAsyncTask4(new postUpdateAsyncTask4.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postForum ,row1,row2,row3,row4,row5,row6);
+        }
+    }
     public static void postToQuestion(String row1) {
         postUpdateAsyncTask3 myAsyncTask = new postUpdateAsyncTask3(new postUpdateAsyncTask3.TaskListener() {
             @Override
@@ -201,7 +347,17 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postQuestion ,row1);
         }
     }
-
+    public static void postToResume(String row1, String row2, String row3) {
+        postUpdateAsyncTask5 myAsyncTask = new postUpdateAsyncTask5(new postUpdateAsyncTask5.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postResumeStudent2Hostel ,row1,row2,row3);
+        }
+    }
         public static int getWorksheetLength(){
             return worksheetLength;
         }
@@ -239,8 +395,45 @@ public class getWorksheet {
         public static String getRow25(int i){
             return row25[i];
         }
-
-
+        public static String getRow26(int i){
+            return row26[i];
+        }
+        public static String getRow27(int i){
+            return row27[i];
+        }
+        public static String getRow28(int i){
+            return row28[i];
+        }
+        public static String getRow29(int i){
+            return row29[i];
+        }
+        public static String getRow30(int i){
+            return row30[i];
+        }
+        public static String getRow31(int i){
+            return row31[i];
+        }
+        public static String getRow32(int i){
+            return row32[i];
+        }
+        public static String getRow33(int i){
+            return row33[i];
+        }
+        public static String getRow34(int i){
+            return row34[i];
+        }
+        public static String getRow35(int i){
+            return row35[i];
+        }
+        public static String getRow36(int i){
+            return row36[i];
+        }
+         public static String getRow45(int i){
+        return row45[i];
+    }
+        public static String getRow8(int i){
+        return row8[i];
+    }
         public static String getRow9(int i){
             return row9[i];
         }
@@ -270,5 +463,42 @@ public class getWorksheet {
         }
         public static String getRow18(int i){
             return row18[i];
+        }
+        public static String getRow40(int i){
+            return row40[i];
+        }
+        public static String getRow41(int i){
+            return row41[i];
+        }
+
+    public static String getRow50(int i){
+        return row50[i];
+    }
+    public static String getRow51(int i){
+        return row51[i];
+    }
+    public static String getRow52(int i){
+        return row52[i];
+    }
+    public static String getRow53(int i){
+        return row53[i];
+    }
+    public static String getRow54(int i){
+        return row54[i];
+    }
+    public static String getRow55(int i){
+        return row55[i];
+    }
+    public static String getRow56(int i){
+        return row56[i];
+    }
+    public static String getRow57(int i){
+        return row57[i];
+    }
+        public static String getRow42(int i){
+            return row42[i];
+        }
+        public static String getRow43(int i){
+            return row43[i];
         }
     }

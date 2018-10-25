@@ -49,15 +49,20 @@
                     android:layout_weight="1"
                     android:ellipsize="end"
                     android:singleLine="true"
-                    android:text="民宿名稱"
-                    android:textColor="@color/fontDark"
+                    android:text="@string/hotel_name"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <ImageButton
+                <TextView
+                    android:id="@+id/textView36"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="5dp"
-                    android:background="@drawable/ic_favorite_border_black_24dp" />
+                    android:background="@drawable/shape_orange"
+                    android:gravity="center"
+                    android:text="優良民宿"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="10sp" />
 
 
             </LinearLayout>
@@ -65,7 +70,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp">
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/txt_hostel_addr"
@@ -75,8 +80,8 @@
                     android:layout_weight="1"
                     android:ellipsize="end"
                     android:singleLine="true"
-                    android:text="民宿地址"
-                    android:textColor="#b0b0b0"
+                    android:text="@string/hotel_address"
+                    android:textColor="@color/fontDark"
                     android:textSize="10sp" />
 
                 <TextView
@@ -85,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="123"
-                    android:textColor="@color/fontDark"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="10sp" />
 
                 <ImageView
@@ -93,7 +98,7 @@
                     android:layout_height="15dp"
                     android:layout_gravity="center"
                     android:layout_marginRight="5dp"
-                    android:background="@drawable/ic_star_black_24dp" />
+                    android:background="@drawable/ic_star_black2_24dp" />
 
 
             </LinearLayout>
@@ -102,6 +107,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <TextView
@@ -110,19 +116,21 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="所需技能："
+                    android:text="@string/work_content"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="10sp" />
 
                 <TextView
                     android:id="@+id/txt_skill"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginTop="5dp"
                     android:ellipsize="end"
                     android:singleLine="true"
-                    android:text="所需技能"
-                    android:textColor="@android:color/holo_red_light"
+                    android:text="@string/work_content"
+                    android:textColor="@android:color/holo_orange_dark"
                     android:textSize="10sp" />
 
             </LinearLayout>
@@ -138,15 +146,17 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="換宿天數："
+                    android:text="@string/work_days"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="10sp" />
 
                 <TextView
                     android:id="@+id/txt_days"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="換宿天數"
+                    android:text="@string/work_days"
                     android:textColor="@color/fontDark"
                     android:textSize="14sp" />
 
@@ -156,7 +166,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
                     android:layout_marginTop="5dp"
-                    android:text="天"
+                    android:text="@string/day"
+                    android:textColor="@color/fontDark"
                     android:textSize="10sp" />
             </LinearLayout>
 
@@ -171,15 +182,17 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="需求人數："
+                    android:text="@string/numder_people"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="10sp" />
 
                 <TextView
                     android:id="@+id/txt_number_people"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="需求人數"
+                    android:text="@string/numder_people"
                     android:textColor="@color/fontDark"
                     android:textSize="14sp" />
 
@@ -189,7 +202,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
                     android:layout_marginTop="5dp"
-                    android:text="人"
+                    android:text="@string/pepole"
+                    android:textColor="@color/fontDark"
                     android:textSize="10sp" />
 
                 <TextView
@@ -203,8 +217,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
                     android:background="@color/cardview_light_background"
-                    card_view:srcCompat="@drawable/ic_more_vert_black_24dp" />
+                    card_view:srcCompat="@drawable/ic_more_vert_black2_24dp" />
             </LinearLayout>
 
         </LinearLayout>

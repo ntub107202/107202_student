@@ -11,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -45,6 +46,9 @@ public class Fragment_Forum extends Fragment{
     ArrayList<String> myDataset4;
     ArrayList<String> myDataset5;
     ArrayList<String> myDataset6;
+    ArrayList<String> myDataset7;
+    ArrayList<String> myDataset8;
+
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
     @Nullable
@@ -52,12 +56,13 @@ public class Fragment_Forum extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_forum,container,false);
         mList = (RecyclerView)view.findViewById(R.id.list_view);
-
+        getWorksheet.gethostelnameJSON();
+//        getWorksheet.getStudentnameJSON();
         FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab_go_to_forum_add) ;
         fab.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Forum_add.class);
+                Intent intent = new Intent(getActivity(),Forum_Add.class);
                 startActivity(intent);
             }
         });
@@ -75,6 +80,9 @@ public class Fragment_Forum extends Fragment{
             myDataset4 = new ArrayList<>();
             myDataset5 = new ArrayList<>();
             myDataset6 = new ArrayList<>();
+            myDataset7 = new ArrayList<>();
+            myDataset8 = new ArrayList<>();
+
             myAdapter = new MyAdapter(myDataset);
             for(int i = 0; i < getWorksheet.forumLength; i++){
 //                myDataset.add(i + "");
@@ -84,6 +92,8 @@ public class Fragment_Forum extends Fragment{
                 myDataset4.add(getWorksheet.getRow16(i));
                 myDataset5.add(getWorksheet.getRow17(i));
                 myDataset6.add(getWorksheet.getRow18(i));
+                myDataset7.add(getWorksheet.getRow40(i));
+                myDataset8.add(getWorksheet.getRow41(i));
                 Log.d("get0000", String.valueOf(getWorksheet.forumLength)+"forumLength_resume");
             }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
@@ -100,8 +110,8 @@ public class Fragment_Forum extends Fragment{
         private Context mContext;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
-            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004 ,TextView0005;
-            public  ImageView TextView0006;
+            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004 ,TextView0005,TextView33,TextViewAddress;
+            public  ImageView TextView0006,TextViewFace;
             public ImageButton ib_popup_menu;
 
 
@@ -112,9 +122,32 @@ public class Fragment_Forum extends Fragment{
                 TextView0003 = (TextView) v.findViewById(R.id.textView0003);
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
                 TextView0005 = (TextView) v.findViewById(R.id.textView0005);
+                TextViewAddress = (TextView) v.findViewById(R.id.textView9);
                 TextView0006 = (ImageView) v.findViewById(R.id.image000006);
+                TextViewFace = (ImageView) v.findViewById(R.id.imageView);
                 ib_popup_menu = (ImageButton) v.findViewById(R.id.ib_popup_menu);
+                TextView33 = (TextView) v.findViewById(R.id.textView33);
+
+                TextView33.setOnClickListener(new View.OnClickListener() {
+                    Boolean flag = true;
+                    @Override
+                    public void onClick(View v) {
+                        if (flag) {
+                            flag = false;
+                            TextView0005.setMaxLines(10);
+                            TextView0005.setEllipsize(null); // 展开
+                            TextView33.setText("摺疊內容");
+                        } else {
+                            flag = true;
+                            TextView0005.setLines(1);
+                            TextView0005.setEllipsize(TextUtils.TruncateAt.END); // 收缩
+                            TextView33.setText("查看更多");
+                        }
+                    }
+                });
             }
+
+
         }
 
         public MyAdapter(List<String> data) {
@@ -138,6 +171,8 @@ public class Fragment_Forum extends Fragment{
             holder.TextView0004.setText(myDataset4.get(position));
             holder.TextView0005.setText(myDataset5.get(position));
             holder.TextView0006.setImageBitmap(stringToBitmap(myDataset6.get(position)));
+            holder.TextViewAddress.setText(myDataset7.get(position));
+            holder.TextViewFace.setImageBitmap(stringToBitmap(myDataset8.get(position)));
             holder.ib_popup_menu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -147,11 +182,18 @@ public class Fragment_Forum extends Fragment{
                         @Override
                         public boolean onMenuItemClick(MenuItem item) {
                             switch (item.getItemId()){
+                                case  R.id.menu_edit:
+                                    Toast.makeText(mContext,"開始編輯貼文",Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(getActivity(),Forum_Edit.class);
+                                    startActivity(intent);
+                                    break;
                                 case  R.id.menu_collection:
                                     Toast.makeText(mContext,"已收藏貼文",Toast.LENGTH_LONG).show();
                                     break;
                                 case  R.id.menu_report:
                                     Toast.makeText(mContext,"已檢舉貼文",Toast.LENGTH_LONG).show();
+                                    intent = new Intent(getActivity(),Forum_Report.class);
+                                    startActivity(intent);
                                     break;
                                 default:
                                     break;

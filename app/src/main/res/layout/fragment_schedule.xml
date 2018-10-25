@@ -24,10 +24,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="工作排程"
+                android:text="@string/title_schedule"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
+        <ntub107202.student.Schedule.view.DataView
+            android:id="@+id/week"
+            android:layout_width="match_parent"
+            android:background="@color/color_ffffff"
+            android:layout_height="wrap_content">
+        </ntub107202.student.Schedule.view.DataView>
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -36,6 +53,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/week_work"
+                    android:textColor="@color/fontDark"
+                    android:textSize="18sp" />
+
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/list_view"
                     android:layout_width="match_parent"
@@ -50,6 +77,7 @@
                     android:text="@string/schedule_no_info"
                     android:textColor="#CCCCCC"
                     android:textSize="26dp" />
+
                 <!--
                                 <Button
                                     android:id="@+id/btn_go_add_calendar"

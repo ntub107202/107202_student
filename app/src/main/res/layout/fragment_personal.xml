@@ -40,6 +40,88 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/bee" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/name"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/textView30"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/email" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/account_state" />
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:text="@string/unbound" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/fb" />
+
+                            <ImageButton
+                                android:id="@+id/imageButton2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/google" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/txt_font" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="10dp">
 
                     <ImageView
@@ -56,7 +138,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="編輯履歷"
+                        android:text="@string/edit_resume"
                         android:textColor="@color/fontDark" />
 
 
@@ -86,27 +168,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_message_black_24dp" />
-
-                    <Button
-                        android:id="@+id/btn_contact_history"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:background="#00000000"
-                        android:gravity="left|center_vertical"
-                        android:text="@string/contact_history"
-                        android:textColor="@color/fontDark" />
-                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -248,16 +309,19 @@
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
+
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:layout_marginLeft="40dp"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dp"
                         android:src="@drawable/ic_person_add_black_24dp" />
+
                     <Button
                         android:id="@+id/btn_reg"
                         android:layout_width="match_parent"
@@ -266,6 +330,29 @@
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
                         android:text="@string/register"
+                        android:textColor="@color/fontDark" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dp"
+                        android:src="@drawable/ic_exit_to_app" />
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:background="#00000000"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/logout"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
             </LinearLayout>

@@ -29,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
-                    android:text="尋找換宿"
+                    android:text="@string/title_bnb"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
 
@@ -47,22 +47,20 @@
         android:orientation="horizontal">
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spinnerCity"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:entries="@array/array_district"
+            android:gravity="center" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spinnerDistrict"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:gravity="center" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_weight="1" />
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
