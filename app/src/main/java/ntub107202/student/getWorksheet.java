@@ -52,7 +52,15 @@ public class getWorksheet {
         private static String[] row16= new String[100];
         private static String[] row17= new String[100];
         private static String[] row18= new String[100];
-
+    private static String[] row50= new String[100];
+    private static String[] row51= new String[100];
+    private static String[] row52= new String[100];
+    private static String[] row53= new String[100];
+    private static String[] row54= new String[100];
+    private static String[] row55= new String[100];
+    private static String[] row56= new String[100];
+    private static String[] row57= new String[100];
+    private static String[] row58= new String[100];
         private static String[] row40= new String[100];
         private static String[] row41= new String[100];
 
@@ -68,6 +76,7 @@ public class getWorksheet {
         public static int hostelLength;
         public static int hostelnameLength;
         public static int studentnameLength;
+        public static int     resumeLength;
 
         public static void getJSON() {
 
@@ -239,8 +248,6 @@ public class getWorksheet {
                     for (int i = 0 ; i<1 ; i++){
                         row42[0] = jsonArray.getJSONObject(0).getString("row1");
                         row43[0] = jsonArray.getJSONObject(0).getString("row2");
-                        Log.v("QQQQQQ42",row42[0]);
-                        Log.v("QQQQQQ43",row43[0]);
                     }
                     username =row42[0];
                     userpic = row43[0];
@@ -252,6 +259,36 @@ public class getWorksheet {
             }
         });
         myNavigationAsyncTask.execute(Common.getStudentname, Login.getUser());
+    }
+    public static void getResumeJSON() {
+
+        NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    resumeLength = worksheetLength;
+                    for (int i = 0 ; i<resumeLength; i++){
+                        row50[i] = jsonArray.getJSONObject(i).getString("row1");
+                        row51[i] = jsonArray.getJSONObject(i).getString("row2");
+                        row52[i] = jsonArray.getJSONObject(i).getString("row3");
+                        row53[i] = jsonArray.getJSONObject(i).getString("row4");
+                        row54[i] = jsonArray.getJSONObject(i).getString("row5");
+                        Log.v("wtf",row50[i]);
+                        Log.v("wtf",row51[i]);
+                        Log.v("wtf",row52[i]);
+                        Log.v("wtf",row53[i]);
+                        Log.v("wtf","value"+worksheetLength);
+
+                    }
+                } catch (Exception e) {
+//                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myNavigationAsyncTask.execute(Common.getResumeS, Login.getUser());
     }
             public static String getusername(){return username;}
             public static String getuserpic(){return userpic;}
@@ -434,6 +471,30 @@ public class getWorksheet {
             return row41[i];
         }
 
+    public static String getRow50(int i){
+        return row50[i];
+    }
+    public static String getRow51(int i){
+        return row51[i];
+    }
+    public static String getRow52(int i){
+        return row52[i];
+    }
+    public static String getRow53(int i){
+        return row53[i];
+    }
+    public static String getRow54(int i){
+        return row54[i];
+    }
+    public static String getRow55(int i){
+        return row55[i];
+    }
+    public static String getRow56(int i){
+        return row56[i];
+    }
+    public static String getRow57(int i){
+        return row57[i];
+    }
         public static String getRow42(int i){
             return row42[i];
         }

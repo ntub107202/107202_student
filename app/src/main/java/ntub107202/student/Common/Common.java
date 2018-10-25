@@ -23,4 +23,5 @@ public class Common {
     public static String postForum="http://140.131.114.153/postForum";
     public static String getStudentname="http://140.131.114.153/getStudentname";
     public static String postResumeStudent2Hostel="http://140.131.114.153/postResumeStudent2Hostel";
+    public static String getResumeS="http://140.131.114.153/getResumeS";
 }
