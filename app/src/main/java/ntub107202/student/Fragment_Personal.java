@@ -25,6 +25,7 @@ public class Fragment_Personal extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_personal,container,false);
 
+        Button btn_add = (Button)view.findViewById(R.id.btn_add_resume);
         Button button00 = (Button)view.findViewById(R.id.btn_edit_resume);
         Button button01 = (Button)view.findViewById(R.id.btn_hire_history);
         Button button02 = (Button)view.findViewById(R.id.btn_logout);
@@ -47,6 +48,15 @@ public class Fragment_Personal extends Fragment {
 //        Log.v("QQQQQQ",getWorksheet.getRow42(0));
         textView30.setText(Login.getUser());
         Log.v("1516651",Login.getUser());
+
+        btn_add.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(),Personal_AddResume.class);
+                startActivity(intent);
+            }
+        });
         button00.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {

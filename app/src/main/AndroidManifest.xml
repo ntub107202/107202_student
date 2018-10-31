@@ -64,6 +64,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Personal_AddResume"
+            android:label="107202">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Personal_Specification"
             android:label="107202">
             <intent-filter>
