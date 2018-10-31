@@ -267,4 +267,13 @@
     <string name="logout">登出</string>
     <string name="accept">接受</string>
     <string name="denied">拒绝</string>
+    <string name="add_resume">新增履歷</string>
+    <string name="hint_school">請輸入學校名稱</string>
+    <string name="hint_depart">請輸入科系名稱</string>
+    <string name="hint_interest">請輸入興趣</string>
+    <string name="hint_work_exp">請輸入工作經驗</string>
+    <string name="hint_reason">請描述您想換宿的原因</string>
+    <string name="veg">素食</string>
+    <string name="forag">葷食</string>
+    <string name="hint_address">請輸入您的居住地</string>
 </resources>
