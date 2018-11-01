@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -26,18 +27,21 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/list_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp" />
 
             </LinearLayout>
         </ScrollView>
@@ -51,9 +55,5 @@
         android:layout_margin="10dp"
         android:clickable="true"
         app:srcCompat="@drawable/ic_create_black_24dp" />
-
-
-
-
 
 </android.support.design.widget.CoordinatorLayout>

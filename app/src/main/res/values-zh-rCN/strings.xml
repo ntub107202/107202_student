@@ -243,7 +243,7 @@
     <string name="day">天</string>
     <string name="pepole">人</string>
     <string name="forum_add">心得撰写</string>
-    <string name="post">发布</string>
+    <string name="post">发布心得</string>
     <string name="pick_photo">选取相片</string>
     <string name="take_pic">拍摄相片</string>
     <string name="pick_hotel">选取民宿</string>
@@ -267,13 +267,20 @@
     <string name="logout">登出</string>
     <string name="accept">接受</string>
     <string name="denied">拒绝</string>
-    <string name="add_resume">新增履歷</string>
-    <string name="hint_school">請輸入學校名稱</string>
-    <string name="hint_depart">請輸入科系名稱</string>
-    <string name="hint_interest">請輸入興趣</string>
-    <string name="hint_work_exp">請輸入工作經驗</string>
-    <string name="hint_reason">請描述您想換宿的原因</string>
+    <string name="add_resume">新增履历</string>
+    <string name="hint_school">请输入学校名称</string>
+    <string name="hint_depart">请输入科系名称</string>
+    <string name="hint_interest">请输入兴趣</string>
+    <string name="hint_work_exp">请输入工作经验</string>
+    <string name="hint_reason">请描述您想换宿的原因</string>
     <string name="veg">素食</string>
-    <string name="forag">葷食</string>
-    <string name="hint_address">請輸入您的居住地</string>
+    <string name="forag">荤食</string>
+    <string name="hint_address">请输入您的居住地</string>
+    <string name="industry">肄业</string>
+    <string name="graduate">毕业</string>
+    <string name="study">就学中</string>
+    <string name="report">检举</string>
+    <string name="report_1">协助我们了解发生的状况</string>
+    <string name="report_2">这则贴文有什么问题?</string>
+    <string name="edit_report">例如：诈骗、侵犯智慧财产权、骚扰到我或某个我认识的人</string>
 </resources>
