@@ -21,44 +21,25 @@
             android:background="?attr/colorPrimary"
             android:elevation="4dp"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:navigationIcon="@drawable/ic_chevron_left_black_24dp"
-            app:titleTextColor="@android:color/white">
+            android:theme="?attr/actionBarTheme">
 
             <TextView
                 android:id="@+id/toolbar_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="心得撰寫"
+                android:text="@string/forum_add"
                 android:textColor="@android:color/white"
-                android:textSize="18dp" />
-
-            <Button
-                android:id="@+id/button11"
-                style="?attr/buttonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_gravity="right|center"
-                android:layout_marginRight="15dp"
-                android:background="@null"
-                android:minHeight="0dp"
-
-                android:minWidth="0dp"
-                android:text="發佈"
-                android:textColor="@android:color/background_light"
-                android:textSize="14sp" />
-
+                android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -79,15 +60,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="陳小名"
-                    android:textColor="#707487"
-                    android:textSize="14sp" />
+                    android:text="@string/name"
+                    android:textColor="#707487" />
 
                 <Spinner
                     android:id="@+id/choose_hostel"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:entries="@array/hostelnamelist"
                     android:prompt="@string/hostelname"
                     android:spinnerMode="dialog"/>
@@ -102,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:paddingTop="5dp">
 
             <Button
@@ -118,7 +97,7 @@
                 android:minHeight="0dp"
                 android:minWidth="0dp"
                 android:padding="5dp"
-                android:text="選取相片"
+                android:text="@string/pick_photo"
                 android:textSize="12sp" />
 
             <Button
@@ -134,7 +113,7 @@
                 android:minHeight="0dp"
                 android:minWidth="0dp"
                 android:padding="5dp"
-                android:text="拍攝相片"
+                android:text="@string/take_pic"
                 android:textSize="12sp" />
 
             <Button
@@ -149,7 +128,7 @@
                 android:minHeight="0dp"
                 android:minWidth="0dp"
                 android:padding="5dp"
-                android:text="分享至FB"
+                android:text="@string/share_fb"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -158,26 +137,32 @@
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:ems="10"
+            android:minLines="4"
             android:gravity="top"
-            android:hint="輸入心得文字......"
+            android:hint="@string/hint_input_forum"
             android:inputType="textMultiLine" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:gravity="center_horizontal|center_vertical">
 
             <ImageView
                 android:id="@+id/imageView10"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
                 app:srcCompat="@color/txt_font" />
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="@string/post"/>
 
         </LinearLayout>
 

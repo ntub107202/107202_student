@@ -243,7 +243,7 @@
     <string name="day">天</string>
     <string name="pepole">人</string>
     <string name="forum_add">心得撰寫</string>
-    <string name="post">發佈</string>
+    <string name="post">發佈心得</string>
     <string name="pick_photo">選取相片</string>
     <string name="take_pic">拍攝相片</string>
     <string name="pick_hotel">選取民宿</string>
@@ -276,4 +276,11 @@
     <string name="veg">素食</string>
     <string name="forag">葷食</string>
     <string name="hint_address">請輸入您的居住地</string>
+    <string name="industry">肄業</string>
+    <string name="graduate">畢業</string>
+    <string name="study">就學中</string>
+    <string name="report">檢舉</string>
+    <string name="report_1">協助我們瞭解發生的狀況</string>
+    <string name="report_2">這則貼文有甚麼問題?</string>
+    <string name="edit_report">例如：詐騙、侵犯智慧財產權、騷擾到我或某個我認識的人</string>
 </resources>

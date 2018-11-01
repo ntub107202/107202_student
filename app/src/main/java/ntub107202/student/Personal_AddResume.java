@@ -28,6 +28,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.app.DatePickerDialog;
@@ -57,6 +58,7 @@ public class Personal_AddResume extends AppCompatActivity {
     private int mYear, mMonth, mDay;
 
     EditText edit_name;
+    RadioGroup rg_gender;
     RadioButton rad_men;
     RadioButton rad_women;
     EditText edit_birth;
@@ -65,6 +67,7 @@ public class Personal_AddResume extends AppCompatActivity {
     EditText edit_address;
     EditText edit_school;
     EditText edit_depart;
+    RadioGroup rg_state_study;
     RadioButton rad_study;
     RadioButton rad_graduate;
     RadioButton rad_industry;
@@ -89,6 +92,7 @@ public class Personal_AddResume extends AppCompatActivity {
     CheckBox chk_minnan;
     EditText edit_work_exp;
     EditText edit_reason;
+    RadioGroup rg_eat_habit;
     RadioButton rad_veg;
     RadioButton rad_forag;
     EditText edit_start_date;
@@ -99,7 +103,7 @@ public class Personal_AddResume extends AppCompatActivity {
     Button btn_add_resume;
 
     String chk_og_S,chk_rs_S,chk_cr_S,chk_rc_S,chk_od_S,chk_web_S,chk_art_S,chk_photograph_S,chk_gardening_S,chk_cook_S,chk_motorcycle_S,chk_car_S,chk_dance_S,chk_sing_S,chk_music_S,chk_english_S,chk_japanese_S,chk_minnan_S;
-    String rad_men_S,rad_women_S,rad_study_S,rad_graduate_S,rad_industry_S,rad_veg_S,rad_forag_S;
+    String gender,state_study,eat_habit;
 
     private static String pic1;
     private static String pic2;
@@ -113,6 +117,7 @@ public class Personal_AddResume extends AppCompatActivity {
         setContentView(R.layout.personal_addresume);
 
         edit_name = (EditText) findViewById(R.id.edit_name);
+        rg_gender = (RadioGroup)findViewById(R.id.rg_gender);
         rad_men = (RadioButton) findViewById(R.id.rad_men);
         rad_women = (RadioButton) findViewById(R.id.rad_women);
         edit_birth = (EditText) findViewById(R.id.edit_birth);
@@ -128,6 +133,7 @@ public class Personal_AddResume extends AppCompatActivity {
         edit_address = (EditText) findViewById(R.id.edit_address);
         edit_school = (EditText) findViewById(R.id.edit_school);
         edit_depart = (EditText) findViewById(R.id.edit_depart);
+        rg_state_study = (RadioGroup) findViewById(R.id.rg_state_study);
         rad_study = (RadioButton) findViewById(R.id.rad_study);
         rad_graduate = (RadioButton) findViewById(R.id.rad_graduate);
         rad_industry = (RadioButton) findViewById(R.id.rad_industry);
@@ -150,6 +156,7 @@ public class Personal_AddResume extends AppCompatActivity {
         chk_english = (CheckBox) findViewById(R.id.chk_english);
         chk_japanese = (CheckBox) findViewById(R.id.chk_japanese);
         chk_minnan = (CheckBox) findViewById(R.id.chk_minnan);
+        rg_eat_habit = (RadioGroup) findViewById(R.id.rg_eat_habit);
         edit_work_exp = (EditText) findViewById(R.id.edit_work_exp);
         edit_reason = (EditText) findViewById(R.id.edit_reason);
         rad_veg = (RadioButton) findViewById(R.id.rad_veg);
@@ -183,153 +190,157 @@ public class Personal_AddResume extends AppCompatActivity {
                 else{
                     chk_og_S = "0";
                 }
+
                 if (chk_rs.isChecked()){
                     chk_rs_S = "1";
                 }
                 else{
                     chk_rs_S = "0";
                 }
+
                 if (chk_cr.isChecked()){
                     chk_cr_S = "1";
                 }
                 else{
                     chk_cr_S = "0";
                 }
+
                 if (chk_rc.isChecked()){
                     chk_rc_S = "1";
                 }
                 else{
                     chk_rc_S = "0";
                 }
+
                 if (chk_od.isChecked()){
                     chk_od_S = "1";
                 }
                 else{
                     chk_od_S = "0";
                 }
+
                 if (chk_web.isChecked()){
                     chk_web_S = "1";
                 }
                 else{
                     chk_web_S = "0";
                 }
+
                 if (chk_art.isChecked()){
                     chk_art_S = "1";
                 }
                 else{
                     chk_art_S = "0";
                 }
+
                 if (chk_photograph.isChecked()){
                     chk_photograph_S = "1";
                 }
                 else{
                     chk_photograph_S = "0";
                 }
+
                 if (chk_gardening.isChecked()){
                     chk_gardening_S = "1";
                 }
                 else{
                     chk_gardening_S = "0";
                 }
+
                 if (chk_cook.isChecked()){
                     chk_cook_S = "1";
                 }
                 else{
                     chk_cook_S = "0";
                 }
+
                 if (chk_motorcycle.isChecked()){
                     chk_motorcycle_S = "1";
                 }
                 else{
                     chk_motorcycle_S = "0";
                 }
+
                 if (chk_car.isChecked()){
                     chk_car_S = "1";
                 }
                 else{
                     chk_car_S = "0";
                 }
+
                 if (chk_dance.isChecked()){
                     chk_dance_S = "1";
                 }
                 else{
                     chk_dance_S = "0";
                 }
+
                 if (chk_sing.isChecked()){
                     chk_sing_S = "1";
                 }
                 else{
                     chk_sing_S = "0";
                 }
+
                 if (chk_music.isChecked()){
                     chk_music_S = "1";
                 }
                 else{
                     chk_music_S = "0";
                 }
+
                 if (chk_english.isChecked()){
                     chk_english_S = "1";
                 }
                 else{
                     chk_english_S = "0";
                 }
+
                 if (chk_japanese.isChecked()){
                     chk_japanese_S = "1";
                 }
                 else{
                     chk_japanese_S = "0";
                 }
+
                 if (chk_minnan.isChecked()){
                     chk_minnan_S = "1";
                 }
                 else{
                     chk_minnan_S = "0";
                 }
-                if (rad_men.isChecked()){
-                    rad_men_S = "1";
-                }
-                else{
-                    rad_men_S = "0";
-                }
-                if (rad_women.isChecked()){
-                    rad_women_S = "1";
-                }
-                else{
-                    rad_women_S = "0";
-                }
-                if (rad_study.isChecked()){
-                    rad_study_S = "1";
-                }
-                else{
-                    rad_study_S = "0";
-                }
-                if (rad_graduate.isChecked()){
-                    rad_graduate_S = "1";
-                }
-                else{
-                    rad_graduate_S = "0";
-                }
-                if (rad_industry.isChecked()){
-                    rad_industry_S = "1";
-                }
-                else{
-                    rad_industry_S = "0";
-                }
-                if (rad_veg.isChecked()){
-                    rad_veg_S = "1";
-                }
-                else{
-                    rad_veg_S = "0";
-                }
-                if (rad_forag.isChecked()){
-                    rad_forag_S = "1";
-                }
-                else{
-                    rad_forag_S = "0";
+
+                switch (rg_gender.getCheckedRadioButtonId()){
+                    case R.id.rad_men:
+                        gender = "男";
+                        break;
+                    case R.id.rad_women:
+                        gender = "女";
+                        break;
                 }
 
-//                Log.v("rad_men_S",rad_men_S);
-//                Log.v("rad_women_S",rad_women_S);
+                switch (rg_state_study.getCheckedRadioButtonId()){
+                    case R.id.rad_study:
+                        state_study = "就學中";
+                        break;
+                    case R.id.rad_graduate:
+                        state_study = "畢業";
+                        break;
+                    case R.id.rad_industry:
+                        state_study = "肄業";
+                        break;
+                }
+
+                switch (rg_eat_habit.getCheckedRadioButtonId()){
+                    case R.id.rad_veg:
+                        eat_habit = "素食";
+                        break;
+                    case R.id.rad_forag:
+                        eat_habit = "葷食";
+                        break;
+                }
+
+//                Log.v("gender",gender);
 //                Log.v("8888888", spin_address.getSelectedItem().toString());
 //                Log.v("8888888", spin_area.getSelectedItem().toString());
 //                Log.v("8888888", pic1);

@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
-        app:navigationIcon="@drawable/ic_chevron_left_black_24dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme">
 
@@ -19,10 +18,10 @@
             android:id="@+id/toolbar_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="檢舉"
+            android:gravity="center_horizontal"
+            android:text="@string/report"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
@@ -35,13 +34,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="協助我們瞭解發生的狀況"
+            android:text="@string/report_1"
             android:textColor="@color/colorPrimaryDark" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="這則貼文有甚麼問題?" />
+            android:text="@string/report_2" />
 
         <EditText
             android:id="@+id/edit_problem"
@@ -49,7 +48,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="top|left"
-            android:hint="例如：詐騙、侵犯智慧財產權、騷擾到我或某個我認識的人"
+            android:hint="@string/edit_report"
             android:inputType="textMultiLine"
             android:minLines="10" />
         <Button
@@ -57,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="確認送出"
+            android:text="@string/sent"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
