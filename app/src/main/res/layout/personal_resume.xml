@@ -184,7 +184,7 @@
                 android:layout_marginRight="20dp">
 
                 <Spinner
-                    android:id="@+id/spin_address"
+                    android:id="@+id/spinnerCity"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -193,7 +193,7 @@
                     android:spinnerMode="dialog" />
 
                 <Spinner
-                    android:id="@+id/spin_area"
+                    android:id="@+id/spinnerDistrict"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -285,7 +285,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
-                    android:id="@+id/rad_industry"
+                    android:id="@+id/rad_inComplete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
