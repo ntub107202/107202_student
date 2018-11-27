@@ -3,6 +3,7 @@ package ntub107202.student;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -56,7 +57,7 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
             contact, email, phone;
     public ImageView imgHostelPic;
     public String hostelNum, hostelOwnerAccount;
-    public Button btnResume;
+    public Button btnResume,btn_connection;
 
     private Context mContext;
 
@@ -126,6 +127,7 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
 
 
         btnResume =  findViewById(R.id.btn_resume);
+        btn_connection =  findViewById(R.id.btn_connection);
 
         hostelName = (TextView) findViewById(R.id.txt_hostel_name);//row19
         hostelAddr = (TextView) findViewById(R.id.txt_hostel_addr);//20
@@ -153,6 +155,16 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
                 Log.d("get5487", "fuck123fuck" + getWorksheet.getRow31(position));
             }
         });
+        btn_connection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v("話都你在說",getWorksheet.getRow46(position));
+                Uri uri = Uri.parse(getWorksheet.getRow46(position));
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
 
 
 
