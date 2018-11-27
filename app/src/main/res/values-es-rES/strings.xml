@@ -288,4 +288,5 @@
     <string name="report_1"> Ayúdenos a entender lo que sucedió </string>    
     <string name="report_2"> ¿Qué hay de malo en esta publicación? </string>    
     <string name="edit_report"> Por ejemplo: estafa, infracción de derechos de propiedad intelectual, acoso a mí o alguien que conozco </string>
+    <string name="web_create">Producción de páginas web</string>
 </resources>
