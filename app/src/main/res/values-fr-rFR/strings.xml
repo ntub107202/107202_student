@@ -291,4 +291,5 @@
     <string name="report_1">Aidez-nous à comprendre ce qui s’est passé</string>
     <string name="report_2">Quel est le problème avec ce message?</string>
     <string name="edit_report">Par exemple: arnaque, violation des droits de propriété intellectuelle, harcèlement envers moi ou une personne que je connais</string>
+    <string name="web_create">Production de pages Web</string>
 </resources>

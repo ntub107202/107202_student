@@ -288,4 +288,5 @@
     <string name="report_1">Help us understand what happened </string>
     <string name="report_2">What is wrong with this post?</string>
     <string name="edit_report">For example: scam, infringement of intellectual property rights, harassment to me or someone I know </string>
+    <string name="web_create">Web production</string>
 </resources>

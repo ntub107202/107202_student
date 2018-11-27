@@ -288,4 +288,5 @@
     <string name="report_1">何が起こったのか理解してください</string>
     <string name="report_2">この投稿で何が間違っていますか？</string>
     <string name="edit_report">たとえば、詐欺、知的財産権の侵害、私または私が知っている誰かへの嫌がらせ</string>
+    <string name="web_create">ウェブ制作</string>
 </resources>

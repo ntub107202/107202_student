@@ -288,4 +288,5 @@
     <string name="report_1"> Helfen Sie uns zu verstehen, was passiert ist </string>
     <string name="report_2"> Was ist an diesem Beitrag falsch? </string>
     <string name="edit_report"> Zum Beispiel: Betrug, Verletzung der Rechte des geistigen Eigentums, Belästigung von mir oder jemandem, den ich kenne </string>
+    <string name="web_create">Webseiten-Produktion</string>
 </resources>

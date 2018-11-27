@@ -452,12 +452,12 @@
                         android:textSize="16sp" />
 
                     <CheckBox
+                        android:id="@+id/web_create"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=""
+                        android:text="@string/web_create"
                         android:textColor="@color/fontDark"
-                        android:textSize="16sp"
-                        android:visibility="invisible" />
+                        android:textSize="16sp"/>
 
                 </TableRow>
 
