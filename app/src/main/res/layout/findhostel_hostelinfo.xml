@@ -41,33 +41,35 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/view_pager"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_centerInParent="true"
-                    android:background="@android:color/darker_gray" />
-                <ImageView
-                    android:id="@+id/imageView_hostel_pic"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@color/fontDark" />
-                <LinearLayout
-                    android:id="@+id/ll_player_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <!--<android.support.v4.view.ViewPager-->
+                    <!--android:id="@+id/view_pager"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:background="@android:color/darker_gray" />-->
 
-                </LinearLayout>
-                <View
-                    android:id="@+id/detail_video_back"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="gone"
-                    android:background="#000000"
-                    ></View>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/adv_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="220dp" >
 
+            </android.support.v4.view.ViewPager>
+            <LinearLayout
+                android:id="@+id/viewGroup"
+                android:layout_below="@id/adv_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25px"
+                android:gravity="right"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/imageView_hostel_pic"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--app:srcCompat="@color/fontDark" />-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -298,6 +300,29 @@
                     android:layout_marginLeft="20dp"
                     android:text="@string/phone"
                     android:textColor="@color/fontDark"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#CCCCCC"
+                    android:padding="12dp"
+                    android:text="Youtube影片"
+                    android:textColor="@color/fontDark" />
+                <LinearLayout
+                    android:id="@+id/ll_player_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/detail_video_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="#000000"
+                    ></View>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

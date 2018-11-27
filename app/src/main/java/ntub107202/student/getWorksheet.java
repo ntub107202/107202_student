@@ -38,6 +38,13 @@ public class getWorksheet {
         private static String[] row32= new String[100];
         private static String[] row33= new String[100];
         private static String[] row34= new String[100];
+        private static String[] row45= new String[100];
+
+        private static String[] row47= new String[100];
+        private static String[] row48= new String[100];
+        private static String[] row49= new String[100];
+        private static String[] row500= new String[100];
+
         private static String[] row35= new String[100];
         private static String[] row36= new String[100];
         private static String[] row45= new String[100];
@@ -62,11 +69,14 @@ public class getWorksheet {
     private static String[] row56= new String[100];
     private static String[] row57= new String[100];
     private static String[] row58= new String[100];
-        private static String[] row40= new String[100];
-        private static String[] row41= new String[100];
+    private static String[] row40= new String[100];
+    private static String[] row41= new String[100];
 
-        private static String[] row42= new String[100];
-        private static String[] row43= new String[100];
+    private static String[] row42= new String[100];
+    private static String[] row43= new String[100];
+    private static String[] row510= new String[100];
+
+
 
         public static String username;
         public static String userpic;
@@ -138,8 +148,11 @@ public class getWorksheet {
                         row33[i] = jsonArray.getJSONObject(i).getString("vacancyDays");
                         row34[i] = jsonArray.getJSONObject(i).getString("hostelRate");
                         row45[i] = jsonArray.getJSONObject(i).getString("hostelNum");
-                        row46[i] = jsonArray.getJSONObject(i).getString("lineId");
-
+                        row500[i] = jsonArray.getJSONObject(i).getString("hostelPhoto2");
+                        row47[i] = jsonArray.getJSONObject(i).getString("hostelPhoto3");
+                        row48[i] = jsonArray.getJSONObject(i).getString("hostelPhoto4");
+                        row49[i] = jsonArray.getJSONObject(i).getString("hostelPhoto5");
+                        row510[i] = jsonArray.getJSONObject(i).getString("url");
                         Log.v("Row56", row20[i]);
                         Log.v("Rowlineid", row46[i]);
                     }
@@ -507,4 +520,20 @@ public class getWorksheet {
         public static String getRow43(int i){
             return row43[i];
         }
+
+    public static String getRow500(int i){
+        return row500[i];
+    }
+    public static String getRow510(int i){
+        return row510[i];
+    }
+    public static String getRow47(int i){
+        return row47[i];
+    }
+    public static String getRow48(int i){
+        return row48[i];
+    }
+    public static String getRow49(int i){
+        return row49[i];
+    }
     }
