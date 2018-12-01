@@ -52,7 +52,7 @@
                 android:text="@string/lbl_upload_photo" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/imgViewFace"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
@@ -452,7 +452,7 @@
                         android:textSize="16sp" />
 
                     <CheckBox
-                        android:id="@+id/web_create"
+                        android:id="@+id/chk_createWeb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/web_create"
@@ -769,7 +769,7 @@
                 android:text="@string/pick_photo" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imgViewLife"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginBottom="10dp"

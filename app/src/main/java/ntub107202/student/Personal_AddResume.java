@@ -102,7 +102,11 @@ public class Personal_AddResume extends AppCompatActivity {
 
     Button btn_add_resume;
 
-    String chk_og_S,chk_rs_S,chk_cr_S,chk_rc_S,chk_od_S,chk_web_S,chk_art_S,chk_photograph_S,chk_gardening_S,chk_cook_S,chk_motorcycle_S,chk_car_S,chk_dance_S,chk_sing_S,chk_music_S,chk_english_S,chk_japanese_S,chk_minnan_S;
+    String chk_og_S,chk_rs_S,chk_cr_S,chk_rc_S,chk_od_S,
+            chk_web_S,chk_art_S,chk_photograph_S,chk_gardening_S,
+            chk_cook_S,chk_motorcycle_S,chk_car_S,chk_dance_S,
+            chk_sing_S,chk_music_S,chk_english_S,chk_japanese_S,
+            chk_minnan_S;
     String gender,state_study,eat_habit;
 
     private static String pic1;

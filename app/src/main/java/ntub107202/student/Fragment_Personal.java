@@ -40,7 +40,7 @@ public class Fragment_Personal extends Fragment {
         textView31 = (TextView)view.findViewById(R.id.textView31);
         textView30 = (TextView)view.findViewById(R.id.textView30);
         ImageView imageView4 = (ImageView)view.findViewById(R.id.imageView4);
-
+        getWorksheet.getEditStudResumeJSON();
 
         textView31.setText(getWorksheet.getRow42(0));
 //        Log.v("QQQQQQ",username);
