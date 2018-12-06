@@ -148,6 +148,7 @@ public class getWorksheet {
                         row33[i] = jsonArray.getJSONObject(i).getString("vacancyDays");
                         row34[i] = jsonArray.getJSONObject(i).getString("hostelRate");
                         row45[i] = jsonArray.getJSONObject(i).getString("hostelNum");
+                        row46[i] = jsonArray.getJSONObject(i).getString("lineId");
                         row500[i] = jsonArray.getJSONObject(i).getString("hostelPhoto2");
                         row47[i] = jsonArray.getJSONObject(i).getString("hostelPhoto3");
                         row48[i] = jsonArray.getJSONObject(i).getString("hostelPhoto4");

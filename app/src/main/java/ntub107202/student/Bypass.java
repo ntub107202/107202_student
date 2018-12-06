@@ -18,6 +18,12 @@ public class Bypass extends AppCompatActivity {
         getWorksheet.getForumJSON();
         getWorksheet.getscheduleJSON();
         getWorksheet.getHostelJSON();
+        try {
+            Thread.sleep(500); //1000為1秒
+        } catch (InterruptedException e) {
+// TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         button2 = findViewById(R.id.buttonStdEntry);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override

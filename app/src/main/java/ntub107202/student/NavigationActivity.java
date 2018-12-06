@@ -1,11 +1,14 @@
 package ntub107202.student;
 
+import android.app.ActivityManager;
 import android.app.FragmentTransaction;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -33,6 +36,7 @@ public class NavigationActivity extends AppCompatActivity {
     BottomNavigationView navigation;
     private int TIME = 3000;
     private int x  = 5 ;
+    private int y  = 5 ;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -76,7 +80,15 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigation);
         init();
         mTextMessage = (TextView) findViewById(R.id.message);
+        int maxMemory = (int) Runtime.getRuntime().maxMemory();
+        Log.i("给应用分配的最大内存是：",maxMemory+"");
+        ActivityManager activityManager = (ActivityManager) (getSystemService(Context.ACTIVITY_SERVICE));
+        int memorySize = activityManager.getMemoryClass();
+        int largeMemorySize = activityManager.getLargeMemoryClass();
+        Log.i("memorySize内存是：",maxMemory+"");
+        Log.i("largeMemorySize内存是：",maxMemory+"");
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setPositiveButton("點擊關閉", new DialogInterface.OnClickListener() {
@@ -84,29 +96,33 @@ public class NavigationActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
             }
         });
-        final AlertDialog dialog = builder.create();
-        LayoutInflater inflater = getLayoutInflater();
-        View dialogLayout = inflater.inflate(R.layout.ad_banner, null);
-        dialog.setView(dialogLayout);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if(y==1){
+            final AlertDialog dialog = builder.create();
+            LayoutInflater inflater = getLayoutInflater();
+            View dialogLayout = inflater.inflate(R.layout.ad_banner, null);
+            dialog.setView(dialogLayout);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        dialog.show();
+            dialog.show();
 
-        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
-            @Override
-            public void onShow(DialogInterface d) {
-                ImageView image = (ImageView) dialog.findViewById(R.id.goProDialogImage);
-                Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                        R.drawable.ad2);
-                float imageWidthInPX = (float)image.getWidth();
+            dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                @Override
+                public void onShow(DialogInterface d) {
+                    ImageView image = (ImageView) dialog.findViewById(R.id.goProDialogImage);
+                    Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                            R.drawable.ad2);
+                    float imageWidthInPX = (float)image.getWidth();
 
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(Math.round(imageWidthInPX),
-                        Math.round(imageWidthInPX * (float)icon.getHeight() / (float)icon.getWidth()));
-                image.setLayoutParams(layoutParams);
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(Math.round(imageWidthInPX),
+                            Math.round(imageWidthInPX * (float)icon.getHeight() / (float)icon.getWidth()));
+                    image.setLayoutParams(layoutParams);
 
 
-            }
-        });
+                }
+            });
+            y=0;
+        }
+
         Handler handler = new Handler();
         // 在初始化方法里.
         Runnable runnable = new Runnable() {
@@ -128,6 +144,12 @@ public class NavigationActivity extends AppCompatActivity {
         };
         handler.postDelayed(runnable, TIME);
 
+    }
+    public void cleanshit(){
+        SharedPreferences pref = getSharedPreferences("userpwS", MODE_PRIVATE);
+        pref.edit()
+                .clear()
+                .commit();
     }
     public void alarm(){
         if (x==5) {

@@ -14,7 +14,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.SharedPreferences;
 
+import static android.content.Context.MODE_PRIVATE;
 import static ntub107202.student.getWorksheet.username;
 
 public class Fragment_Personal extends Fragment {
@@ -76,7 +78,8 @@ public class Fragment_Personal extends Fragment {
         button02.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-
+                NavigationActivity navigationActivity = (NavigationActivity ) getActivity();
+                navigationActivity.cleanshit();
                 Intent intent = new Intent(getActivity(),Login.class);
                 startActivity(intent);
             }

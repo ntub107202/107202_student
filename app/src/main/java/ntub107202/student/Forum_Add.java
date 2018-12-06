@@ -122,11 +122,17 @@ public class Forum_Add extends AppCompatActivity {
                 //choose_hostel.getSelectedItem().toString(),
 //                getWorksheet.postToForum("1", "1", "2011-09-05" , "1", "1" , "1");
                 getWorksheet.postToForum(Login.getUser(), getWorksheet.getRow35((int)choose_hostel.getSelectedItemId()).toString(), str , good, editText2.getText().toString() , pic1);
-
+                getWorksheet.getForumJSON();
+                try {
+                    Thread.sleep(1000); //1000為1秒
+                } catch (InterruptedException e) {
+// TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
 //                getWorksheet.getJSON();
 //                getWorksheet.getHostelJSON();
 //                getWorksheet.getscheduleJSON();
-//                getWorksheet.getForumJSON();
+
                 Intent intent = new Intent(Forum_Add.this,NavigationActivity.class);
                 intent.putExtra("id",2);
                 startActivity(intent);

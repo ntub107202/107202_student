@@ -144,13 +144,13 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
         phone = (TextView) findViewById(R.id.txt_phone);//32
 //        imgHostelPic = (ImageView) findViewById(R.id.imageView_hostel_pic);//21
 
-        String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+        String user = getSharedPreferences("userpwS", MODE_PRIVATE).getString("USER", "");
 
         btnResume.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getWorksheet.postToResume(user, hostelOwnerAccount, hostelNum);
-                Log.d("get5487", "我是User" + user);
+                Log.d("get6969", "我是User" + user);
                 Log.d("get5487", "fuck123fuck" + getWorksheet.getRow35(position));
                 Log.d("get5487", "fuck123fuck" + getWorksheet.getRow31(position));
             }
