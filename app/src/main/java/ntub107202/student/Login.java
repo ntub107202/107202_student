@@ -39,6 +39,7 @@ public class Login extends AppCompatActivity {
     private String valid_email;
     private String valid_password;
     private static String user ;
+    public static int gg = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

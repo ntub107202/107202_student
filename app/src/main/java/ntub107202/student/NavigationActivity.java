@@ -96,7 +96,7 @@ public class NavigationActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
             }
         });
-        if(y==1){
+        if(Login.gg==1){
             final AlertDialog dialog = builder.create();
             LayoutInflater inflater = getLayoutInflater();
             View dialogLayout = inflater.inflate(R.layout.ad_banner, null);
@@ -120,7 +120,7 @@ public class NavigationActivity extends AppCompatActivity {
 
                 }
             });
-            y=0;
+            Login.gg=0;
         }
 
         Handler handler = new Handler();
