@@ -11,6 +11,7 @@ import ntub107202.student.MyAsyncTask.postUpdateAsyncTask3;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask4;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask5;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask6;
+import ntub107202.student.MyAsyncTask.postUpdateAsyncTask7;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -70,6 +71,7 @@ public class getWorksheet {
     private static String[] row56= new String[100];
     private static String[] row57= new String[100];
     private static String[] row58= new String[100];
+    private static String[] row60= new String[100];
     private static String[] row40= new String[100];
     private static String[] row41= new String[100];
 
@@ -321,10 +323,12 @@ public class getWorksheet {
                         row52[i] = jsonArray.getJSONObject(i).getString("row3");
                         row53[i] = jsonArray.getJSONObject(i).getString("row4");
                         row54[i] = jsonArray.getJSONObject(i).getString("row5");
+                        row60[i] = jsonArray.getJSONObject(i).getString("row6");
                         Log.v("wtf",row50[i]);
                         Log.v("wtf",row51[i]);
                         Log.v("wtf",row52[i]);
                         Log.v("wtf",row53[i]);
+                        Log.v("hireNo",row60[i]);
                         Log.v("wtf","value"+worksheetLength);
 
                     }
@@ -421,6 +425,17 @@ public class getWorksheet {
                                 row7,row8,row9,row10,row11,row12,row13,row14,row15,row16,row17,
                                 row18,row19,row20,row21,row22,row23,row24,row25,row26,row27,
                                 row28,row29,row30,row31,row32,row33,row34,row35);
+        }
+    }
+    public static void delToResume(String row1) {
+        postUpdateAsyncTask7 myAsyncTask = new postUpdateAsyncTask7(new postUpdateAsyncTask7.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.delResumeS ,row1);
         }
     }
         public static int getWorksheetLength(){
@@ -562,6 +577,9 @@ public class getWorksheet {
     }
     public static String getRow57(int i){
         return row57[i];
+    }
+    public static String getRow60(int i){
+        return row60[i];
     }
         public static String getRow42(int i){
             return row42[i];
