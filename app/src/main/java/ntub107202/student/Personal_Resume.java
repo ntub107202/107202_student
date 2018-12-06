@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -72,6 +73,8 @@ public class Personal_Resume extends AppCompatActivity {
 
     ImageView ImgV_face;
     ImageView ImgV_life;
+    EditText edit_y2b;
+    EditText edit_qr;
     EditText edit_name;
     RadioGroup rg_gender;
     RadioButton rad_men;
@@ -120,9 +123,9 @@ public class Personal_Resume extends AppCompatActivity {
             chk_sing_S,chk_music_S,chk_english_S,chk_japanese_S,
             chk_minnan_S;
 
-    String face_S,name_S,gender_S,birth_S,addressC_S,addressD_S,addressST_S,school_S,depart_S,
+    String face_S,life_S,name_S,gender_S,birth_S,addressC_S,addressD_S,addressST_S,school_S,depart_S,
             studyState_S,interest_S,workExp_S,workReason_S,eatingHab_S,startDate_S,endDate_S
-            ,contact_S,phone_S;
+            ,contact_S,phone_S,y2b_S,qr_S;
 
     private static String user ;
 
@@ -140,6 +143,8 @@ public class Personal_Resume extends AppCompatActivity {
 
         ImgV_face = findViewById(R.id.imgViewFace);
         ImgV_life = findViewById(R.id.imgViewLife);
+        edit_y2b = findViewById(R.id.edit_y2b);
+        edit_qr = findViewById(R.id.edit_qr);
         edit_name = (EditText) findViewById(R.id.edit_name);
         rg_gender = (RadioGroup)findViewById(R.id.rg_gender);
         rad_men = (RadioButton) findViewById(R.id.rad_men);
@@ -208,6 +213,18 @@ public class Personal_Resume extends AppCompatActivity {
         btn_add_resume.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Bitmap image = ((BitmapDrawable)ImgV_face.getDrawable()).getBitmap();
+                face_S = BitmapToString(image);
+                Bitmap image2 = ((BitmapDrawable)ImgV_life.getDrawable()).getBitmap();
+                life_S = BitmapToString(image2);
+
+                qr_S = edit_qr.getText().toString();
+                y2b_S = edit_y2b.getText().toString();
+
+//                face_S = bitmapToBase64(image);
+
+
                 name_S = edit_name.getText().toString();
 
                 switch (rg_gender.getCheckedRadioButtonId()){
@@ -286,14 +303,17 @@ public class Personal_Resume extends AppCompatActivity {
                         chk_cook_S + chk_motorcycle_S + chk_car_S + chk_dance_S + 
                         chk_sing_S + chk_music_S + chk_english_S + chk_japanese_S + 
                         chk_minnan_S + workExp_S + workReason_S + eatingHab_S + startDate_S +
-                        endDate_S + contact_S + phone_S);
+                        endDate_S + contact_S + phone_S + qr_S + y2b_S);
+
+                Log.v("facehere",face_S);
+                Log.v("lifehere",life_S);
 
                 getWorksheet.postUpdateToStudResume(user,name_S,gender_S,birth_S,addressC_S,
                                 addressD_S,addressST_S,school_S,depart_S,studyState_S,interest_S,
                         chk_og_S,chk_rs_S,chk_cr_S,chk_rc_S,chk_od_S,chk_gardening_S,chk_cook_S,chk_photograph_S,
                         chk_webManage_S,chk_art_S,chk_motorcycle_S,chk_car_S,chk_dance_S, chk_sing_S,chk_music_S,
                         chk_english_S,chk_japanese_S, chk_minnan_S,workExp_S, workReason_S,eatingHab_S,startDate_S,
-                        endDate_S,phone_S);
+                        endDate_S,phone_S,qr_S,y2b_S);
                 showAlert();
             }
         });
@@ -346,6 +366,9 @@ public class Personal_Resume extends AppCompatActivity {
 
         ImgV_face.setImageBitmap(stringToBitmap(getWorksheet.getRow100(9)));
         ImgV_life.setImageBitmap(stringToBitmap(getWorksheet.getRow100(10)));
+
+        edit_qr.setText(getWorksheet.getRow100(51));
+        edit_y2b.setText(getWorksheet.getRow100(52));
 
         edit_name.setText(getWorksheet.getRow100(0));
 
@@ -786,6 +809,36 @@ public class Personal_Resume extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+    public static String bitmapToBase64(Bitmap bitmap) {
+
+        String result = null;
+        ByteArrayOutputStream baos = null;
+        try {
+            if (bitmap != null) {
+                baos = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+
+                baos.flush();
+                baos.close();
+
+                byte[] bitmapBytes = baos.toByteArray();
+                result = Base64.encodeToString(bitmapBytes, Base64.DEFAULT);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (baos != null) {
+                    baos.flush();
+                    baos.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
 
 }
 
