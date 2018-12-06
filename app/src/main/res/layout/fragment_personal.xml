@@ -123,31 +123,6 @@
                     android:layout_marginTop="10dp"
                     android:background="@color/txt_font" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp">
-
-                    <ImageView
-                        android:layout_width="33dp"
-                        android:layout_height="33dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="40dp"
-                        android:src="@drawable/pencil" />
-
-                    <Button
-                        android:id="@+id/btn_add_resume"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:background="#00000000"
-                        android:gravity="left|center_vertical"
-                        android:text="@string/add_resume"
-                        android:textColor="@color/fontDark" />
-
-
-                </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -329,6 +304,7 @@
                     android:background="@color/txt_font" />
 
                 <LinearLayout
+                    android:id="@+id/lin_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
@@ -353,6 +329,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lin_reg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">

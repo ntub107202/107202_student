@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.content.SharedPreferences;
 
@@ -27,7 +28,7 @@ public class Fragment_Personal extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_personal,container,false);
 
-        Button btn_add = (Button)view.findViewById(R.id.btn_add_resume);
+//        Button btn_add = (Button)view.findViewById(R.id.btn_add_resume);
         Button button00 = (Button)view.findViewById(R.id.btn_edit_resume);
         Button button01 = (Button)view.findViewById(R.id.btn_hire_history);
         Button button02 = (Button)view.findViewById(R.id.btn_logout);
@@ -43,6 +44,8 @@ public class Fragment_Personal extends Fragment {
         textView30 = (TextView)view.findViewById(R.id.textView30);
         ImageView imageView4 = (ImageView)view.findViewById(R.id.imageView4);
         getWorksheet.getEditStudResumeJSON();
+        LinearLayout lin_login = (LinearLayout)view.findViewById(R.id.lin_login);
+        LinearLayout lin_reg = (LinearLayout)view.findViewById(R.id.lin_reg);
 
         textView31.setText(getWorksheet.getRow42(0));
 //        Log.v("QQQQQQ",username);
@@ -50,15 +53,19 @@ public class Fragment_Personal extends Fragment {
 //        Log.v("QQQQQQ",getWorksheet.getRow42(0));
         textView30.setText(Login.getUser());
         Log.v("1516651",Login.getUser());
+        if(Login.getUser()!= null){
+            lin_login.setVisibility(View.GONE);
+            lin_reg.setVisibility(View.GONE);
+        }
 
-        btn_add.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getActivity(),Personal_AddResume.class);
-                startActivity(intent);
-            }
-        });
+//        btn_add.setOnClickListener(new Button.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent intent = new Intent(getActivity(),Personal_AddResume.class);
+//                startActivity(intent);
+//            }
+//        });
         button00.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
