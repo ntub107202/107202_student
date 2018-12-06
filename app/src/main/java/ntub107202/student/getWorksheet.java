@@ -159,12 +159,14 @@ public class getWorksheet {
                         row48[i] = jsonArray.getJSONObject(i).getString("hostelPhoto4");
                         row49[i] = jsonArray.getJSONObject(i).getString("hostelPhoto5");
                         row510[i] = jsonArray.getJSONObject(i).getString("url");
+                        Log.v("Row19", row19[i]);
                         Log.v("Row56", row20[i]);
                         Log.v("Rowlineid", row46[i]);
                     }
                 } catch (Exception e) {
                     Log.v("ABC", Log.getStackTraceString(e));
                 }
+
             }
         });
         myAsyncTask.execute(Common.getHostel);
@@ -291,7 +293,7 @@ public class getWorksheet {
                 try {
                     JSONObject object = new JSONObject(result);
                     JSONArray jsonArray = object.getJSONArray("result");
-                    for (int i = 0; i<51 ; i++){
+                    for (int i = 0; i<53 ; i++){
                         String abc = "row" + String.valueOf(i+1);
                         row100[i] = jsonArray.getJSONObject(0).getString(abc);
                         Log.v("row100",row100[i]);
@@ -413,7 +415,8 @@ public class getWorksheet {
                                               String row13, String row14, String row15, String row16, String row17, String row18,
                                               String row19, String row20, String row21, String row22, String row23, String row24,
                                               String row25, String row26, String row27, String row28, String row29, String row30,
-                                              String row31, String row32, String row33, String row34, String row35) {
+                                              String row31, String row32, String row33, String row34, String row35,String row36,
+                                              String row37) {
         postUpdateAsyncTask6 myAsyncTask = new postUpdateAsyncTask6(new postUpdateAsyncTask6.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -424,7 +427,7 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postStudEditResume ,row1,row2,row3,row4,row5,row6,
                                 row7,row8,row9,row10,row11,row12,row13,row14,row15,row16,row17,
                                 row18,row19,row20,row21,row22,row23,row24,row25,row26,row27,
-                                row28,row29,row30,row31,row32,row33,row34,row35);
+                                row28,row29,row30,row31,row32,row33,row34,row35,row36,row37);
         }
     }
     public static void delToResume(String row1) {

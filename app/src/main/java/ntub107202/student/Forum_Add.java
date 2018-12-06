@@ -30,7 +30,9 @@ import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -343,7 +345,7 @@ public class Forum_Add extends AppCompatActivity {
         } catch (OutOfMemoryError e) {
             return null;
         }
-    }
 }
 
 
+}
