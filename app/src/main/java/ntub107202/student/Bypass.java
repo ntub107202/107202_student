@@ -234,7 +234,7 @@ public class Bypass extends AppCompatActivity {
     private void whatOption() {
         what.incrementAndGet();
         if (what.get() > imageViews.length - 1) {
-            what.getAndAdd(-4);
+            what.getAndAdd(-7);
         }
         try {
             Thread.sleep(5000);
