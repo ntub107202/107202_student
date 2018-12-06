@@ -10,6 +10,7 @@ import ntub107202.student.MyAsyncTask.postUpdateAsyncTask2;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask3;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask4;
 import ntub107202.student.MyAsyncTask.postUpdateAsyncTask5;
+import ntub107202.student.MyAsyncTask.postUpdateAsyncTask6;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -75,6 +76,8 @@ public class getWorksheet {
     private static String[] row42= new String[100];
     private static String[] row43= new String[100];
     private static String[] row510= new String[100];
+
+    private static String[] row100= new String[100];
 
 
 
@@ -277,6 +280,31 @@ public class getWorksheet {
         });
         myNavigationAsyncTask.execute(Common.getStudentname, Login.getUser());
     }
+
+    public static void getEditStudResumeJSON() {
+
+        NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    for (int i = 0; i<51 ; i++){
+                        String abc = "row" + String.valueOf(i+1);
+                        row100[i] = jsonArray.getJSONObject(0).getString(abc);
+                        Log.v("row100",row100[i]);
+                    }
+//                    username =row42[0];
+//                    userpic = row43[0];
+
+                } catch (Exception e) {
+//                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myNavigationAsyncTask.execute(Common.getEditStudResume, Login.getUser());
+    }
+
     public static void getResumeJSON() {
 
         NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
@@ -373,6 +401,26 @@ public class getWorksheet {
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
             myAsyncTask.execute(Common.postResumeStudent2Hostel ,row1,row2,row3);
+        }
+    }
+
+    public static void postUpdateToStudResume(String row1, String row2, String row3, String row4, String row5, String row6,
+                                              String row7, String row8, String row9, String row10, String row11, String row12,
+                                              String row13, String row14, String row15, String row16, String row17, String row18,
+                                              String row19, String row20, String row21, String row22, String row23, String row24,
+                                              String row25, String row26, String row27, String row28, String row29, String row30,
+                                              String row31, String row32, String row33, String row34, String row35) {
+        postUpdateAsyncTask6 myAsyncTask = new postUpdateAsyncTask6(new postUpdateAsyncTask6.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postStudEditResume ,row1,row2,row3,row4,row5,row6,
+                                row7,row8,row9,row10,row11,row12,row13,row14,row15,row16,row17,
+                                row18,row19,row20,row21,row22,row23,row24,row25,row26,row27,
+                                row28,row29,row30,row31,row32,row33,row34,row35);
         }
     }
         public static int getWorksheetLength(){
@@ -537,4 +585,9 @@ public class getWorksheet {
     public static String getRow49(int i){
         return row49[i];
     }
+
+    public static String getRow100(int i){
+        return row100[i];
     }
+
+}

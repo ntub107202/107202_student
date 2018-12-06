@@ -2,6 +2,7 @@ package ntub107202.student;
 
 import android.Manifest;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -14,19 +15,25 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -40,6 +47,7 @@ public class Personal_Resume extends AppCompatActivity {
     private ImageView pictureImageView = null;
 
     private String city, district;
+
 
     private EditText edit_birth, edit_startDate, edit_endDate;
 
@@ -60,6 +68,64 @@ public class Personal_Resume extends AppCompatActivity {
 
     private ImageButton imageButton1 = null;
     private ImageView choiceFromAlbumButton2 = null;
+
+
+    ImageView ImgV_face;
+    ImageView ImgV_life;
+    EditText edit_name;
+    RadioGroup rg_gender;
+    RadioButton rad_men;
+    RadioButton rad_women;
+    Spinner spnCity, spnDistrict;
+    EditText edit_address;
+    EditText edit_school;
+    EditText edit_depart;
+    RadioGroup rg_state_study;
+    RadioButton rad_study;
+    RadioButton rad_graduate;
+    RadioButton rad_inComplete;
+    EditText edit_interest;
+    CheckBox chk_og;
+    CheckBox chk_rs;
+    CheckBox chk_cr;
+    CheckBox chk_rc;
+    CheckBox chk_od;
+    CheckBox chk_webManage;
+    CheckBox chk_webDesign;
+    CheckBox chk_art;
+    CheckBox chk_photograph;
+    CheckBox chk_gardening;
+    CheckBox chk_cook;
+    CheckBox chk_motorcycle;
+    CheckBox chk_car;
+    CheckBox chk_dance;
+    CheckBox chk_sing;
+    CheckBox chk_music;
+    CheckBox chk_english;
+    CheckBox chk_japanese;
+    CheckBox chk_minnan;
+    EditText edit_work_exp;
+    EditText edit_reason;
+    RadioGroup rg_eat_habit;
+    RadioButton rad_veg;
+    RadioButton rad_forag;
+    EditText edit_contact;
+    EditText edit_phone;
+
+    Button btn_add_resume;
+
+    String chk_og_S,chk_rs_S,chk_cr_S,chk_rc_S,chk_od_S,
+            chk_webManage_S,chk_art_S,chk_photograph_S,chk_gardening_S,
+            chk_cook_S,chk_motorcycle_S,chk_car_S,chk_dance_S,
+            chk_sing_S,chk_music_S,chk_english_S,chk_japanese_S,
+            chk_minnan_S;
+
+    String face_S,name_S,gender_S,birth_S,addressC_S,addressD_S,addressST_S,school_S,depart_S,
+            studyState_S,interest_S,workExp_S,workReason_S,eatingHab_S,startDate_S,endDate_S
+            ,contact_S,phone_S;
+
+    private static String user ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,13 +134,60 @@ public class Personal_Resume extends AppCompatActivity {
         startCameraButton.setOnClickListener(clickListener);
         choiceFromAlbumButton = (Button) findViewById(R.id.button7);
         choiceFromAlbumButton.setOnClickListener(clickListener);
-        pictureImageView = (ImageView) findViewById(R.id.imageView10);
-        choiceFromAlbumButton2 = (ImageView) findViewById(R.id.imageView6);
-        choiceFromAlbumButton2.setOnClickListener(clickListener);
+//        pictureImageView = (ImageView) findViewById(R.id.imageView10);
+//        choiceFromAlbumButton2 = (ImageView) findViewById(R.id.imageView6);
+//        choiceFromAlbumButton2.setOnClickListener(clickListener);
 
+        ImgV_face = findViewById(R.id.imgViewFace);
+        ImgV_life = findViewById(R.id.imgViewLife);
+        edit_name = (EditText) findViewById(R.id.edit_name);
+        rg_gender = (RadioGroup)findViewById(R.id.rg_gender);
+        rad_men = (RadioButton) findViewById(R.id.rad_men);
+        rad_women = (RadioButton) findViewById(R.id.rad_women);
         edit_birth = (EditText) findViewById(R.id.edit_birth);
+        spnCity = (Spinner)findViewById(R.id.spinnerCity);
+        spnDistrict = (Spinner)findViewById(R.id.spinnerDistrict);
+        edit_address = (EditText) findViewById(R.id.edit_address);
+        edit_school = (EditText) findViewById(R.id.edit_school);
+        edit_depart = (EditText) findViewById(R.id.edit_depart);
+        rg_state_study = (RadioGroup) findViewById(R.id.rg_state_study);
+        rad_study = (RadioButton) findViewById(R.id.rad_study);
+        rad_graduate = (RadioButton) findViewById(R.id.rad_graduate);
+        rad_inComplete = (RadioButton) findViewById(R.id.rad_industry);
+        edit_interest = (EditText) findViewById(R.id.edit_interest);
+        chk_og = (CheckBox) findViewById(R.id.chk_og);
+        chk_rs = (CheckBox) findViewById(R.id.chk_rs);
+        chk_cr = (CheckBox) findViewById(R.id.chk_cr);
+        chk_rc = (CheckBox) findViewById(R.id.chk_rc);
+        chk_od = (CheckBox) findViewById(R.id.chk_od);
+        chk_webManage = (CheckBox) findViewById(R.id.chk_web);
+        chk_webDesign = (CheckBox) findViewById(R.id.chk_createWeb);
+        chk_art = (CheckBox) findViewById(R.id.chk_art);
+        chk_photograph = (CheckBox) findViewById(R.id.chk_photograph);
+        chk_gardening = (CheckBox) findViewById(R.id.chk_gardening);
+        chk_cook = (CheckBox) findViewById(R.id.chk_cook);
+        chk_motorcycle = (CheckBox) findViewById(R.id.chk_motorcycle);
+        chk_car = (CheckBox) findViewById(R.id.chk_car);
+        chk_dance = (CheckBox) findViewById(R.id.chk_dance);
+        chk_sing = (CheckBox) findViewById(R.id.chk_sing);
+        chk_music = (CheckBox) findViewById(R.id.chk_music);
+        chk_english = (CheckBox) findViewById(R.id.chk_english);
+        chk_japanese = (CheckBox) findViewById(R.id.chk_japanese);
+        chk_minnan = (CheckBox) findViewById(R.id.chk_minnan);
+        rg_eat_habit = (RadioGroup) findViewById(R.id.rg_eat_habit);
+        edit_work_exp = (EditText) findViewById(R.id.edit_work_exp);
+        edit_reason = (EditText) findViewById(R.id.edit_reason);
+        rad_veg = (RadioButton) findViewById(R.id.rad_veg);
+        rad_forag = (RadioButton) findViewById(R.id.rad_forag);
+
         edit_startDate = (EditText) findViewById(R.id.edit_start_date);
         edit_endDate = (EditText) findViewById(R.id.edit_end_date);
+
+        edit_contact = (EditText) findViewById(R.id.edit_contact);
+        edit_phone = (EditText) findViewById(R.id.edit_phone);
+
+        btn_add_resume = findViewById(R.id.btn_add_resume);
+        user = getSharedPreferences("userpwS", MODE_PRIVATE).getString("USER", "");
 
         edit_birth.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
@@ -92,6 +205,102 @@ public class Personal_Resume extends AppCompatActivity {
             }
         });
 
+        btn_add_resume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                name_S = edit_name.getText().toString();
+
+                switch (rg_gender.getCheckedRadioButtonId()){
+                    case R.id.rad_men:
+                        gender_S = "男";
+                        break;
+                    case R.id.rad_women:
+                        gender_S = "女";
+                        break;
+                }
+                birth_S = edit_birth.getText().toString();
+                addressC_S = spnCity.getSelectedItem().toString();
+                addressD_S = spnDistrict.getSelectedItem().toString();
+                addressST_S = edit_address.getText().toString();
+                school_S = edit_school.getText().toString();
+                depart_S = edit_depart.getText().toString();
+
+                switch (rg_state_study.getCheckedRadioButtonId()){
+                    case R.id.rad_study:
+                        studyState_S = "就學中";
+                        break;
+                    case R.id.rad_graduate:
+                        studyState_S = "畢業";
+                        break;
+                    case R.id.rad_inComplete:
+                        studyState_S = "肄業";
+                        break;
+                }
+                interest_S = edit_interest.getText().toString();
+
+                if (chk_og.isChecked()){ chk_og_S = "1"; } else{ chk_og_S = "0"; }
+                if (chk_rs.isChecked()){ chk_rs_S = "1"; } else{ chk_rs_S = "0"; }
+                if (chk_cr.isChecked()){ chk_cr_S = "1"; } else{ chk_cr_S = "0"; }
+                if (chk_rc.isChecked()){ chk_rc_S = "1"; } else{ chk_rc_S = "0"; }
+                if (chk_od.isChecked()){ chk_od_S = "1"; } else{ chk_od_S = "0"; }
+
+                if (chk_webManage.isChecked()){ chk_webManage_S = "1"; } else{ chk_webManage_S = "0"; }
+                if (chk_art.isChecked()){ chk_art_S = "1"; } else{ chk_art_S = "0"; }
+                if (chk_photograph.isChecked()){ chk_photograph_S = "1"; } else{ chk_photograph_S = "0"; }
+                if (chk_gardening.isChecked()){ chk_gardening_S = "1"; } else{ chk_gardening_S = "0"; }
+                if (chk_cook.isChecked()){ chk_cook_S = "1"; } else{ chk_cook_S = "0"; }
+
+                if (chk_motorcycle.isChecked()){ chk_motorcycle_S = "1"; } else{ chk_motorcycle_S = "0"; }
+                if (chk_car.isChecked()){ chk_car_S = "1"; } else{ chk_car_S = "0"; }
+
+                if (chk_dance.isChecked()){ chk_dance_S = "1"; } else{ chk_dance_S = "0"; }
+                if (chk_sing.isChecked()){ chk_sing_S = "1"; } else{ chk_sing_S = "0"; }
+                if (chk_music.isChecked()){ chk_music_S = "1"; } else{ chk_music_S = "0"; }
+
+                if (chk_english.isChecked()){ chk_english_S = "1"; } else{ chk_english_S = "0"; }
+                if (chk_japanese.isChecked()){ chk_japanese_S = "1"; } else{ chk_japanese_S = "0"; }
+                if (chk_minnan.isChecked()){ chk_minnan_S = "1"; } else{ chk_minnan_S = "0"; }
+
+                workExp_S = edit_work_exp.getText().toString();
+                workReason_S = edit_reason.getText().toString();
+
+                switch (rg_eat_habit.getCheckedRadioButtonId()){
+                    case R.id.rad_veg:
+                        eatingHab_S = "0";
+                        break;
+                    case R.id.rad_forag:
+                        eatingHab_S = "1";
+                        break;
+                }
+
+                startDate_S = edit_startDate.getText().toString();
+                endDate_S = edit_endDate.getText().toString();
+
+                contact_S =edit_contact.getText().toString();
+                phone_S = edit_phone.getText().toString();
+
+                Log.v("namehere",user + name_S + gender_S + birth_S + addressC_S +
+                        addressD_S + addressST_S + school_S + depart_S + studyState_S
+                        + interest_S + chk_og_S + chk_rs_S + chk_cr_S + chk_rc_S + chk_od_S + 
+                        chk_webManage_S + chk_art_S + chk_photograph_S + chk_gardening_S + 
+                        chk_cook_S + chk_motorcycle_S + chk_car_S + chk_dance_S + 
+                        chk_sing_S + chk_music_S + chk_english_S + chk_japanese_S + 
+                        chk_minnan_S + workExp_S + workReason_S + eatingHab_S + startDate_S +
+                        endDate_S + contact_S + phone_S);
+
+                getWorksheet.postUpdateToStudResume(user,name_S,gender_S,birth_S,addressC_S,
+                                addressD_S,addressST_S,school_S,depart_S,studyState_S,interest_S,
+                        chk_og_S,chk_rs_S,chk_cr_S,chk_rc_S,chk_od_S,chk_gardening_S,chk_cook_S,chk_photograph_S,
+                        chk_webManage_S,chk_art_S,chk_motorcycle_S,chk_car_S,chk_dance_S, chk_sing_S,chk_music_S,
+                        chk_english_S,chk_japanese_S, chk_minnan_S,workExp_S, workReason_S,eatingHab_S,startDate_S,
+                        endDate_S,phone_S);
+                showAlert();
+            }
+        });
+//        btn_add_resume.setOnClickListener();
+
+
+
         //计算图片左右间距之和
         int padding = 15;
         int spacePx = (int) (UIUtil.dp2px(this, padding) * 2);
@@ -106,29 +315,12 @@ public class Personal_Resume extends AppCompatActivity {
         //设置左右边距
         params.leftMargin = (int) UIUtil.dp2px(this, padding);
         params.rightMargin = (int) UIUtil.dp2px(this, padding);
-        choiceFromAlbumButton2.setLayoutParams(params);
+//        choiceFromAlbumButton2.setLayoutParams(params);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-
-
-        /*
-         * 先判断用户以前有没有对我们的应用程序允许过读写内存卡内容的权限，
-         * 用户处理的结果在 onRequestPermissionResult 中进行处理
-         */
-        if(ContextCompat.checkSelfPermission(Personal_Resume.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            // 申请读写内存卡内容的权限
-            ActivityCompat.requestPermissions(Personal_Resume.this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_SDCARD_PERMISSION_REQUEST_CODE);
-        }
-
-        final Spinner spnCity = (Spinner)findViewById(R.id.spinnerCity);
-        final Spinner spnDistrict = (Spinner)findViewById(R.id.spinnerDistrict);
-        //resume
-
-        final String[][] cDistrict = {{"鄉鎮市區"},
+        final String[][] cDistrict = {
                 {"鄉鎮市區","仁愛區","中正區","信義區","中山區","安樂區","暖暖區","七堵區"},
                 {"鄉鎮市區","中正區","大同區","中山區","松山區","大安區","萬華區","信義區","士林區","北投區","內湖區","南港區","文山區"},
                 {"鄉鎮市區","板橋區","新莊區","中和區","永和區","土城區","樹林區","三峽區","鶯歌區","三重區","蘆洲區","五股區","泰山區","林口區","八里區","淡水區","三芝區","石門區","金山區","萬里區","汐止區","瑞芳區","貢寮區","平溪區","雙溪區","新店區","深坑區","石碇區","坪林","烏來區"},
@@ -152,16 +344,117 @@ public class Personal_Resume extends AppCompatActivity {
                 {"鄉鎮市區","金城鎮","金湖鎮","金沙鎮","金寧鄉","烈嶼鄉","烏坵鄉"},
                 {"鄉鎮市區","南竿鄉","北竿鄉","莒光鄉","東引鄉"}};
 
+        ImgV_face.setImageBitmap(stringToBitmap(getWorksheet.getRow100(9)));
+        ImgV_life.setImageBitmap(stringToBitmap(getWorksheet.getRow100(10)));
+
+        edit_name.setText(getWorksheet.getRow100(0));
+
+        switch (getWorksheet.getRow100(1)){
+            case "男":
+                rg_gender.check(R.id.rad_men);
+                break;
+            case "女":
+                rg_gender.check(R.id.rad_women);
+                break;
+        }
+
+
+        edit_birth.setText(getWorksheet.getRow100(2));
+
+        String[] address_c = getResources().getStringArray(R.array.address_list);
+        for(int x=0; x<address_c.length; x++){
+            if(address_c[x].equals(getWorksheet.getRow100(4))){
+                spnCity.setSelection(x);
+            }
+        }
+
+
+        edit_address.setText(getWorksheet.getRow100(6));
+        edit_school.setText(getWorksheet.getRow100(12));
+        edit_depart.setText(getWorksheet.getRow100(13));
+
+        switch (getWorksheet.getRow100(11)){
+            case "就學中":
+                rg_state_study.check(R.id.rad_study);
+                break;
+            case "畢業":
+                rg_state_study.check(R.id.rad_graduate);
+                break;
+            case "肄業":
+                rg_state_study.check(R.id.rad_inComplete);
+                break;
+        }
+
+        edit_interest.setText(getWorksheet.getRow100(14));
+////一般技能
+        if (getWorksheet.getRow100(21).equals("1")){ chk_og.setChecked(true);}else{ chk_og.setChecked(false); }
+        if (getWorksheet.getRow100(23).equals("1")){ chk_rs.setChecked(true); }else{ chk_rs.setChecked(false); }
+        if (getWorksheet.getRow100(24).equals("1")){ chk_cr.setChecked(true); }else{ chk_cr.setChecked(false); }
+        if (getWorksheet.getRow100(22).equals("1")){ chk_rc.setChecked(true); }else{ chk_rc.setChecked(false); }
+        if (getWorksheet.getRow100(25).equals("1")){ chk_od.setChecked(true); }else{ chk_od.setChecked(false); }
+        //// 專業技能
+        if (getWorksheet.getRow100(30).equals("1")){ chk_webManage.setChecked(true); }else{ chk_webManage.setChecked(false); }
+        if (getWorksheet.getRow100(29).equals("1")){ chk_art.setChecked(true); }else{ chk_art.setChecked(false); }
+        if (getWorksheet.getRow100(27).equals("1")){ chk_photograph.setChecked(true); }else{ chk_photograph.setChecked(false); }
+        if (getWorksheet.getRow100(28).equals("1")){ chk_gardening.setChecked(true); }else{ chk_gardening.setChecked(false); }
+        if (getWorksheet.getRow100(26).equals("1")){ chk_cook.setChecked(true); }else{ chk_cook.setChecked(false); }
+        //駕駛能力
+        if (getWorksheet.getRow100(37).equals("1")){ chk_motorcycle.setChecked(true); }else{ chk_motorcycle.setChecked(false); }
+        if (getWorksheet.getRow100(38).equals("1")){ chk_car.setChecked(true); }else{ chk_car.setChecked(false); }
+        //才藝表演
+        if (getWorksheet.getRow100(31).equals("1")){ chk_dance.setChecked(true); }else{ chk_dance.setChecked(false); }
+        if (getWorksheet.getRow100(32).equals("1")){ chk_sing.setChecked(true); }else{ chk_sing.setChecked(false); }
+        if (getWorksheet.getRow100(33).equals("1")){ chk_music.setChecked(true); }else{ chk_music.setChecked(false); }
+        //外語能力
+        if (getWorksheet.getRow100(34).equals("1")){ chk_english.setChecked(true); }else{ chk_english.setChecked(false); }
+        if (getWorksheet.getRow100(35).equals("1")){ chk_japanese.setChecked(true); }else{ chk_japanese.setChecked(false); }
+        if (getWorksheet.getRow100(36).equals("1")){ chk_minnan.setChecked(true); }else{ chk_minnan.setChecked(false); }
+
+        edit_work_exp.setText(getWorksheet.getRow100(15));
+        edit_reason.setText(getWorksheet.getRow100(16));
+
+        if(getWorksheet.getRow100(17).equals("0")){ rg_eat_habit.check(R.id.rad_veg); }else{ rg_eat_habit.check(R.id.rad_forag); }
+
+        edit_startDate.setText(getWorksheet.getRow100(18));
+        edit_endDate.setText(getWorksheet.getRow100(19));
+
+        edit_contact.setText(getWorksheet.getRow100(0));
+        edit_phone.setText(getWorksheet.getRow100(3));
+
+
+        /*
+        * 先判断用户以前有没有对我们的应用程序允许过读写内存卡内容的权限，
+         * 用户处理的结果在 onRequestPermissionResult 中进行处理
+         */
+        if(ContextCompat.checkSelfPermission(Personal_Resume.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // 申请读写内存卡内容的权限
+            ActivityCompat.requestPermissions(Personal_Resume.this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_SDCARD_PERMISSION_REQUEST_CODE);
+        }
+
+
+        //resume
+
         spnCity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 int pos = spnCity.getSelectedItemPosition();
-                city = spnCity.getSelectedItem().toString();
+//                city = spnCity.getSelectedItem().toString();
                 ArrayAdapter<String> cityDistrict = new ArrayAdapter<>(Personal_Resume.this,
                         android.R.layout.simple_spinner_dropdown_item,
                         cDistrict[pos]);
                 spnDistrict.setAdapter(cityDistrict);
-                district = spnDistrict.getSelectedItem().toString();
+                for(int y=0; y<cDistrict[pos].length; y++){
+                    if(cDistrict[pos][y].equals(getWorksheet.getRow100(5))){
+                        spnDistrict.setAdapter(cityDistrict);
+
+                        spnDistrict.setSelection(y,true);
+                        cityDistrict.notifyDataSetChanged();
+                        Log.v("cd",cDistrict[pos][y]);
+                    }
+                }
+//                district = spnDistrict.getSelectedItem().toString();
 
 //                Toast.makeText(getActivity().getBaseContext(), "你選的是" + city + district, Toast.LENGTH_SHORT).show();
             }
@@ -468,6 +761,32 @@ public class Personal_Resume extends AppCompatActivity {
                 }, mYear, mMonth, mDay);
         dpd.show();
     }
+    public Bitmap stringToBitmap(String string) {
+        Bitmap bitmap = null;
+        try {
+            byte[] bitmapArray = Base64.decode(string, Base64.DEFAULT);
+            bitmap = BitmapFactory.decodeByteArray(bitmapArray, 0, bitmapArray.length);
+            return bitmap;
+        } catch (NullPointerException e) {
+            e.getMessage();
+            return null;
+        } catch (OutOfMemoryError e) {
+            return null;
+        }
+    }
+    public void showAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Personal_Resume.this);
+        builder.setMessage("履歷已更新");
+
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
 }
 
 
