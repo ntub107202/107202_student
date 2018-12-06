@@ -2,8 +2,10 @@ package ntub107202.student;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -15,6 +17,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,6 +33,8 @@ public class Fragment_Inbox extends Fragment {
     ArrayList<String> myDatasetImg;
     TextView textView0;
     MyAdapter myAdapter;
+    Button btnOK;
+    Button btnNO;
     static LinearLayoutManager layoutManager;
     private int TIME = 3000;
     @Nullable
@@ -38,6 +43,8 @@ public class Fragment_Inbox extends Fragment {
         View view = inflater.inflate(R.layout.fragment_inbox, container, false);
         mList = (RecyclerView) view.findViewById(R.id.list_view);
         textView0 = (TextView)view.findViewById(R.id.txt_noinbox);
+
+
         //每隔1s执行一次.
 
 //        Handler handler=new Handler();
@@ -121,6 +128,9 @@ public class Fragment_Inbox extends Fragment {
             public TextView TextView0001, TextView0002, TextView0003, TextView0004;
             public ImageView Img01;
             public CardView cardView;
+            Button btnOK;
+            Button btnNO;
+
 
             public ViewHolder(View v) {
                 super(v);
@@ -130,6 +140,8 @@ public class Fragment_Inbox extends Fragment {
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
                 Img01 = (ImageView) v.findViewById(R.id.img01);
                 cardView = (CardView) v.findViewById(R.id.card_view);
+                btnOK = (Button)v.findViewById(R.id.btn_accept);
+                btnNO = (Button)v.findViewById(R.id.btn_denied);
             }
         }
 
@@ -141,7 +153,20 @@ public class Fragment_Inbox extends Fragment {
             mContext = parent.getContext();
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.inboxview_item, parent, false);
             MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
-
+            vh.btnOK.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getWorksheet.delToResume(getWorksheet.getRow60(vh.getAdapterPosition()));
+                    Log.d("get5487", "fuck123fuck" + getWorksheet.getRow60(vh.getAdapterPosition()));
+                }
+            });
+            vh.btnNO.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getWorksheet.delToResume(getWorksheet.getRow60(vh.getAdapterPosition()));
+                    Log.d("get5487", "fuck123fuck" + getWorksheet.getRow60(vh.getAdapterPosition()));
+                }
+            });
             vh.cardView.setOnClickListener(new View.OnClickListener() {
                 int position;
 
