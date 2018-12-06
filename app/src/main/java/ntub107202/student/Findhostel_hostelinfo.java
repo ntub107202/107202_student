@@ -1,9 +1,11 @@
 package ntub107202.student;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -150,6 +152,7 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getWorksheet.postToResume(user, hostelOwnerAccount, hostelNum);
+                showAlert();
                 Log.d("get6969", "我是User" + user);
                 Log.d("get5487", "fuck123fuck" + getWorksheet.getRow35(position));
                 Log.d("get5487", "fuck123fuck" + getWorksheet.getRow31(position));
@@ -187,6 +190,18 @@ public class Findhostel_hostelinfo extends AppCompatActivity {
         hostelOwnerAccount = getWorksheet.getRow31(position);
 
 
+    }
+    public void showAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Findhostel_hostelinfo.this);
+        builder.setMessage("您已傳送履歷");
+
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 //
 //    class BannerAdapter extends PagerAdapter {

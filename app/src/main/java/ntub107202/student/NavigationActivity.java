@@ -34,7 +34,7 @@ public class NavigationActivity extends AppCompatActivity {
     private Fragment_Schedule Fragment4_Schedule;
     private Fragment_Personal Fragment5_Personal;
     BottomNavigationView navigation;
-    private int TIME = 3000;
+    private int TIME = 2000;
     private int x  = 5 ;
     private int y  = 5 ;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener

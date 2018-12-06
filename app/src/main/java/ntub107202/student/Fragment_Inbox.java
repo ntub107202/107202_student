@@ -2,6 +2,7 @@ package ntub107202.student;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -87,7 +89,30 @@ public class Fragment_Inbox extends Fragment {
             //resume
         }
     }
+    public void showAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage("您已接受邀請");
 
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+    public void showAlert2() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage("您已拒絕邀請");
+
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
     public void setResumeview() {
         myDatasetName = new ArrayList<>();
         myDatasetAddr = new ArrayList<>();
@@ -157,6 +182,7 @@ public class Fragment_Inbox extends Fragment {
                 @Override
                 public void onClick(View v) {
                     getWorksheet.delToResume(getWorksheet.getRow60(vh.getAdapterPosition()));
+                    showAlert();
                     Log.d("get5487", "fuck123fuck" + getWorksheet.getRow60(vh.getAdapterPosition()));
                 }
             });
@@ -164,6 +190,7 @@ public class Fragment_Inbox extends Fragment {
                 @Override
                 public void onClick(View v) {
                     getWorksheet.delToResume(getWorksheet.getRow60(vh.getAdapterPosition()));
+                    showAlert2();
                     Log.d("get5487", "fuck123fuck" + getWorksheet.getRow60(vh.getAdapterPosition()));
                 }
             });
